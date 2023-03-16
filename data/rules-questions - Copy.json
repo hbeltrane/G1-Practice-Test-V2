@@ -1,6 +1,8 @@
 {
-    "_id": {
-		"number": 1,
+  "version": "0.0.1.0",
+  "date": "2022-07-12",
+  "questions": {
+    "1": {
       "text": "To get your vehicle out of a skid, you should first:",
       "category": "rules",
       "presentation": "text",
@@ -24,8 +26,7 @@
       ],
       "explanation": "To get your vehicle out of a skid, you should first steer in the direction you want to go."
     },
-    "_id": {
-		"number": 2,
+    "2": {
       "text": "When may you lend your driver’s licence?",
       "category": "rules",
       "presentation": "text",
@@ -49,8 +50,7 @@
       ],
       "explanation": "You should not lend your driver’s license."
     },
-    "_id": {
-		"number": 3,
+    "3": {
       "text": "What must a driver do before entering a highway from a private road or driveway?",
       "category": "rules",
       "presentation": "text",
@@ -74,8 +74,7 @@
       ],
       "explanation": "Before entering a highway from a private road or driveway a driver must yield right-of-way to all vehicles approaching on the highway."
     },
-    "_id": {
-		"number": 4,
+    "4": {
       "text": "Never change lanes in traffic without:",
       "category": "rules",
       "presentation": "text",
@@ -99,8 +98,7 @@
       ],
       "explanation": "When changing lanes in traffic always give the proper signal and look to make sure your move can be made safely."
     },
-    "_id": {
-		"number": 5,
+    "5": {
       "text": "When the driver of another vehicle is about to overtake and pass your vehicle, you must:",
       "category": "rules",
       "presentation": "text",
@@ -124,8 +122,7 @@
       ],
       "explanation": "When the driver of another vehicle is about to overtake and pass your vehicle, you must move to the right and allow his/her vehicle to pass."
     },
-    "_id": {
-		"number": 6,
+    "6": {
       "text": "When you are deciding whether or not to make a U-turn, your first consideration should be to check:",
       "category": "rules",
       "presentation": "text",
@@ -149,8 +146,7 @@
       ],
       "explanation": "When you are deciding whether or not to make a U-turn, your first consideration should be to check the traffic regulations."
     },
-    "_id": {
-		"number": 7,
+    "7": {
       "text": "It is more dangerous to drive at the maximum speed limit at night than during daytime as:",
       "category": "rules",
       "presentation": "text",
@@ -174,8 +170,7 @@
       ],
       "explanation": "It is more dangerous to drive at the maximum speed limit at night than during the daytime because you cannot see as far ahead at night."
     },
-    "_id": {
-		"number": 8,
+    "8": {
       "text": "You should under all conditions drive at a speed which will allow you to:",
       "category": "rules",
       "presentation": "text",
@@ -199,8 +194,7 @@
       ],
       "explanation": "Under all conditions you should drive at a speed that will allow you to stop within a safe distance"
     },
-    "_id": {
-		"number": 9,
+    "9": {
       "text": "At what times must a driver accompany you in the front passenger seat if you are driving with a learner's license?",
       "category": "rules",
       "presentation": "text",
@@ -224,8 +218,7 @@
       ],
       "explanation": "When you are you are driving with a learner's license, a graduated driver must accompany you in the front passenger seat all the time."
     },
-    "_id": {
-		"number": 10,
+    "10": {
       "text": "In what amount of time must you inform the Ministry of Transportation if a licensed driver changes their name or address?",
       "category": "rules",
       "presentation": "text",
@@ -249,8 +242,7 @@
       ],
       "explanation": "When you as a licensed driver change your name or address you must inform the Ministry of Transportation within 6 days."
     },
-    "_id": {
-		"number": 11,
+    "11": {
       "text": "If there is median on the road, when do you need to stop for a school bus?",
       "category": "rules",
       "presentation": "text",
@@ -274,8 +266,7 @@
       ],
       "explanation": "If you are behind it and it has red lights flashing."
     },
-    "_id": {
-		"number": 12,
+    "12": {
       "text": "What does having an Accessible Parking Permit do?",
       "category": "rules",
       "presentation": "text",
@@ -299,8 +290,7 @@
       ],
       "explanation": "A vehicle carrying the person to whom it was issued to use a designated disabled parking space."
     },
-    "_id": {
-		"number": 13,
+    "13": {
       "text": "How much visibility do you need to be able to make a U-turn?",
       "category": "rules",
       "presentation": "text",
@@ -324,8 +314,7 @@
       ],
       "explanation": "150 metres."
     },
-    "_id": {
-		"number": 14,
+    "14": {
       "text": "How much authority do signs giving instructions around roadwork have?",
       "category": "rules",
       "presentation": "text",
@@ -349,8 +338,7 @@
       ],
       "explanation": "Legally enforceable."
     },
-    "_id": {
-		"number": 15,
+    "15": {
       "text": "If you fail to stay at the scene of an accident, how many points could you get on your license?",
       "category": "rules",
       "presentation": "text",
@@ -374,8 +362,7 @@
       ],
       "explanation": "7."
     },
-    "_id": {
-		"number": 16,
+    "16": {
       "text": "What is the area that you are unable to see in your rear and side-view mirrors?",
       "category": "rules",
       "presentation": "text",
@@ -399,8 +386,7 @@
       ],
       "explanation": "Blind spot."
     },
-    "_id": {
-		"number": 17,
+    "17": {
       "text": "What does overdriving your headlights mean?",
       "category": "rules",
       "presentation": "text",
@@ -424,8 +410,7 @@
       ],
       "explanation": "Driving so fast that your stopping distance is farther than you can see with your headlights."
     },
-    "_id": {
-		"number": 18,
+    "18": {
       "text": "What does a red X over a driving lane mean?",
       "category": "rules",
       "presentation": "text",
@@ -449,8 +434,7 @@
       ],
       "explanation": "A driver must not enter or remain in that lane."
     },
-    "_id": {
-		"number": 19,
+    "19": {
       "text": "If you are exiting a freeway, what should you do?",
       "category": "rules",
       "presentation": "text",
@@ -474,8 +458,7 @@
       ],
       "explanation": "Signal, move into the deceleration lane, reduce speed gradually and obey exit signs."
     },
-    "_id": {
-		"number": 20,
+    "20": {
       "text": "If your brakes fail, what should you do?",
       "category": "rules",
       "presentation": "text",
@@ -499,4 +482,5 @@
       ],
       "explanation": "Pump the brakes rapidly and shift into a lower gear."
     }
+  }
 }

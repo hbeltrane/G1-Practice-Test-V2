@@ -1,6 +1,6 @@
 /*
  *		Lambton College
- *		CSD 2103 - Front End Web Development II
+ *		CSD 3103 - Full Stack JavaScript
  *		Term project
  *		Hugo Beltran Escarraga - C0845680
  *		Juan Luis Casanova Romero - C0851175
