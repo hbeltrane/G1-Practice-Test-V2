@@ -24,77 +24,109 @@
 <body>
 
   <div class="container">
-    <header>
+    <header class="col d-flex justify-content-center">
       <h1>G1 Driver License Knowledge Practice Test</h1>
     </header>
 
-    <main>
-      <form id="test-form" action="test.html" method="GET">
+    <main class="col d-flex justify-content-center">
 
-        <div class="contact-information">
+      <div class="card w-50 mb-3">
+        <div class="card-body">
           
-          <h2>Sign up</h2>
-          <div class="form-group">
-            <label for="user-name">Name</label>&nbsp;&nbsp;<span id="user-name-error" class="danger"></span>
-            <input type="text" id="user-name" name="user-name" size="30" placeholder="Enter your name">
-          </div>
-          <div class="form-group">
-            <label for="email">Email</label>&nbsp;&nbsp;<span id="email-error" class="danger"></span>
-            <input type="email" id="email" name="email" size="30" placeholder="Enter your email address">
-          </div>
-          <div class="form-group">
-            <label for="phone">Phone</label>&nbsp;&nbsp;<span id="phone-error" class="danger"></span>
-            <input type="tel" id="phone" name="phone" size="30" placeholder="Enter your Telephone number">
-          </div>
-        </div>
-  
-        <div class="test-configuration">
+          <form id="test-form" action="test.html" method="GET">
 
-          <h2>Configure your test</h2>
-          <div class="form-group">
-            <label for="rules-questions">Rules</label>
-            <select name="rules-questions" id="rules-questions">
-              <option value="5" selected>5</option>
-              <option value="10">10</option>
-              <option value="15">15</option>
-              <option value="20">20</option>
-            </select>
-          </div>
-          <div class="form-group">
-            <label for="signs-questions">Signs</label>
-            <select name="signs-questions" id="signs-questions">
-              <option value="5" selected>5</option>
-              <option value="10">10</option>
-              <option value="15">15</option>
-              <option value="20">20</option>
-            </select>
-          </div>
-          <div class="form-group">
-            <input type="checkbox" id="random" name="random">
-            <label for="random">Random</label>
-          </div>
-          <div class="form-group">
-            <input type="checkbox" id="sendEmail" name="sendEmail">
-            <label for="sendEmail">Send my score by email</label>
-          </div>
-        </div>
-        
-        <div class="submit-button">
-          <input class="primary" type="button" id="submit-btn" value="Go for it">
-        </div>
-        
-      </form>
+            <div>
+              
+              <h2>Sign up</h2>
+
+              <div class="mb-3">
+                <label class="form-label" for="user-name">Name</label>&nbsp;&nbsp;<span id="user-name-error"></span>
+                <input type="text" class="form-control" id="user-name" name="user-name" size="30" placeholder="Enter your name">
+              </div>
+              <div class="mb-3">
+                <label class="form-label" for="email">Email</label>&nbsp;&nbsp;<span id="email-error"></span>
+                <input type="email" class="form-control" id="email" name="email" size="30" placeholder="Enter your email address">
+              </div>
+              <div  class="mb-3">
+                <label class="form-label" for="phone">Phone</label>&nbsp;&nbsp;<span id="phone-error"></span>
+                <input type="tel" class="form-control" id="phone" name="phone" size="30" placeholder="Enter your telephone number">
+              </div>
+            </div>
       
-      <div class="about-us" id="about-us">
-        <h3>About Us</h3>
-        <div class="info" id="info">
-          <p>Developed by Hugo Beltran & Juan Casanova</p>
-          <p>for CSD 3103 - Full Stack JavaScript Term Project</p>
-          <p>Copyright &copy; 2023</p>
+            <div class="row">
+    
+              <h2>Configure your test</h2>
+              <div class="col-sm-6">
+                <label class="form-label" for="rules-questions">Rules</label>
+                <select class="form-select" name="rules-questions" id="rules-questions">
+                  <option value="5" selected>5</option>
+                  <option value="10">10</option>
+                  <option value="15">15</option>
+                  <option value="20">20</option>
+                </select>
+              </div>
+              <div class="col-sm-6">
+                <label class="form-label" for="signs-questions">Signs</label>
+                <select class="form-select" name="signs-questions" id="signs-questions">
+                  <option value="5" selected>5</option>
+                  <option value="10">10</option>
+                  <option value="15">15</option>
+                  <option value="20">20</option>
+                </select>
+              </div>
+              
+            </div>
+
+            <hr class="my-4">
+        
+            <div class="form-check">
+              <input class="form-check-input" type="checkbox" id="random" name="random">
+              <label class="form-check-label" for="random">Random questions</label>
+            </div>
+            <div class="form-check">
+              <input class="form-check-input" type="checkbox" id="send-email" name="send-email">
+              <label class="form-check-label" for="sendEmail">Send score by email</label>
+            </div>
+
+            <hr class="my-4">
+            
+            <button class="w-100 btn btn-primary btn-lg" type="submit" id="submit-btn">
+              Go for it
+            </button>
+            
+          </form>
+          
         </div>
       </div>
+      
     </main>
-    
+
+    <footer class="col d-flex justify-content-center">
+
+      <div class="w-50 mb-3">
+
+        <div class="accordion">
+          <div class="accordion-item">
+            <h2 class="accordion-header" id="accordion-heading">
+              <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#accordion-panel" aria-expanded="true" aria-controls="accordion-panel">
+                About Us
+              </button>
+            </h2>
+            <div id="accordion-panel" class="accordion-collapse collapse" aria-labelledby="accordion-heading">
+              <div class="accordion-body">
+                <h3>About Us</h3>
+                <div id="info">
+                  <p>Developed by Hugo Beltran & Juan Casanova</p>
+                  <p>for CSD 3103 - Full Stack JavaScript Term Project</p>
+                  <p>Copyright &copy; 2023</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+    </footer>
   </div>
 
 </body>

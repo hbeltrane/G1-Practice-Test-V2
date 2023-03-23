@@ -6,14 +6,14 @@
  *		Juan Luis Casanova Romero - C0851175
  */
  
-$(document).ready(function() {
-    checkCookie();
-    document.getElementById("submit-btn").addEventListener("click", checkInfo);
+// $(document).ready(function() {
+//     checkCookie();
+//     document.getElementById("submit-btn").addEventListener("click", checkInfo);
 
-    $("#about-us").click(function(){
-        $("#info").toggle(1500);
-      });
-});
+//     $("#about-us").click(function(){
+//         $("#info").toggle(1500);
+//       });
+// });
 
 function checkName() {
     var name = document.getElementById("user-name").value;
