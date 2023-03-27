@@ -1,6 +1,7 @@
 import 'bootstrap/dist/css/bootstrap.min.css';
 import 'bootstrap/dist/js/bootstrap.bundle.min';
 import React from "react"
+import { Link } from "react-router-dom"
 
 export default function Test() {
     function onSkip() {
