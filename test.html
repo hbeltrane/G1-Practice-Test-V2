@@ -10,81 +10,93 @@
 <html lang="en">
 <head>
 	<meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet"
 		integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
+  <link rel="icon" type="image/png" href="images/favicon.png">
 	<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"
 		integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN"
-		crossorigin="anonymous"></script>
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <link rel="stylesheet" href="css/resets.css">
-  <link rel="stylesheet" href="css/test.css">
-  <link rel="icon" type="image/png" href="images/favicon.png">
+		crossorigin="anonymous"></script>  
+  <script defer src="js/test.js"></script>
   <title>G1 Practice Test 2.0 - Questions</title>
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
 </head>
 <body>
 
   <div class="container">
-    <header>
+
+    <header class="col d-flex justify-content-center">
       <h1>Driver License Knowledge Test</h1>
     </header>
 
-    <main>
-      <div class="info-bar">
-        <div class="question-category">
-          <p id="category"></p>
-        </div>
-        <div class="quiz-progress">
-          <p id="progress"><span id="correct">Correct: 0</span> &nbsp;<span id="incorrect">Incorrect: 0</span></p> 
-        </div>
-      </div>
+    <main class="col d-flex justify-content-center">
 
-      <div class="quiz">
-        <div class="question">
+      <div class="card w-50 mb-3" id="quiz">
+        <div class="card-header" id="info">
+          <div class="question-category">
+            <p id="category"></p>
+          </div>
+          <div class="quiz-progress">
+            <p id="progress">
+              <span id="correct">Correct: 0</span> &nbsp;<span id="incorrect">Incorrect: 0</span>
+            </p> 
+          </div>
+        </div>
+
+        <div class="card-body" id="question">
           <p id="text"></p>
-          <div class="image">
+          <div class="card-title">
             <img src="images/no-pedestrians.jpg" alt="reference image">
           </div>
         </div>
-        
-        <div class="answers">
-          <div class="answer-group">
-            <input class="answer-radio" type="radio" name="answer-radio" id="answer-a">
-            <label class="answer-label" for="answer-a" id="answer-a-text"></label>
-          </div>
-          <div class="answer-group">
-            <input class="answer-radio" type="radio" name="answer-radio" id="answer-b">
-            <label class="answer-label" for="answer-b" id="answer-b-text"></label>
-          </div>
-          <div class="answer-group">
-            <input class="answer-radio" type="radio" name="answer-radio" id="answer-c">
-            <label class="answer-label" for="answer-c" id="answer-c-text"></label>
-          </div>
-          <div class="answer-group">
-            <input class="answer-radio" type="radio" name="answer-radio" id="answer-d">
-            <label class="answer-label" for="answer-d" id="answer-d-text"></label>
-          </div>
-        </div>
 
-        <div class="button-group">
-          <div class="skip-button">
-            <input class="primary" type="button" id="skip-btn" value="Skip Question">
-          </div>
-          <div class="submit-button">
-            <input class="success" type="button" id="submit-btn" value="Submit Answer">
+        <ul class="list-group list-group-flush" id="answers">
+          <li class="list-group-item">
+            <div class="answer-group">
+              <input class="answer-radio" type="radio" name="answer-radio" id="answer-a">
+              <label class="answer-label" for="answer-a" id="answer-a-text"></label>
+            </div>
+          </li>
+          <li class="list-group-item">
+            <div class="answer-group">
+              <input class="answer-radio" type="radio" name="answer-radio" id="answer-b">
+              <label class="answer-label" for="answer-b" id="answer-b-text"></label>
+            </div>
+          </li>
+          <li class="list-group-item">
+            <div class="answer-group">
+              <input class="answer-radio" type="radio" name="answer-radio" id="answer-c">
+              <label class="answer-label" for="answer-c" id="answer-c-text"></label>
+            </div>
+          </li>
+          <li class="list-group-item">
+            <div class="answer-group">
+              <input class="answer-radio" type="radio" name="answer-radio" id="answer-d">
+              <label class="answer-label" for="answer-d" id="answer-d-text"></label>
+            </div>
+          </li>
+        </ul>
+        <div class="card-footer">
+          <div class="button-group">
+            <div class="skip-button">
+              <input class="primary" type="button" id="skip-btn" value="Skip Question">
+            </div>
+            <div class="submit-button">
+              <input class="success" type="button" id="submit-btn" value="Submit Answer">
+            </div>
           </div>
         </div>
+      </div>
+
+      <div>
         <div class="answer-explanation">
           <p id="explanation"></p>
         </div>
-        
       </div>
 
     </main>
-
+    
   </div>
 
-  <script src="js/test.js"></script>
 </body>
 </html>
