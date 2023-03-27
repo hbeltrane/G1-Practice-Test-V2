@@ -10,48 +10,52 @@ export default function Main() {
     const inputEmail = useRef(null)
     return (
         <div className="container">
-            <header>
-                <h1 className="title">G1 Driver License Practice Test - V2</h1>
+            <header className="col d-flex justify-content-center">
+                <h1>G1 Driver License Knowledge Practice Test V2</h1>
             </header>
-            <main>
-                <form id="form">
+            <main className="col d-flex justify-content-center">
+                <div className="card w-50 mb-3">
+                    <div className="card-header">
+                        <form id="form">
 
-                    <div class="test-configuration">
+                            <div className="test-configuration">
 
-                        <h2>Configure your test</h2>
-                        <div class="form-group">
-                            <label for="rules-questions">Rules questions</label>
-                            <select ref={inputRules} name="rules-questions" id="rules-questions">
-                                <option value="5" selected>5</option>
-                                <option value="10">10</option>
-                                <option value="15">15</option>
-                                <option value="20">20</option>
-                            </select>
-                        </div>
-                        <div class="form-group">
-                            <label for="signs-questions">Signs questions</label>
-                            <select ref={inputSigns} name="signs-questions" id="signs-questions">
-                                <option value="5" selected>5</option>
-                                <option value="10">10</option>
-                                <option value="15">15</option>
-                                <option value="20">20</option>
-                            </select>
-                        </div>
-                        <div class="form-group">
-                            <input ref={inputRandom} type="checkbox" id="random" name="random"></input>
-                            <label for="random">Randomize questions</label>
-                        </div>
-                        <div class="form-group">
-                            <input ref={inputEmail} type="checkbox" id="sendEmail" name="sendEmail"></input>
-                            <label for="sendEmail">Send my score by email</label>
-                        </div>
+                                <h2>Configure your test</h2>
+                                <div className="form-group">
+                                    <label for="rules-questions">Rules questions</label>
+                                    <select ref={inputRules} name="rules-questions" id="rules-questions">
+                                        <option value="5" selected>5</option>
+                                        <option value="10">10</option>
+                                        <option value="15">15</option>
+                                        <option value="20">20</option>
+                                    </select>
+                                </div>
+                                <div className="form-group">
+                                    <label for="signs-questions">Signs questions</label>
+                                    <select ref={inputSigns} name="signs-questions" id="signs-questions">
+                                        <option value="5" selected>5</option>
+                                        <option value="10">10</option>
+                                        <option value="15">15</option>
+                                        <option value="20">20</option>
+                                    </select>
+                                </div>
+                                <div className="form-group">
+                                    <input ref={inputRandom} type="checkbox" id="random" name="random"></input>
+                                    <label for="random">Randomize questions</label>
+                                </div>
+                                <div className="form-group">
+                                    <input ref={inputEmail} type="checkbox" id="sendEmail" name="sendEmail"></input>
+                                    <label for="sendEmail">Send my score by email</label>
+                                </div>
+                            </div>
+
+                            <div className="start">
+                                <Link className="btn btn-primary" to={'/test'}>Go for it</Link>
+                            </div>
+
+                        </form>
                     </div>
-
-                    <div class="start">
-                        <Link className="btn btn-primary" to={'/test'}>Go for it</Link>
-                    </div>
-
-                </form>
+                </div>
             </main>
         </div>
     )

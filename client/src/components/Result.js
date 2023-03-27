@@ -1,22 +1,22 @@
 import 'bootstrap/dist/css/bootstrap.min.css';
 import 'bootstrap/dist/js/bootstrap.bundle.min';
 import React from "react"
-import { Link } from "react-router-dom"
+//import { Link } from "react-router-dom"
 
 export default function Result() {
     return (
         <div className="container">
             <header className="col d-flex justify-content-center">
-                <h1>Driver License Knowledge Test</h1>
+                <h1>G1 Driver License Knowledge Practice Test V2</h1>
             </header>
 
-            <main className="col d-flex justify-content-center pt-4">
+            <main className="col d-flex justify-content-center">
 
-                <div className="card w-50">
+                <div className="card w-50 mb-3">
                     <div className="card-header">
                         <h2>Results</h2>
                         <div className="return-button">
-                            <input className="primary" type="button" id="return-btn" value="Try Again"></input>
+                            <input className="btn btn-primary" type="button" id="return-btn" value="Try Again"></input>
                         </div>
                     </div>
                     <ul className="list-group list-group-flush">
@@ -51,7 +51,7 @@ export default function Result() {
                     </ul>
                     <div className="card-body">
                         <div className="pie-chart">
-                            <canvas id="myChart" style="width:100%; max-width:600px"></canvas>
+                            {/* <canvas id="myChart" style="width:100%; max-width:600px"></canvas> */}
                         </div>
                     </div>
                 </div>

@@ -1,6 +1,6 @@
 import '../styles/App.css';
 
-import { createBrowserRouter, RouterProvider} from 'react-router-dom'
+import { createBrowserRouter, RouterProvider } from 'react-router-dom'
 
 /** import components */
 import Login from './Login';
@@ -36,7 +36,7 @@ const router = createBrowserRouter([
 function App() {
   return (
     <>
-      <RouterProvider router = {router} />
+      <RouterProvider router={router} />
     </>
   );
 }

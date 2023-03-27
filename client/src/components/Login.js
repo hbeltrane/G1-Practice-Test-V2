@@ -7,15 +7,15 @@ export default function Login() {
     return (
         <div className="container">
             <header className="col d-flex justify-content-center">
-                <h1>G1 Driver License Knowledge Practice Test</h1>
+                <h1>G1 Driver License Knowledge Practice Test V2</h1>
             </header>
 
-            <main className="col d-flex justify-content-center pt-4">
+            <main className="col d-flex justify-content-center">
 
                 <div className="card w-40 mb-3">
                     <div className="card-body">
 
-                        <form id="test-form" action="test.html" method="GET">
+                        <form id="form">
 
                             <div>
                                 <h2>Login</h2>
