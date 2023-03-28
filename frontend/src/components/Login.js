@@ -1,5 +1,5 @@
-import 'bootstrap/dist/css/bootstrap.min.css';
-import 'bootstrap/dist/js/bootstrap.bundle.min';
+import "bootstrap/dist/css/bootstrap.min.css";
+import "bootstrap/dist/js/bootstrap.bundle.min";
 import React from "react"
 import { Link } from "react-router-dom"
 
@@ -21,17 +21,17 @@ export default function Login() {
                                 <h2>Login</h2>
 
                                 <div className="mb-3">
-                                    <label className="form-label" for="email">Email</label>&nbsp;&nbsp;<span id="email-error"></span>
+                                    <label className="form-label" htmlFor="email">Email</label>&nbsp;&nbsp;<span id="email-error"></span>
                                     <input type="email" className="form-control" id="email" name="email" size="30" placeholder="Enter your email address"></input>
                                 </div>
                                 <div className="mb-3">
-                                    <label className="form-label" for="password">Password</label>&nbsp;&nbsp;<span id="password-error"></span>
+                                    <label className="form-label" htmlFor="password">Password</label>&nbsp;&nbsp;<span id="password-error"></span>
                                     <input type="password" className="form-control" id="password" name="password" size="30" placeholder="Enter your password"></input>
                                 </div>
                             </div>
 
                             <div class="start">
-                                <Link className="btn btn-primary" to={'/main'}>Login</Link>
+                                <Link className="btn btn-primary" to={"/main"}>Login</Link>
                             </div>
 
                         </form>

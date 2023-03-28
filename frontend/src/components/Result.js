@@ -1,7 +1,7 @@
-import 'bootstrap/dist/css/bootstrap.min.css';
-import 'bootstrap/dist/js/bootstrap.bundle.min';
+import "bootstrap/dist/css/bootstrap.min.css";
+import "bootstrap/dist/js/bootstrap.bundle.min";
 import React from "react"
-//import { Link } from "react-router-dom"
+import { Link } from "react-router-dom"
 
 export default function Result() {
     return (
@@ -16,7 +16,7 @@ export default function Result() {
                     <div className="card-header">
                         <h2>Results</h2>
                         <div className="return-button">
-                            <input className="btn btn-primary" type="button" id="return-btn" value="Try Again"></input>
+                            <Link className="btn btn-primary" to={"/main"}>Try again</Link>
                         </div>
                     </div>
                     <ul className="list-group list-group-flush">

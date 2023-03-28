@@ -1,10 +1,17 @@
-import 'bootstrap/dist/css/bootstrap.min.css';
-import 'bootstrap/dist/js/bootstrap.bundle.min';
-import React from "react"
+import "bootstrap/dist/css/bootstrap.min.css";
+import "bootstrap/dist/js/bootstrap.bundle.min";
+import React, { useEffect } from "react"
 import Questions from "./Questions"
 //import { Link } from "react-router-dom"
 
+/** redux store import */
+import { useSelector } from "react-redux"
+
 export default function Test() {
+    const state = useSelector(state => state)
+    useEffect(() => {
+        console.log(state)
+    })
     /** Skip button event handler */
     function onSkip() {
         console.log("Click on skip")
