@@ -1,24 +1,49 @@
 import "bootstrap/dist/css/bootstrap.min.css";
 import "bootstrap/dist/js/bootstrap.bundle.min";
-import React, { useEffect } from "react"
+import React, { useEffect, useState } from "react"
 import Questions from "./Questions"
+import { MoveNextQuestion, MovePreviousQuestion } from "../hooks/FetchQuestion";
+import { PushAnswer } from "../hooks/setResult";
+import { Navigate } from "react-router-dom";
 //import { Link } from "react-router-dom"
 
 /** redux store import */
-import { useSelector } from "react-redux"
+import { useSelector, useDispatch } from "react-redux"
 
 export default function Test() {
-    const state = useSelector(state => state)
+    const [check, setChecked] = useState(undefined)
+    const result = useSelector(state => state.result.result);
+    const { queue, trace } = useSelector(state => state.questions);
+    const dispatch = useDispatch()
     useEffect(() => {
-        console.log(state)
+        console.log(result)
     })
-    /** Skip button event handler */
-    function onSkip() {
-        console.log("Click on skip")
-    }
     /** Next button event handler */
     function onNext() {
-        console.log("Click on next")
+        //console.log("Click on next")
+        /** Update the trace value by 1 using MoveNextAction */
+        if (trace < queue.length) {
+            dispatch(MoveNextQuestion());
+            if (result.length <= trace) {
+                dispatch(PushAnswer(check))
+            }
+        }
+    }
+    /** Previous button event handler */
+    function onPrevious() {
+        //console.log("Click on previous")
+        if (trace > 0) {
+            dispatch(MovePreviousQuestion());
+        }
+    }
+    function onChecked(check) {
+        console.log(check)
+        setChecked(check)
+    }
+
+    /** Finish exam after the ast question */
+    if (result.length && result.length >= queue.length) {
+        return <Navigate to={"/result"} replace="true"></Navigate>
     }
     return (
 
@@ -42,11 +67,11 @@ export default function Test() {
                         </div>
                     </div>
 
-                    <Questions />
+                    <Questions onChecked={onChecked} />
                     <div className="card-footer">
                         <div className="button-group">
                             <div className="skip-button">
-                                <input className="btn btn-primary" onClick={onSkip} type="button" id="skip-btn" value="Skip Question"></input>
+                                {trace > 0 ? <input className="btn btn-primary" onClick={onPrevious} type="button" id="previous-btn" value="Previous Question"></input> : <div></div>}
                             </div>
                             <div className="submit-button">
                                 <input className="btn btn-success" onClick={onNext} type="button" id="submit-btn" value="Next question"></input>

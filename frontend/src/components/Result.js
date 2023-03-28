@@ -1,9 +1,17 @@
 import "bootstrap/dist/css/bootstrap.min.css";
 import "bootstrap/dist/js/bootstrap.bundle.min";
 import React from "react"
+import { useDispatch } from "react-redux";
 import { Link } from "react-router-dom"
+import { resetAllAction } from "../redux/question_reducer";
+import { resetResultAction } from "../redux/result_reducer";
 
 export default function Result() {
+    const dispatch = useDispatch()
+    function onRestart() {
+        dispatch(resetAllAction())
+        dispatch(resetResultAction())
+    }
     return (
         <div className="container">
             <header className="col d-flex justify-content-center">
@@ -16,7 +24,7 @@ export default function Result() {
                     <div className="card-header">
                         <h2>Results</h2>
                         <div className="return-button">
-                            <Link className="btn btn-primary" to={"/main"}>Try again</Link>
+                            <Link className="btn btn-primary" to={"/main"} onClick={onRestart}>Try again</Link>
                         </div>
                     </div>
                     <ul className="list-group list-group-flush">
