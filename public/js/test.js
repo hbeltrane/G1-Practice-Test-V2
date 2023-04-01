@@ -315,10 +315,10 @@ function checkAnswer() {
 
     if (checkIsCorrect(selectedAnswer.innerText)) {
         addAnswerStyle(selectedAnswer.id, "text-success");
-        addExplanationStyle("text-bg-success");
+        addExplanationStyle("alert-success");
     } else {
         addAnswerStyle(selectedAnswer.id, "text-danger");
-        addExplanationStyle("text-bg-danger");
+        addExplanationStyle("alert-danger");
     }
 }
 
@@ -357,11 +357,11 @@ function removeAnswerStyle() {
 function removeExplanationStyle() {
     let answerExplanation = document.querySelector(".answer-explanation");
 
-    if (answerExplanation.classList.contains("text-bg-danger")) {
-        answerExplanation.classList.remove("text-bg-danger");
+    if (answerExplanation.classList.contains("alert-danger")) {
+        answerExplanation.classList.remove("alert-danger");
     }
-    if (answerExplanation.classList.contains("text-bg-success")) {
-        answerExplanation.classList.remove("text-bg-success");
+    if (answerExplanation.classList.contains("alert-success")) {
+        answerExplanation.classList.remove("alert-success");
     }
 }
 
