@@ -1,0 +1,156 @@
+<!--
+  	Lambton College
+		CSD 3103 - Full Stack JavaScript
+		Term project
+		Hugo Beltran Escarraga - C0845680
+		Juan Luis Casanova Romero - C0851175
+-->
+
+<%- include('header') -%>
+
+  <script src="/js/test.js"></script>
+  <title>Test</title>
+  </head>
+
+  <body>
+
+    <%- include('navbar') -%>
+
+    <div class="container">
+      <header class="col d-flex justify-content-center">
+        <h1>G1 Driver License Knowledge Test</h1>
+      </header>
+  
+      <main class="col d-flex justify-content-center pt-4">
+  
+        <div class="card w-50 mb-3" id="quiz">
+          <div class="card-header" id="info">
+            <div class="row mt-2">
+              <div class="col-sm-7">
+                <p id="category"></p>
+              </div>
+              <div class="col-sm-5">
+                <div class="row">
+                  <p class="text-success col-sm-6" id="correct">Correct: 0</p>
+                  <p class="text-danger col-sm-6" id="incorrect">Incorrect: 0</p>
+                </div>
+              </div>
+            </div>
+          </div>
+  
+          <div class="card-body" id="question">
+            <p id="text"></p>
+            <div class="card-title image">
+              <img src="" alt="reference image">
+            </div>
+          </div>
+  
+          <ul class="list-group list-group-flush" id="answers">
+            <li class="list-group-item">
+              <div class="answer-group">
+                <input class="answer-radio" type="radio" name="answer-radio" id="answer-a">
+                <label class="answer-label" for="answer-a" id="answer-a-text"></label>
+              </div>
+            </li>
+            <li class="list-group-item">
+              <div class="answer-group">
+                <input class="answer-radio" type="radio" name="answer-radio" id="answer-b">
+                <label class="answer-label" for="answer-b" id="answer-b-text"></label>
+              </div>
+            </li>
+            <li class="list-group-item">
+              <div class="answer-group">
+                <input class="answer-radio" type="radio" name="answer-radio" id="answer-c">
+                <label class="answer-label" for="answer-c" id="answer-c-text"></label>
+              </div>
+            </li>
+            <li class="list-group-item">
+              <div class="answer-group">
+                <input class="answer-radio" type="radio" name="answer-radio" id="answer-d">
+                <label class="answer-label" for="answer-d" id="answer-d-text"></label>
+              </div>
+            </li>
+          </ul>
+          <div class="card-footer">
+            <div class="button-group">
+              <span class="skip-button">
+                <input class="btn btn-primary" type="button" id="skip-btn" value="Skip Question">
+              </span>
+              <span class="submit-button">
+                <input class="btn btn-primary" type="button" id="submit-btn" value="Submit Answer">
+              </span>
+            </div>
+          </div>
+  
+          <div class="answer-explanation">
+            <p id="explanation"></p>
+          </div>
+      </div>
+  
+      </main>
+      
+    </div>
+  
+<!--
+    <div class="container">
+      <header>
+        <h1>Driver License Knowledge Test</h1>
+      </header>
+
+      <main>
+        <div class="info-bar">
+          <div class="question-category">
+            <p id="category"></p>
+          </div>
+          <div class="quiz-progress">
+            <p id="progress"><span id="correct">Correct: 0</span> &nbsp;<span id="incorrect">Incorrect: 0</span></p>
+          </div>
+        </div>
+
+        <div class="quiz">
+          <div class="question">
+            <p id="text"></p>
+            <div class="image">
+              <img src="" alt="reference image">
+            </div>
+          </div>
+
+          <div class="answers">
+            <div class="answer-group">
+              <input class="answer-radio" type="radio" name="answer-radio" id="answer-a">
+              <label class="answer-label" for="answer-a" id="answer-a-text"></label>
+            </div>
+            <div class="answer-group">
+              <input class="answer-radio" type="radio" name="answer-radio" id="answer-b">
+              <label class="answer-label" for="answer-b" id="answer-b-text"></label>
+            </div>
+            <div class="answer-group">
+              <input class="answer-radio" type="radio" name="answer-radio" id="answer-c">
+              <label class="answer-label" for="answer-c" id="answer-c-text"></label>
+            </div>
+            <div class="answer-group">
+              <input class="answer-radio" type="radio" name="answer-radio" id="answer-d">
+              <label class="answer-label" for="answer-d" id="answer-d-text"></label>
+            </div>
+          </div>
+
+          <div class="button-group">
+            <div class="skip-button">
+              <input class="primary" type="button" id="skip-btn" value="Skip Question">
+            </div>
+            <div class="submit-button">
+              <input class="success" type="button" id="submit-btn" value="Submit Answer">
+            </div>
+          </div>
+          <div class="answer-explanation">
+            <p id="explanation"></p>
+          </div>
+
+        </div>
+
+      </main>
+
+    </div>
+    -->
+
+    <%- include('footer') -%>
