@@ -7,24 +7,24 @@
 */
 
 module.exports = (app) => {
-  const test = require('../controllers/test.controllers.js');
+  const test = require('../controllers/test.controller.js');
 
   app.get('/questions/rules', test.findAllRules);
 
   app.get('/questions/signs', test.findAllSigns);
 
-  // Create a new Note
+  // Create a new question
   app.post('/questions', test.create);
   
-  // Retrieve all Notes
+  // Retrieve all question
   app.get('/questions', test.findAll);
 
-  // Retrieve a single Note with noteId
+  // Retrieve a single question by Id
   app.get('/questions/:qId', test.findOne);
 
-  // Update a Note with noteId
+  // Update a question by Id
   app.put('/questions/:qId', test.update);
 
-  // Delete a Note with noteId
+  // Delete a question by Id
   app.delete('/questions/:qId', test.delete);
 }

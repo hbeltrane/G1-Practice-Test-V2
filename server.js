@@ -37,7 +37,6 @@ mongoose.connect(dbConfig.url, {
     process.exit();
 });
 
-
 app.set('view engine', 'ejs');
 
 //load static assets
@@ -60,7 +59,9 @@ app.get('/', (req,res) => {
     res.render('index', {title : "Welcome"});
 })
 
-// Require Notes routes
+// Require user routes
+require('./backend/routes/user.routes.js')(app);
+// Require test routes
 require('./backend/routes/test.routes.js')(app);
 
 app.listen(port, () => { console.log("Listening to the server on http://localhost:3000")});
