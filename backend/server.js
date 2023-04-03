@@ -10,8 +10,6 @@ app.use(bodyParser.urlencoded({ extended: true }))
 // parse requests of content-type - application/json
 app.use(bodyParser.json())
 
-app.use(bodyParser.urlencoded({extended: true}));
-
 // Configuring the database
 const dbConfig = require('./config/database.config');
 const mongoose = require('mongoose');
