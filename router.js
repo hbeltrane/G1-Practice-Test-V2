@@ -8,6 +8,8 @@
 
 var express = require('express');
 var router = express.Router();
+var loggeduser;
+
 /*
 const credential = {
     email: "admin@ferrari.com",
@@ -43,17 +45,15 @@ router.get('/result', (req, res) => {
 router.post('/login', async (req, res) => {
     // Sign up
     if (req.body.password2 != null) {
-        req.session.message = "User created successfully";
-        req.session.user = req.body.fullname;
+        req.session.user = req.body.email;
         res.redirect('/router/dashboard');
     // Log in
     } else {
         let requestUser = await fetch('http://localhost:3000/users/' + req.body.email);
-        let credential = requestUser.json();
-        console.log(credential[0]);
-        if (req.body.email == credential.email && req.body.password == credential.password) {
-            req.session.message = "Welcome back";
-            req.session.user = credential.fullname;
+        loggeduser = requestUser.json();
+        console.log(loggeduser.name);
+        if (req.body.email == loggeduser.email && req.body.password == loggeduser.password) {
+            req.session.user = loggeduser.email;
             res.redirect('/router/dashboard');
             //res.end("Login successful");
         } else {
@@ -63,12 +63,12 @@ router.post('/login', async (req, res) => {
 });
 
 //route for dashboard
-router.get('/dashboard', (req, res) => {
-    if (req.session.user) {
-        res.render('dashboard', { user: req.session.user });
+router.get('/dashboard', (req, res) => {/*
+    if (req.session.user) {*/
+        res.render('dashboard', { user: req.session.user });/*
     } else {
         res.send("Unauthorized user");
-    }
+    }*/
 });
 
 //route for logout
