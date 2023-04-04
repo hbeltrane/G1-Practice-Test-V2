@@ -52,7 +52,8 @@ exports.authenticate = async (req, res) => {
       if (user.role == 'admin') {
         // res.redirect('/router/dashboard');
       } else {
-        res.end("Login successful");
+        //res.end("Login successful");
+        res.render('dashboard');
       }
 
     } else {
