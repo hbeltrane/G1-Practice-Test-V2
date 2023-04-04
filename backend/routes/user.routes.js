@@ -11,6 +11,9 @@ module.exports = (app) => {
   
     // Create a new user
     app.post('/users', user.create);
+
+    // Login a new user
+    app.post('/auth', user.authenticate);
     
     // Retrieve user
     app.get('/users/:Email', user.findOne);
