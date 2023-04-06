@@ -1,0 +1,1121 @@
+[{
+  "_id": {
+    "$oid": "6413219ecbbf56618bea5fd1"
+  },
+  "number": 1,
+  "text": "To get your vehicle out of a skid, you should first:",
+  "category": "rules",
+  "presentation": "text",
+  "reference": "",
+  "answers": [
+    {
+      "text": "Steer in the direction you want to go.",
+      "isCorrect": true
+    },
+    {
+      "text": "Steer straight ahead",
+      "isCorrect": false
+    },
+    {
+      "text": "Steer in the opposite direction of the skid.",
+      "isCorrect": false
+    },
+    {
+      "text": "Apply brakes hard.",
+      "isCorrect": false
+    }
+  ],
+  "explanation": "To get your vehicle out of a skid, you should first steer in the direction you want to go."
+},{
+  "_id": {
+    "$oid": "6413219ecbbf56618bea5fd2"
+  },
+  "number": 2,
+  "text": "When may you lend your driver's license?",
+  "category": "rules",
+  "presentation": "text",
+  "reference": "",
+  "answers": [
+    {
+      "text": "It is not permitted.",
+      "isCorrect": true
+    },
+    {
+      "text": "In emergencies.",
+      "isCorrect": false
+    },
+    {
+      "text": "To a person learning to drive.",
+      "isCorrect": false
+    },
+    {
+      "text": "For identification purposes.",
+      "isCorrect": false
+    }
+  ],
+  "explanation": "You should not lend your driver’s license."
+},{
+  "_id": {
+    "$oid": "6413219ecbbf56618bea5fd3"
+  },
+  "number": 3,
+  "text": "What must a driver do before entering a highway from a private road or driveway?",
+  "category": "rules",
+  "presentation": "text",
+  "reference": "",
+  "answers": [
+    {
+      "text": "Yield right-of-way to all vehicles approaching on the highway.",
+      "isCorrect": true
+    },
+    {
+      "text": "Enter or cross the highway as quickly as possible.",
+      "isCorrect": false
+    },
+    {
+      "text": "Sound horn and proceed with caution.",
+      "isCorrect": false
+    },
+    {
+      "text": "Give hand signal then take right-of-way.",
+      "isCorrect": false
+    }
+  ],
+  "explanation": "Before entering a highway from a private road or driveway a driver must yield right-of-way to all vehicles approaching on the highway."
+},{
+  "_id": {
+    "$oid": "6413219ecbbf56618bea5fd4"
+  },
+  "number": 4,
+  "text": "Never change lanes in traffic without:",
+  "category": "rules",
+  "presentation": "text",
+  "reference": "",
+  "answers": [
+    {
+      "text": "Giving proper signal and looking to make sure the move can be made safely.",
+      "isCorrect": true
+    },
+    {
+      "text": "Looking in the rear view mirror only.",
+      "isCorrect": false
+    },
+    {
+      "text": "Blowing your horn and looking to the rear.",
+      "isCorrect": false
+    },
+    {
+      "text": "Decreasing speed and giving correct signal.",
+      "isCorrect": false
+    }
+  ],
+  "explanation": "When changing lanes in traffic always give the proper signal and look to make sure your move can be made safely."
+},{
+  "_id": {
+    "$oid": "6413219ecbbf56618bea5fd5"
+  },
+  "number": 5,
+  "text": "When the driver of another vehicle is about to overtake and pass your vehicle, you must:",
+  "category": "rules",
+  "presentation": "text",
+  "reference": "",
+  "answers": [
+    {
+      "text": "Move to the right and allow such vehicle to pass.",
+      "isCorrect": true
+    },
+    {
+      "text": "Speed up so that passing is not necessary.",
+      "isCorrect": false
+    },
+    {
+      "text": "Move to the left to prevent passing.",
+      "isCorrect": false
+    },
+    {
+      "text": "Signal to the other driver not to pass.",
+      "isCorrect": false
+    }
+  ],
+  "explanation": "When the driver of another vehicle is about to overtake and pass your vehicle, you must move to the right and allow his/her vehicle to pass."
+},{
+  "_id": {
+    "$oid": "6413219ecbbf56618bea5fd6"
+  },
+  "number": 6,
+  "text": "When you are deciding whether or not to make a U-turn, your first consideration should be to check:",
+  "category": "rules",
+  "presentation": "text",
+  "reference": "",
+  "answers": [
+    {
+      "text": "Traffic regulations.",
+      "isCorrect": true
+    },
+    {
+      "text": "Presence of trees, fire hydrants or poles near the curb.",
+      "isCorrect": false
+    },
+    {
+      "text": "Turning radius of your car.",
+      "isCorrect": false
+    },
+    {
+      "text": "Height of curb.",
+      "isCorrect": false
+    }
+  ],
+  "explanation": "When you are deciding whether or not to make a U-turn, your first consideration should be to check the traffic regulations."
+},{
+  "_id": {
+    "$oid": "6413219ecbbf56618bea5fd7"
+  },
+  "number": 7,
+  "text": "It is more dangerous to drive at the maximum speed limit at night than during daytime as:",
+  "category": "rules",
+  "presentation": "text",
+  "reference": "",
+  "answers": [
+    {
+      "text": "You cannot see as far ahead at night.",
+      "isCorrect": true
+    },
+    {
+      "text": "Your reaction time is slower at night.",
+      "isCorrect": false
+    },
+    {
+      "text": "Some drivers unlawfully drive with parking lights only.",
+      "isCorrect": false
+    },
+    {
+      "text": "The roadways are more apt to be slippery at night.",
+      "isCorrect": false
+    }
+  ],
+  "explanation": "It is more dangerous to drive at the maximum speed limit at night than during the daytime because you cannot see as far ahead at night."
+},{
+  "_id": {
+    "$oid": "6413219ecbbf56618bea5fd8"
+  },
+  "number": 8,
+  "text": "You should under all conditions drive at a speed which will allow you to:",
+  "category": "rules",
+  "presentation": "text",
+  "reference": "",
+  "answers": [
+    {
+      "text": "Stop within a safe distance.",
+      "isCorrect": true
+    },
+    {
+      "text": "Stop within 150 metres (500 feet).",
+      "isCorrect": false
+    },
+    {
+      "text": "Stop within 90 metres (300 feet).",
+      "isCorrect": false
+    },
+    {
+      "text": "Stop within 60 metres (200 feet).",
+      "isCorrect": false
+    }
+  ],
+  "explanation": "Under all conditions you should drive at a speed that will allow you to stop within a safe distance"
+},{
+  "_id": {
+    "$oid": "6413219ecbbf56618bea5fd9"
+  },
+  "number": 9,
+  "text": "At what times must a driver accompany you in the front passenger seat if you are driving with a learner's license?",
+  "category": "rules",
+  "presentation": "text",
+  "reference": "",
+  "answers": [
+    {
+      "text": "At all times",
+      "isCorrect": true
+    },
+    {
+      "text": "During the hours of darkness",
+      "isCorrect": false
+    },
+    {
+      "text": "At peak traffic times",
+      "isCorrect": false
+    },
+    {
+      "text": "On high speed highways",
+      "isCorrect": false
+    }
+  ],
+  "explanation": "When you are you are driving with a learner's license, a graduated driver must accompany you in the front passenger seat all the time."
+},{
+  "_id": {
+    "$oid": "6413219ecbbf56618bea5fda"
+  },
+  "number": 10,
+  "text": "In what amount of time must you inform the Ministry of Transportation if a licensed driver changes their name or address?",
+  "category": "rules",
+  "presentation": "text",
+  "reference": "",
+  "answers": [
+    {
+      "text": "Within 6 days",
+      "isCorrect": true
+    },
+    {
+      "text": "At any time prior to the license renewal date",
+      "isCorrect": false
+    },
+    {
+      "text": "Within 28 days",
+      "isCorrect": false
+    },
+    {
+      "text": "Within 12 days",
+      "isCorrect": false
+    }
+  ],
+  "explanation": "When you as a licensed driver change your name or address you must inform the Ministry of Transportation within 6 days."
+},{
+  "_id": {
+    "$oid": "6413219ecbbf56618bea5fdb"
+  },
+  "number": 11,
+  "text": "If there is median on the road, when do you need to stop for a school bus?",
+  "category": "rules",
+  "presentation": "text",
+  "reference": "",
+  "answers": [
+    {
+      "text": "If you are behind it and it has red lights flashing",
+      "isCorrect": true
+    },
+    {
+      "text": "If you are approaching it",
+      "isCorrect": false
+    },
+    {
+      "text": "Any time it is stopped",
+      "isCorrect": false
+    },
+    {
+      "text": "At no time",
+      "isCorrect": false
+    }
+  ],
+  "explanation": "If you are behind it and it has red lights flashing."
+},{
+  "_id": {
+    "$oid": "6413219ecbbf56618bea5fdc"
+  },
+  "number": 12,
+  "text": "What does having an Accessible Parking Permit do?",
+  "category": "rules",
+  "presentation": "text",
+  "reference": "",
+  "answers": [
+    {
+      "text": "A vehicle carrying the person to whom it was issued to use a designated disabled parking space",
+      "isCorrect": true
+    },
+    {
+      "text": "A designated parking space to be used by any vehicle showing the permit",
+      "isCorrect": false
+    },
+    {
+      "text": "The holder to park anywhere",
+      "isCorrect": false
+    },
+    {
+      "text": "The holder’s family members to use designated spaces",
+      "isCorrect": false
+    }
+  ],
+  "explanation": "A vehicle carrying the person to whom it was issued to use a designated disabled parking space."
+},{
+  "_id": {
+    "$oid": "6413219ecbbf56618bea5fdd"
+  },
+  "number": 13,
+  "text": "How much visibility do you need to be able to make a U-turn?",
+  "category": "rules",
+  "presentation": "text",
+  "reference": "",
+  "answers": [
+    {
+      "text": "150 metres",
+      "isCorrect": true
+    },
+    {
+      "text": "125 metres",
+      "isCorrect": false
+    },
+    {
+      "text": "50 metres",
+      "isCorrect": false
+    },
+    {
+      "text": "250 metres",
+      "isCorrect": false
+    }
+  ],
+  "explanation": "150 metres."
+},{
+  "_id": {
+    "$oid": "6413219ecbbf56618bea5fde"
+  },
+  "number": 14,
+  "text": "How much authority do signs giving instructions around roadwork have?",
+  "category": "rules",
+  "presentation": "text",
+  "reference": "",
+  "answers": [
+    {
+      "text": "Legally enforceable",
+      "isCorrect": true
+    },
+    {
+      "text": "Only applicable to site traffic",
+      "isCorrect": false
+    },
+    {
+      "text": "Optional",
+      "isCorrect": false
+    },
+    {
+      "text": "Only applicable to large vehicles",
+      "isCorrect": false
+    }
+  ],
+  "explanation": "Legally enforceable."
+},{
+  "_id": {
+    "$oid": "6413219ecbbf56618bea5fdf"
+  },
+  "number": 15,
+  "text": "If you fail to stay at the scene of an accident, how many points could you get on your license?",
+  "category": "rules",
+  "presentation": "text",
+  "reference": "",
+  "answers": [
+    {
+      "text": "7",
+      "isCorrect": true
+    },
+    {
+      "text": "9",
+      "isCorrect": false
+    },
+    {
+      "text": "3",
+      "isCorrect": false
+    },
+    {
+      "text": "11",
+      "isCorrect": false
+    }
+  ],
+  "explanation": "7."
+},{
+  "_id": {
+    "$oid": "6413219ecbbf56618bea5fe0"
+  },
+  "number": 16,
+  "text": "What is the area that you are unable to see in your rear and side-view mirrors?",
+  "category": "rules",
+  "presentation": "text",
+  "reference": "",
+  "answers": [
+    {
+      "text": "Blind spot",
+      "isCorrect": true
+    },
+    {
+      "text": "Dark area",
+      "isCorrect": false
+    },
+    {
+      "text": "Danger zone",
+      "isCorrect": false
+    },
+    {
+      "text": "Safe zone",
+      "isCorrect": false
+    }
+  ],
+  "explanation": "Blind spot."
+},{
+  "_id": {
+    "$oid": "6413219ecbbf56618bea5fe1"
+  },
+  "number": 17,
+  "text": "What does over driving your headlights mean?",
+  "category": "rules",
+  "presentation": "text",
+  "reference": "",
+  "answers": [
+    {
+      "text": "Driving so fast that your stopping distance is farther than you can see with your headlights",
+      "isCorrect": true
+    },
+    {
+      "text": "Using your headlights when unnecessary",
+      "isCorrect": false
+    },
+    {
+      "text": "Flashing your headlights constantly",
+      "isCorrect": false
+    },
+    {
+      "text": "Driving with high beam headlights at all times",
+      "isCorrect": false
+    }
+  ],
+  "explanation": "Driving so fast that your stopping distance is farther than you can see with your headlights."
+},{
+  "_id": {
+    "$oid": "6413219ecbbf56618bea5fe2"
+  },
+  "number": 18,
+  "text": "What does a red X over a driving lane mean?",
+  "category": "rules",
+  "presentation": "text",
+  "reference": "",
+  "answers": [
+    {
+      "text": "A driver must not enter or remain in that lane",
+      "isCorrect": true
+    },
+    {
+      "text": "It applies to pedestrians only",
+      "isCorrect": false
+    },
+    {
+      "text": "Drivers in that lane must stop immediately",
+      "isCorrect": false
+    },
+    {
+      "text": "It indicates traffic lights ahead",
+      "isCorrect": false
+    }
+  ],
+  "explanation": "A driver must not enter or remain in that lane."
+},{
+  "_id": {
+    "$oid": "6413219ecbbf56618bea5fe3"
+  },
+  "number": 19,
+  "text": "If you are exiting a freeway, what should you do?",
+  "category": "rules",
+  "presentation": "text",
+  "reference": "",
+  "answers": [
+    {
+      "text": "Signal, move into the deceleration lane, reduce speed gradually and obey exit signs",
+      "isCorrect": true
+    },
+    {
+      "text": "Signal and then stop to wait for an opening in traffic",
+      "isCorrect": false
+    },
+    {
+      "text": "Do what the vehicle ahead of you does",
+      "isCorrect": false
+    },
+    {
+      "text": "Signal, and then accelerate while merging smoothly into traffic and then proceed to the exit lane",
+      "isCorrect": false
+    }
+  ],
+  "explanation": "Signal, move into the deceleration lane, reduce speed gradually and obey exit signs."
+},{
+  "_id": {
+    "$oid": "6413219ecbbf56618bea5fe4"
+  },
+  "number": 20,
+  "text": "If your brakes fail, what should you do?",
+  "category": "rules",
+  "presentation": "text",
+  "reference": "",
+  "answers": [
+    {
+      "text": "Pump the brakes rapidly and shift into a lower gear",
+      "isCorrect": true
+    },
+    {
+      "text": "Wave down the nearest police officer and shout for help",
+      "isCorrect": false
+    },
+    {
+      "text": "Firmly press down on your brakes until they re-engage",
+      "isCorrect": false
+    },
+    {
+      "text": "Use your emergency brake and sound your horn to warn other drivers while looking for a soft collision point",
+      "isCorrect": false
+    }
+  ],
+  "explanation": "Pump the brakes rapidly and shift into a lower gear."
+},{
+  "_id": {
+    "$oid": "64132275cbbf56618bea5fe6"
+  },
+  "number": 21,
+  "text": "What does this sign mean?",
+  "category": "sign",
+  "presentation": "image",
+  "reference": "images/emergency-response-sign.jpg",
+  "answers": [
+    {
+      "text": "Shows alternative routes for the same destination with their respective timings.",
+      "isCorrect": true
+    },
+    {
+      "text": "Shows the distance for the mentioned town or city on the road",
+      "isCorrect": false
+    },
+    {
+      "text": "Shows unpaved routes to the mentioned cities or towns",
+      "isCorrect": false
+    },
+    {
+      "text": "Shows pedestrian control information",
+      "isCorrect": false
+    }
+  ],
+  "explanation": "Emergency response signs are information signs which include a numbering system along the bottom of the sign to assist emergency vehicles and drivers in determining an appropriate route."
+},{
+  "_id": {
+    "$oid": "64132275cbbf56618bea5fe7"
+  },
+  "number": 22,
+  "text": "What does this sign mean?",
+  "category": "sign",
+  "presentation": "image",
+  "reference": "images/long-commercial-vehicle.jpg",
+  "answers": [
+    {
+      "text": "Shows on the back of long commercial vehicles usually of 40 m in length",
+      "isCorrect": true
+    },
+    {
+      "text": "Shows route to the nearest Cargo place",
+      "isCorrect": false
+    },
+    {
+      "text": "Shows long commercial vehicle parking",
+      "isCorrect": false
+    },
+    {
+      "text": "Shows that the Long commercial vehicles is prohibited in this road",
+      "isCorrect": false
+    }
+  ],
+  "explanation": "This placard identifies a long commercial vehicle, which is a double trailer and can be up to 40 metres in length."
+},{
+  "_id": {
+    "$oid": "64132275cbbf56618bea5fe8"
+  },
+  "number": 23,
+  "text": "What does this sign mean?",
+  "category": "sign",
+  "presentation": "image",
+  "reference": "images/bilingual-sign.jpg",
+  "answers": [
+    {
+      "text": "These are bilingual signs conveying messages like No standing, School bus turning",
+      "isCorrect": true
+    },
+    {
+      "text": "These are for driving instructions",
+      "isCorrect": false
+    },
+    {
+      "text": "Shows only Construction zone related information",
+      "isCorrect": false
+    },
+    {
+      "text": "These are for directing drivers to off-road facilities",
+      "isCorrect": false
+    }
+  ],
+  "explanation": "Watch for bilingual signs when driving in designated bilingual areas. Read the messages in the language you understand best."
+},{
+  "_id": {
+    "$oid": "64132275cbbf56618bea5fe9"
+  },
+  "number": 24,
+  "text": "What does this sign mean?",
+  "category": "sign",
+  "presentation": "image",
+  "reference": "images/slow-moving-vehicle.jpg",
+  "answers": [
+    {
+      "text": "Shows slow-moving vehicle usually under 40 km/h",
+      "isCorrect": true
+    },
+    {
+      "text": "Shows fast-moving vehicle usually above 40 km/h",
+      "isCorrect": false
+    },
+    {
+      "text": "Shows Long commercial vehicle usually of 40 meter in length",
+      "isCorrect": false
+    },
+    {
+      "text": "Shows stopped vehicle within the road",
+      "isCorrect": false
+    }
+  ],
+  "explanation": "The slow-moving vehicle sign is an orange triangle with a red border. It alerts other drivers that the vehicle ahead will be traveling at 40 km/h or less."
+},{
+  "_id": {
+    "$oid": "64132275cbbf56618bea5fea"
+  },
+  "number": 25,
+  "text": "What does this sign mean?",
+  "category": "sign",
+  "presentation": "image",
+  "reference": "images/emergency-detour-route.jpg",
+  "answers": [
+    {
+      "text": "Shows alternative routes to drivers during unscheduled closure of provincial highway",
+      "isCorrect": true
+    },
+    {
+      "text": "Shows direction to the cities or towns",
+      "isCorrect": false
+    },
+    {
+      "text": "Shows speed limit in the provincial highway",
+      "isCorrect": false
+    },
+    {
+      "text": "Shows traffic control information",
+      "isCorrect": false
+    }
+  ],
+  "explanation": "Emergency Detour Route signs are used during the unscheduled closure of a provincial highway when Ontario Provincial Police detour all traffic off the highway."
+},{
+  "_id": {
+    "$oid": "64132275cbbf56618bea5feb"
+  },
+  "number": 26,
+  "text": "What does this sign mean?",
+  "category": "sign",
+  "presentation": "image",
+  "reference": "images/high-occupancy-vehicle.jpg",
+  "answers": [
+    {
+      "text": "Reserved lane for public vehicle like buses or car carrying mentioned passengers count",
+      "isCorrect": true
+    },
+    {
+      "text": "Restricted lane for passenger vehicles",
+      "isCorrect": false
+    },
+    {
+      "text": "High speed lane",
+      "isCorrect": false
+    },
+    {
+      "text": "Reserved lane for ambulance",
+      "isCorrect": false
+    }
+  ],
+  "explanation": "When a High Occupancy Vehicle (HOV) signs, only public vehicles such as buses, or passenger vehicles carrying a specified minimum number of passengers, may use this lane."
+},{
+  "_id": {
+    "$oid": "64132275cbbf56618bea5fec"
+  },
+  "number": 27,
+  "text": "What does this sign mean?",
+  "category": "sign",
+  "presentation": "image",
+  "reference": "images/hov-do-not-cross.jpg",
+  "answers": [
+    {
+      "text": "Vehicles cannot change lanes into or out in the area between these signs",
+      "isCorrect": true
+    },
+    {
+      "text": "Vehicles can change lanes into or out in the area ahead",
+      "isCorrect": false
+    },
+    {
+      "text": "Restricted lane for pedestrians",
+      "isCorrect": false
+    },
+    {
+      "text": "Lane specific for Bicycles",
+      "isCorrect": false
+    }
+  ],
+  "explanation": "Vehicles cannot change lanes into or out of a high-occupancy vehicle lane in this area."
+},{
+  "_id": {
+    "$oid": "64132275cbbf56618bea5fed"
+  },
+  "number": 28,
+  "text": "What does this sign mean?",
+  "category": "sign",
+  "presentation": "image",
+  "reference": "images/no-pedestrians.jpg",
+  "answers": [
+    {
+      "text": "No pedestrian allowed in this road",
+      "isCorrect": true
+    },
+    {
+      "text": "No vehicles allowed in this road",
+      "isCorrect": false
+    },
+    {
+      "text": "No bicycles allowed in this road",
+      "isCorrect": false
+    },
+    {
+      "text": "No crosswalk in the area ahead",
+      "isCorrect": false
+    }
+  ],
+  "explanation": "A regulatory sign indicates pedestrians are not allowed on this road."
+},{
+  "_id": {
+    "$oid": "64132275cbbf56618bea5fee"
+  },
+  "number": 29,
+  "text": "What does this sign mean?",
+  "category": "sign",
+  "presentation": "image",
+  "reference": "images/app-parking.jpg",
+  "answers": [
+    {
+      "text": "Parking for vehicles having accessible parking permit",
+      "isCorrect": true
+    },
+    {
+      "text": "Parking is prohibited in this area",
+      "isCorrect": false
+    },
+    {
+      "text": "Ambulance parking area",
+      "isCorrect": false
+    },
+    {
+      "text": "Parking prohibited for disabled persons",
+      "isCorrect": false
+    }
+  ],
+  "explanation": "A regulatory sign showing a parking space is only for vehicles displaying a valid Accessible Parking Permit."
+},{
+  "_id": {
+    "$oid": "64132275cbbf56618bea5fef"
+  },
+  "number": 30,
+  "text": "What does this sign mean?",
+  "category": "sign",
+  "presentation": "image",
+  "reference": "images/keep-to-the-right.jpg",
+  "answers": [
+    {
+      "text": "Drivers must keep right of the traffic island",
+      "isCorrect": true
+    },
+    {
+      "text": "Drivers must keep left of the traffic island",
+      "isCorrect": false
+    },
+    {
+      "text": "Drivers must take the left turn",
+      "isCorrect": false
+    },
+    {
+      "text": "Drivers must take the right turn",
+      "isCorrect": false
+    }
+  ],
+  "explanation": "A regulatory sign for when you must keep to the right of the traffic island."
+},{
+  "_id": {
+    "$oid": "64132275cbbf56618bea5ff0"
+  },
+  "number": 31,
+  "text": "What does this sign mean?",
+  "category": "sign",
+  "presentation": "image",
+  "reference": "images/school-bus-loading-zone.jpg",
+  "answers": [
+    {
+      "text": "Zone where school buses load or unload students without signaling",
+      "isCorrect": true
+    },
+    {
+      "text": "School Zone ahead",
+      "isCorrect": false
+    },
+    {
+      "text": "Bus Stop ahead",
+      "isCorrect": false
+    },
+    {
+      "text": "There is a Parking for school buses only",
+      "isCorrect": false
+    }
+  ],
+  "explanation": "A regulatory which marks a zone within which school buses load or unload passengers without using the red alternating lights and stop arm."
+},{
+  "_id": {
+    "$oid": "64132275cbbf56618bea5ff1"
+  },
+  "number": 32,
+  "text": "What does this sign mean?",
+  "category": "sign",
+  "presentation": "image",
+  "reference": "images/no-turn-right.jpg",
+  "answers": [
+    {
+      "text": "Drivers must not take right turn when facing red light at intersection",
+      "isCorrect": true
+    },
+    {
+      "text": "Drivers must take right turn when facing red light at intersection",
+      "isCorrect": false
+    },
+    {
+      "text": "Drivers can go straight when facing a red light at intersection",
+      "isCorrect": false
+    },
+    {
+      "text": "Drivers must come to a complete stop when facing red light at intersection",
+      "isCorrect": false
+    }
+  ],
+  "explanation": "Drivers must not take right turn when facing red light at intersection."
+},{
+  "_id": {
+    "$oid": "64132275cbbf56618bea5ff2"
+  },
+  "number": 33,
+  "text": "What does this sign mean?",
+  "category": "sign",
+  "presentation": "image",
+  "reference": "images/parking-allowed.jpg",
+  "answers": [
+    {
+      "text": "Drivers can only park their vehicle during the mentioned time",
+      "isCorrect": true
+    },
+    {
+      "text": "Drivers can only park their vehicles during other than the time mentioned",
+      "isCorrect": false
+    },
+    {
+      "text": "Drivers cannot park their vehicles in this area",
+      "isCorrect": false
+    },
+    {
+      "text": "This is a private parking area",
+      "isCorrect": false
+    }
+  ],
+  "explanation": "Drivers can only park their vehicle during the mentioned time."
+},{
+  "_id": {
+    "$oid": "64132275cbbf56618bea5ff3"
+  },
+  "number": 34,
+  "text": "What does this sign mean?",
+  "category": "sign",
+  "presentation": "image",
+  "reference": "images/no-turn-left.jpg",
+  "answers": [
+    {
+      "text": "Drivers must not take left turn during the time mentioned",
+      "isCorrect": true
+    },
+    {
+      "text": "Drivers must take left turn during the time mentioned",
+      "isCorrect": false
+    },
+    {
+      "text": "Drivers must take left turn other than the time mentioned",
+      "isCorrect": false
+    },
+    {
+      "text": "Drivers must not take left turn other than the time mentioned",
+      "isCorrect": false
+    }
+  ],
+  "explanation": "Drivers must not take left turn during the time mentioned."
+},{
+  "_id": {
+    "$oid": "64132275cbbf56618bea5ff4"
+  },
+  "number": 35,
+  "text": "What does this sign mean?",
+  "category": "sign",
+  "presentation": "image",
+  "reference": "images/community-zone.jpg",
+  "answers": [
+    {
+      "text": "There is a community zone ahead ; Special risk of pedestrians in the area",
+      "isCorrect": true
+    },
+    {
+      "text": "There is a construction zone ahead : Special risk of workers in the area",
+      "isCorrect": false
+    },
+    {
+      "text": "There is Hospital zone ahead : Special risk of patients in the area",
+      "isCorrect": false
+    },
+    {
+      "text": "There is police station ahead : Specials risk of pedestrians in the area",
+      "isCorrect": false
+    }
+  ],
+  "explanation": "There is a community zone ahead ; Special risk of pedestrians in the area."
+},{
+  "_id": {
+    "$oid": "64132275cbbf56618bea5ff5"
+  },
+  "number": 36,
+  "text": "What does this sign mean?",
+  "category": "sign",
+  "presentation": "image",
+  "reference": "images/crossing-zone.jpg",
+  "answers": [
+    {
+      "text": "There is a speed limit in the area ahead when lights are flashing",
+      "isCorrect": true
+    },
+    {
+      "text": "The 40km/hr is the lowest maximum speed limit in the area ahead when flashing",
+      "isCorrect": false
+    },
+    {
+      "text": "The flashing indicates the oncoming of train in the railway crossing the road ahead",
+      "isCorrect": false
+    },
+    {
+      "text": "There is a speed limit in the area ahead when lights are not flashing",
+      "isCorrect": false
+    }
+  ],
+  "explanation": "There is a speed limit in the area ahead when lights are flashing."
+},{
+  "_id": {
+    "$oid": "64132275cbbf56618bea5ff6"
+  },
+  "number": 37,
+  "text": "What does this sign mean?",
+  "category": "sign",
+  "presentation": "image",
+  "reference": "images/no-parking.jpg",
+  "answers": [
+    {
+      "text": "Drivers cannot park in the area between these signs",
+      "isCorrect": true
+    },
+    {
+      "text": "Drivers must not stop their vehicle in the area between these signs",
+      "isCorrect": false
+    },
+    {
+      "text": "Drivers can park their vehicles in the area between these signs",
+      "isCorrect": false
+    },
+    {
+      "text": "Bicycles can only park in the area between these signs, not four wheel vehicles",
+      "isCorrect": false
+    }
+  ],
+  "explanation": "Drivers cannot park in the area between these signs."
+},{
+  "_id": {
+    "$oid": "64132275cbbf56618bea5ff7"
+  },
+  "number": 38,
+  "text": "What does this sign mean?",
+  "category": "sign",
+  "presentation": "image",
+  "reference": "images/speed-limit-ahead.jpg",
+  "answers": [
+    {
+      "text": "There is a speed limit of 50 km/hr in the area ahead",
+      "isCorrect": true
+    },
+    {
+      "text": "Ending of a Speed limit zone",
+      "isCorrect": false
+    },
+    {
+      "text": "There is a speed limit for longer vehicles usually 40m in length",
+      "isCorrect": false
+    },
+    {
+      "text": "Drivers must keep their vehicles speed above 50 km/hr in the area ahead",
+      "isCorrect": false
+    }
+  ],
+  "explanation": "There is a speed limit of 50 km/hr in the area ahead."
+},{
+  "_id": {
+    "$oid": "64132275cbbf56618bea5ff8"
+  },
+  "number": 39,
+  "text": "What does this sign mean?",
+  "category": "sign",
+  "presentation": "image",
+  "reference": "images/lane-turns.jpg",
+  "answers": [
+    {
+      "text": "Driver on 1st lane must turn left, on 2nd lane must turn left or go straight, on 3rd lane must turn right",
+      "isCorrect": true
+    },
+    {
+      "text": "Driver on 1st lane must go straight, on 2nd lane must turn right, on 3rd lane must turn left",
+      "isCorrect": false
+    },
+    {
+      "text": "Driver on 1st lane must turn right, on 2nd lane must turn left, on 3rd lane must go straight",
+      "isCorrect": false
+    },
+    {
+      "text": "Driver on 1st lane must go straight or turn right, on 2nd lane must turn right, on 3rd lane must turn left",
+      "isCorrect": false
+    }
+  ],
+  "explanation": "Driver on 1st lane must turn left, on 2nd lane must turn left or go straight, on 3rd lane must turn right."
+},{
+  "_id": {
+    "$oid": "64132275cbbf56618bea5ff9"
+  },
+  "number": 40,
+  "text": "What does this sign mean?",
+  "category": "sign",
+  "presentation": "image",
+  "reference": "images/hazardous-substances.jpg",
+  "answers": [
+    {
+      "text": "Any vehicle contain hazardous substances or toxins is permitted in this road",
+      "isCorrect": true
+    },
+    {
+      "text": "Any vehicle contain hazardous substances or toxins is prohibited in this road",
+      "isCorrect": false
+    },
+    {
+      "text": "There is permit of passing other vehicles in this road",
+      "isCorrect": false
+    },
+    {
+      "text": "Drivers must not drive on the left lane",
+      "isCorrect": false
+    }
+  ],
+  "explanation": "Any vehicle contain hazardous substances or toxins is permitted in this road."
+}]
