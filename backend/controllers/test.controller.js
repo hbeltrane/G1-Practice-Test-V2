@@ -10,7 +10,7 @@ const Question = require('../models/test.model.js');
 
 // Retrieve and return all questions of rules category.
 exports.findAllRules = (req, res) => {
-    Question.find({ "category": "rules" })
+    Question.find({ "category": "Rules" })
     .then(questions => {
         res.send(questions);
     }).catch(err => {
@@ -22,7 +22,7 @@ exports.findAllRules = (req, res) => {
 
 // Retrieve and return all questions of signs category.
 exports.findAllSigns = (req, res) => {
-    Question.find({ "category": "signs" })
+    Question.find({ "category": "Signs" })
     .then(questions => {
         res.send(questions);
     }).catch(err => {

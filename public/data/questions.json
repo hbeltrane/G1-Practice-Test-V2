@@ -4,7 +4,7 @@
   },
   "number": 1,
   "text": "To get your vehicle out of a skid, you should first:",
-  "category": "rules",
+  "category": "Rules",
   "presentation": "text",
   "reference": "",
   "answers": [
@@ -32,7 +32,7 @@
   },
   "number": 2,
   "text": "When may you lend your driver's license?",
-  "category": "rules",
+  "category": "Rules",
   "presentation": "text",
   "reference": "",
   "answers": [
@@ -60,7 +60,7 @@
   },
   "number": 3,
   "text": "What must a driver do before entering a highway from a private road or driveway?",
-  "category": "rules",
+  "category": "Rules",
   "presentation": "text",
   "reference": "",
   "answers": [
@@ -88,7 +88,7 @@
   },
   "number": 4,
   "text": "Never change lanes in traffic without:",
-  "category": "rules",
+  "category": "Rules",
   "presentation": "text",
   "reference": "",
   "answers": [
@@ -116,7 +116,7 @@
   },
   "number": 5,
   "text": "When the driver of another vehicle is about to overtake and pass your vehicle, you must:",
-  "category": "rules",
+  "category": "Rules",
   "presentation": "text",
   "reference": "",
   "answers": [
@@ -144,7 +144,7 @@
   },
   "number": 6,
   "text": "When you are deciding whether or not to make a U-turn, your first consideration should be to check:",
-  "category": "rules",
+  "category": "Rules",
   "presentation": "text",
   "reference": "",
   "answers": [
@@ -172,7 +172,7 @@
   },
   "number": 7,
   "text": "It is more dangerous to drive at the maximum speed limit at night than during daytime as:",
-  "category": "rules",
+  "category": "Rules",
   "presentation": "text",
   "reference": "",
   "answers": [
@@ -200,7 +200,7 @@
   },
   "number": 8,
   "text": "You should under all conditions drive at a speed which will allow you to:",
-  "category": "rules",
+  "category": "Rules",
   "presentation": "text",
   "reference": "",
   "answers": [
@@ -228,7 +228,7 @@
   },
   "number": 9,
   "text": "At what times must a driver accompany you in the front passenger seat if you are driving with a learner's license?",
-  "category": "rules",
+  "category": "Rules",
   "presentation": "text",
   "reference": "",
   "answers": [
@@ -256,7 +256,7 @@
   },
   "number": 10,
   "text": "In what amount of time must you inform the Ministry of Transportation if a licensed driver changes their name or address?",
-  "category": "rules",
+  "category": "Rules",
   "presentation": "text",
   "reference": "",
   "answers": [
@@ -284,7 +284,7 @@
   },
   "number": 11,
   "text": "If there is median on the road, when do you need to stop for a school bus?",
-  "category": "rules",
+  "category": "Rules",
   "presentation": "text",
   "reference": "",
   "answers": [
@@ -312,7 +312,7 @@
   },
   "number": 12,
   "text": "What does having an Accessible Parking Permit do?",
-  "category": "rules",
+  "category": "Rules",
   "presentation": "text",
   "reference": "",
   "answers": [
@@ -340,7 +340,7 @@
   },
   "number": 13,
   "text": "How much visibility do you need to be able to make a U-turn?",
-  "category": "rules",
+  "category": "Rules",
   "presentation": "text",
   "reference": "",
   "answers": [
@@ -368,7 +368,7 @@
   },
   "number": 14,
   "text": "How much authority do signs giving instructions around roadwork have?",
-  "category": "rules",
+  "category": "Rules",
   "presentation": "text",
   "reference": "",
   "answers": [
@@ -396,7 +396,7 @@
   },
   "number": 15,
   "text": "If you fail to stay at the scene of an accident, how many points could you get on your license?",
-  "category": "rules",
+  "category": "Rules",
   "presentation": "text",
   "reference": "",
   "answers": [
@@ -424,7 +424,7 @@
   },
   "number": 16,
   "text": "What is the area that you are unable to see in your rear and side-view mirrors?",
-  "category": "rules",
+  "category": "Rules",
   "presentation": "text",
   "reference": "",
   "answers": [
@@ -452,7 +452,7 @@
   },
   "number": 17,
   "text": "What does over driving your headlights mean?",
-  "category": "rules",
+  "category": "Rules",
   "presentation": "text",
   "reference": "",
   "answers": [
@@ -480,7 +480,7 @@
   },
   "number": 18,
   "text": "What does a red X over a driving lane mean?",
-  "category": "rules",
+  "category": "Rules",
   "presentation": "text",
   "reference": "",
   "answers": [
@@ -508,7 +508,7 @@
   },
   "number": 19,
   "text": "If you are exiting a freeway, what should you do?",
-  "category": "rules",
+  "category": "Rules",
   "presentation": "text",
   "reference": "",
   "answers": [
@@ -536,7 +536,7 @@
   },
   "number": 20,
   "text": "If your brakes fail, what should you do?",
-  "category": "rules",
+  "category": "Rules",
   "presentation": "text",
   "reference": "",
   "answers": [
@@ -564,9 +564,9 @@
   },
   "number": 21,
   "text": "What does this sign mean?",
-  "category": "sign",
+  "category": "Signs",
   "presentation": "image",
-  "reference": "images/emergency-response-sign.jpg",
+  "reference": "/images/emergency-response-sign.jpg",
   "answers": [
     {
       "text": "Shows alternative routes for the same destination with their respective timings.",
@@ -592,9 +592,9 @@
   },
   "number": 22,
   "text": "What does this sign mean?",
-  "category": "sign",
+  "category": "Signs",
   "presentation": "image",
-  "reference": "images/long-commercial-vehicle.jpg",
+  "reference": "/images/long-commercial-vehicle.jpg",
   "answers": [
     {
       "text": "Shows on the back of long commercial vehicles usually of 40 m in length",
@@ -620,9 +620,9 @@
   },
   "number": 23,
   "text": "What does this sign mean?",
-  "category": "sign",
+  "category": "Signs",
   "presentation": "image",
-  "reference": "images/bilingual-sign.jpg",
+  "reference": "/images/bilingual-sign.jpg",
   "answers": [
     {
       "text": "These are bilingual signs conveying messages like No standing, School bus turning",
@@ -648,9 +648,9 @@
   },
   "number": 24,
   "text": "What does this sign mean?",
-  "category": "sign",
+  "category": "Signs",
   "presentation": "image",
-  "reference": "images/slow-moving-vehicle.jpg",
+  "reference": "/images/slow-moving-vehicle.jpg",
   "answers": [
     {
       "text": "Shows slow-moving vehicle usually under 40 km/h",
@@ -676,9 +676,9 @@
   },
   "number": 25,
   "text": "What does this sign mean?",
-  "category": "sign",
+  "category": "Signs",
   "presentation": "image",
-  "reference": "images/emergency-detour-route.jpg",
+  "reference": "/images/emergency-detour-route.jpg",
   "answers": [
     {
       "text": "Shows alternative routes to drivers during unscheduled closure of provincial highway",
@@ -704,9 +704,9 @@
   },
   "number": 26,
   "text": "What does this sign mean?",
-  "category": "sign",
+  "category": "Signs",
   "presentation": "image",
-  "reference": "images/high-occupancy-vehicle.jpg",
+  "reference": "/images/high-occupancy-vehicle.jpg",
   "answers": [
     {
       "text": "Reserved lane for public vehicle like buses or car carrying mentioned passengers count",
@@ -732,9 +732,9 @@
   },
   "number": 27,
   "text": "What does this sign mean?",
-  "category": "sign",
+  "category": "Signs",
   "presentation": "image",
-  "reference": "images/hov-do-not-cross.jpg",
+  "reference": "/images/hov-do-not-cross.jpg",
   "answers": [
     {
       "text": "Vehicles cannot change lanes into or out in the area between these signs",
@@ -760,9 +760,9 @@
   },
   "number": 28,
   "text": "What does this sign mean?",
-  "category": "sign",
+  "category": "Signs",
   "presentation": "image",
-  "reference": "images/no-pedestrians.jpg",
+  "reference": "/images/no-pedestrians.jpg",
   "answers": [
     {
       "text": "No pedestrian allowed in this road",
@@ -788,9 +788,9 @@
   },
   "number": 29,
   "text": "What does this sign mean?",
-  "category": "sign",
+  "category": "Signs",
   "presentation": "image",
-  "reference": "images/app-parking.jpg",
+  "reference": "/images/app-parking.jpg",
   "answers": [
     {
       "text": "Parking for vehicles having accessible parking permit",
@@ -816,9 +816,9 @@
   },
   "number": 30,
   "text": "What does this sign mean?",
-  "category": "sign",
+  "category": "Signs",
   "presentation": "image",
-  "reference": "images/keep-to-the-right.jpg",
+  "reference": "/images/keep-to-the-right.jpg",
   "answers": [
     {
       "text": "Drivers must keep right of the traffic island",
@@ -844,9 +844,9 @@
   },
   "number": 31,
   "text": "What does this sign mean?",
-  "category": "sign",
+  "category": "Signs",
   "presentation": "image",
-  "reference": "images/school-bus-loading-zone.jpg",
+  "reference": "/images/school-bus-loading-zone.jpg",
   "answers": [
     {
       "text": "Zone where school buses load or unload students without signaling",
@@ -872,9 +872,9 @@
   },
   "number": 32,
   "text": "What does this sign mean?",
-  "category": "sign",
+  "category": "Signs",
   "presentation": "image",
-  "reference": "images/no-turn-right.jpg",
+  "reference": "/images/no-turn-right.jpg",
   "answers": [
     {
       "text": "Drivers must not take right turn when facing red light at intersection",
@@ -900,9 +900,9 @@
   },
   "number": 33,
   "text": "What does this sign mean?",
-  "category": "sign",
+  "category": "Signs",
   "presentation": "image",
-  "reference": "images/parking-allowed.jpg",
+  "reference": "/images/parking-allowed.jpg",
   "answers": [
     {
       "text": "Drivers can only park their vehicle during the mentioned time",
@@ -928,9 +928,9 @@
   },
   "number": 34,
   "text": "What does this sign mean?",
-  "category": "sign",
+  "category": "Signs",
   "presentation": "image",
-  "reference": "images/no-turn-left.jpg",
+  "reference": "/images/no-turn-left.jpg",
   "answers": [
     {
       "text": "Drivers must not take left turn during the time mentioned",
@@ -956,9 +956,9 @@
   },
   "number": 35,
   "text": "What does this sign mean?",
-  "category": "sign",
+  "category": "Signs",
   "presentation": "image",
-  "reference": "images/community-zone.jpg",
+  "reference": "/images/community-zone.jpg",
   "answers": [
     {
       "text": "There is a community zone ahead ; Special risk of pedestrians in the area",
@@ -984,9 +984,9 @@
   },
   "number": 36,
   "text": "What does this sign mean?",
-  "category": "sign",
+  "category": "Signs",
   "presentation": "image",
-  "reference": "images/crossing-zone.jpg",
+  "reference": "/images/crossing-zone.jpg",
   "answers": [
     {
       "text": "There is a speed limit in the area ahead when lights are flashing",
@@ -1012,9 +1012,9 @@
   },
   "number": 37,
   "text": "What does this sign mean?",
-  "category": "sign",
+  "category": "Signs",
   "presentation": "image",
-  "reference": "images/no-parking.jpg",
+  "reference": "/images/no-parking.jpg",
   "answers": [
     {
       "text": "Drivers cannot park in the area between these signs",
@@ -1040,9 +1040,9 @@
   },
   "number": 38,
   "text": "What does this sign mean?",
-  "category": "sign",
+  "category": "Signs",
   "presentation": "image",
-  "reference": "images/speed-limit-ahead.jpg",
+  "reference": "/images/speed-limit-ahead.jpg",
   "answers": [
     {
       "text": "There is a speed limit of 50 km/hr in the area ahead",
@@ -1068,9 +1068,9 @@
   },
   "number": 39,
   "text": "What does this sign mean?",
-  "category": "sign",
+  "category": "Signs",
   "presentation": "image",
-  "reference": "images/lane-turns.jpg",
+  "reference": "/images/lane-turns.jpg",
   "answers": [
     {
       "text": "Driver on 1st lane must turn left, on 2nd lane must turn left or go straight, on 3rd lane must turn right",
@@ -1096,9 +1096,9 @@
   },
   "number": 40,
   "text": "What does this sign mean?",
-  "category": "sign",
+  "category": "Signs",
   "presentation": "image",
-  "reference": "images/hazardous-substances.jpg",
+  "reference": "/images/hazardous-substances.jpg",
   "answers": [
     {
       "text": "Any vehicle contain hazardous substances or toxins is permitted in this road",

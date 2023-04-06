@@ -58,8 +58,8 @@ exports.authenticate = async (req, res) => {
       req.session.user = user.name;
       console.log(req.session.user);
       if (user.role == 'admin') {
-        let allRules = await Question.find({ "category": "rules" });
-        let allSigns = await Question.find({ "category": "sign" });
+        let allRules = await Question.find({ "category": "Rules" });
+        let allSigns = await Question.find({ "category": "Signs" });
         res.render('questions', {rules: allRules, signs: allSigns});
       } else {
         res.render('dashboard');
