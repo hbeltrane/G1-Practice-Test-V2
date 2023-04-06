@@ -23,6 +23,34 @@
 </head>
 <body>
 
+  <nav class="navbar navbar-expand-sm navbar-dark bg-dark">
+		<div class="container-fluid">
+
+			<button class="navbar-toggler" type="button"
+				data-bs-toggle="collapse" data-bs-target="#test-navbar">
+				<span class="navbar-toggler-icon"></span>
+			</button>
+			<div class="collapse navbar-collapse" id="test-navbar">
+				<ul class="navbar-nav me-auto">
+				</ul>
+				<ul class="navbar-nav d-flex">
+					<li class="nav-item">
+            <a class="nav-link text-white"
+						href="/test">Test</a>
+          </li>
+					<li class="nav-item">
+            <a class="nav-link text-white"
+						href="/signup">Sign up</a>
+          </li>
+					<li class="nav-item">
+            <a class="nav-link text-white"
+						href="/login">Login</a>
+          </li>
+				</ul>
+			</div>
+		</div>
+	</nav>
+  
   <div class="container">
 
     <header class="col d-flex justify-content-center">
@@ -33,13 +61,16 @@
 
       <div class="card w-50 mb-3" id="quiz">
         <div class="card-header" id="info">
-          <div class="question-category">
-            <p id="category"></p>
-          </div>
-          <div class="quiz-progress">
-            <p id="progress">
-              <span id="correct">Correct: 0</span> &nbsp;<span id="incorrect">Incorrect: 0</span>
-            </p> 
+          <div class="row mt-2">
+            <div class="col-sm-7">
+              <p id="category">Sign</p>
+            </div>
+            <div class="col-sm-5">
+              <div class="row">
+                <p class="text-success col-sm-6" id="correct">Correct: 0</p>
+                <p class="text-danger col-sm-6" id="incorrect">Incorrect: 0</p>
+              </div>
+            </div>
           </div>
         </div>
 
@@ -79,10 +110,10 @@
         <div class="card-footer">
           <div class="button-group">
             <div class="skip-button">
-              <input class="primary" type="button" id="skip-btn" value="Skip Question">
+              <input class="btn btn-primary" type="button" id="skip-btn" value="Skip Question">
             </div>
             <div class="submit-button">
-              <input class="success" type="button" id="submit-btn" value="Submit Answer">
+              <input class="btn btn-primary" type="button" id="submit-btn" value="Submit Answer">
             </div>
           </div>
         </div>

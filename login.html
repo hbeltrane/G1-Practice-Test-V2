@@ -23,6 +23,34 @@
 </head>
 <body>
 
+  <nav class="navbar navbar-expand-sm navbar-dark bg-dark">
+		<div class="container-fluid">
+
+			<button class="navbar-toggler" type="button"
+				data-bs-toggle="collapse" data-bs-target="#test-navbar">
+				<span class="navbar-toggler-icon"></span>
+			</button>
+			<div class="collapse navbar-collapse" id="test-navbar">
+				<ul class="navbar-nav me-auto">
+				</ul>
+				<ul class="navbar-nav d-flex">
+					<li class="nav-item">
+            <a class="nav-link text-white"
+						href="/test">Test</a>
+          </li>
+					<li class="nav-item">
+            <a class="nav-link text-white"
+						href="/signup">Sign up</a>
+          </li>
+					<li class="nav-item">
+            <a class="nav-link text-white"
+						href="/login">Login</a>
+          </li>
+				</ul>
+			</div>
+		</div>
+	</nav>
+  
   <div class="container">
     <header class="col d-flex justify-content-center">
       <h1>G1 Driver License Knowledge Practice Test</h1>
@@ -33,7 +61,7 @@
       <div class="card w-40 mb-3">
         <div class="card-body">
           
-          <form id="test-form" action="test.html" method="GET">
+          <form class="mx-3 mb-2" id="test-form" action="test.html" method="GET">
 
             <div>
               <h2>Login</h2>

@@ -23,12 +23,40 @@
 </head>
 <body>
 
+  <nav class="navbar navbar-expand-sm navbar-dark bg-dark">
+		<div class="container-fluid">
+
+			<button class="navbar-toggler" type="button"
+				data-bs-toggle="collapse" data-bs-target="#test-navbar">
+				<span class="navbar-toggler-icon"></span>
+			</button>
+			<div class="collapse navbar-collapse" id="test-navbar">
+				<ul class="navbar-nav me-auto">
+				</ul>
+				<ul class="navbar-nav d-flex">
+					<li class="nav-item">
+            <a class="nav-link text-white"
+						href="/test">Test</a>
+          </li>
+					<li class="nav-item">
+            <a class="nav-link text-white"
+						href="/signup">Sign up</a>
+          </li>
+					<li class="nav-item">
+            <a class="nav-link text-white"
+						href="/login">Login</a>
+          </li>
+				</ul>
+			</div>
+		</div>
+	</nav>
+
   <div class="container">
     <header class="col d-flex justify-content-center">
       <h1>G1 Driver License Knowledge Practice Test</h1>
     </header>
 
-    <main class="col d-flex justify-content-center">
+    <main class="col d-flex justify-content-center pt-4">
 
       <div class="card w-50 mb-3">
         <div class="card-body">
@@ -55,28 +83,26 @@
                   <option value="15">15</option>
                   <option value="20">20</option>
                 </select>
-                <label class="form-label" for="password">Password</label>&nbsp;&nbsp;<span id="password-error"></span>
-                <input type="password" class="form-control" id="password" name="password" size="30" placeholder="Enter your password">
+                
               </div>
 
             </div>
 
             <hr class="my-4">
-
-            <div class="form-check">
+            <div class="row mx-1">
+            <div class="form-check col-sm-6">
               <input class="form-check-input" type="checkbox" id="random" name="random">
               <label class="form-check-label" for="random">Random questions</label>
             </div>
-            <div class="form-check">
+            <div class="form-check col-sm-6">
               <input class="form-check-input" type="checkbox" id="send-email" name="send-email">
               <label class="form-check-label" for="sendEmail">Send score by email</label>
             </div>
-
+            </div>
             <hr class="my-4">
 
-            <button class="w-100 btn btn-primary btn-lg" type="submit" id="submit-btn">
+            <button class="w-100 btn btn-success btn-lg" type="submit" id="submit-btn">
               Go for it
-              Register
             </button>
 
           </form>
