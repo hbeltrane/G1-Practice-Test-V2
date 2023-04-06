@@ -8,4 +8,5 @@
 
 module.exports = {
     url: 'mongodb://0.0.0.0:27017/G1-Practice-Test'
+    // url:'mongodb+srv://admin:Welcome2023@fullstackjs.cbyf9va.mongodb.net/PracticeTest'
 }

@@ -22,9 +22,6 @@ module.exports = (app) => {
   // Retrieve a single question by Id
   app.get('/questions/:qId', test.findOne);
 
-  // Update a question by Id
-  app.put('/questions/:qId', test.update);
-
   // Delete a question by Id
   app.delete('/questions/:qId', test.delete);
 }

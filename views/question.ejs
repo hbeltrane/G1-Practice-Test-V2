@@ -22,82 +22,89 @@
         <main class="row justify-content-center pt-4 mb-5">
           <div class="col col-md-8">
             <div class="card mb-3" id="quiz">
-              <div class="card-header" id="info">
-                <div class="row mt-2 float-end mb-3">
-                  <div class="col-sm-7">
-                    <label for="category" class="form-label select-label fw-bold">Category</label>
-                    <br>
-                    <select class="select form-control-sm" id="category" name="category">
-                      <option value="Rules" selected>Rules</option>
-                      <option value="Signs">Signs</option>
-                    </select>
+  
+              <form action="">
+                <div class="card-header" id="info">
+                  <div class="row mt-2 float-end mb-3">
+                    <div class="col-sm-7">
+                      <label for="category" class="form-label select-label fw-bold">Category</label> <br>
+                      <select class="select form-control-sm" id="category" name="category">
+                        <option value="Rules" selected>Rules</option>
+                        <option value="Signs">Signs</option>
+                      </select>
+                    </div>
                   </div>
                 </div>
-              </div>
-
-              <div class="card-body" id="question">
-                <div class="form-outline">
-                  <label class="form-label fw-bold" for="question">Question</label>
-                  <br>
-                  <textarea id="question" name="question" class="form-control form-control-sm" rows="3" required></textarea>
-                </div>
-                <div class="card-title image" hidden>
-                  <img src="" alt="reference image">
-                </div>
-                <br>
-                <p class="fw-bold">Answers</p>
-              <ul class="list-group list-group-flush" id="answers">
-                <!--<li class="list-group-item bg-success">-->
-                <li class="list-group-item">
-                  <div class="answer-group d-flex pt-2 pb-2 alert alert-success">
-                    <!--<input class="form-check-input" type="radio" name="answer-radio" id="true-0" checked />-->
-                    <input type="text" id="answer-0" name="answer-0" class="form-control form-control-sm text-success" required />
-                    <label class="answer-label" for="true-0" id="true-0"></label>
-                  </div>
-                </li>
-                <!--<li class="list-group-item bg-danger">-->
-                <li class="list-group-item">
-                  <div class="answer-group d-flex pt-2 pb-2 alert alert-danger">
-                    <!--<input class="form-check-input" type="radio" name="answer-radio" id="true-1" />-->
-                    <input type="text" id="answer-1" name="answer-1" class="form-control form-control-sm text-danger" required />
-                    <label class="answer-label" for="true-1" id="true-1"></label>
-                  </div>
-                </li>
-                <!--<li class="list-group-item bg-danger">-->
-                <li class="list-group-item">
-                  <div class="answer-group d-flex pt-2 pb-2 alert alert-danger">
-                    <!--<input class="form-check-input" type="radio" name="answer-radio" id="true-2" />-->
-                    <input type="text" id="answer-2" name="answer-2" class="form-control form-control-sm text-danger" required />
-                    <label class="answer-label" for="true-2" id="true-2"></label>
-                  </div>
-                </li>
-                <!--<li class="list-group-item bg-danger">-->
-                <li class="list-group-item">
-                  <div class="answer-group d-flex pt-2 pb-2 alert alert-danger">
-                    <!--<input class="form-check-input" type="radio" name="answer-radio" id="true-3" />-->
-                    <input type="text" id="answer-3" name="answer-3" class="form-control form-control-sm text-danger" required />
-                    <label class="answer-label" for="true-3" id="true-3"></label>
-                  </div>
-                </li>
-              </ul>
-              <div class="col mb-1">
+            
+                <div class="card-body" id="question">
                   <div class="form-outline">
-                    <div class="answer-explanation">
-                    <label class="form-label fw-bold" for="explanation">Explanation</label>
+                    <label class="form-label fw-bold" for="question">Question</label>
                     <br>
-                    <textarea id="explanation" name="explanation" class="form-control form-control-sm" rows="3" required></textarea>
+                    <textarea id="question" name="question" class="form-control form-control-sm" rows="3" required></textarea>
+                  </div>
+                  <div class="card-title image" hidden>
+                    <img src="" alt="reference image">
+                  </div>
+                  <br>
+                  <p class="fw-bold">Answers</p>
+                  <ul class="list-group list-group-flush" id="answers">
+            
+                    <li class="list-group-item">
+                      <div class="answer-group d-flex pt-2 pb-2 alert alert-success">
+            
+                        <input type="text" id="answer-0" name="answer-0" class="form-control form-control-sm text-success"
+                          required />
+                        <label class="answer-label" for="true-0" id="true-0"></label>
+                      </div>
+                    </li>
+            
+                    <li class="list-group-item">
+                      <div class="answer-group d-flex pt-2 pb-2 alert alert-danger">
+            
+                        <input type="text" id="answer-1" name="answer-1" class="form-control form-control-sm text-danger"
+                          required />
+                        <label class="answer-label" for="true-1" id="true-1"></label>
+                      </div>
+                    </li>
+            
+                    <li class="list-group-item">
+                      <div class="answer-group d-flex pt-2 pb-2 alert alert-danger">
+            
+                        <input type="text" id="answer-2" name="answer-2" class="form-control form-control-sm text-danger"
+                          required />
+                        <label class="answer-label" for="true-2" id="true-2"></label>
+                      </div>
+                    </li>
+            
+                    <li class="list-group-item">
+                      <div class="answer-group d-flex pt-2 pb-2 alert alert-danger">
+            
+                        <input type="text" id="answer-3" name="answer-3" class="form-control form-control-sm text-danger"
+                          required />
+                        <label class="answer-label" for="true-3" id="true-3"></label>
+                      </div>
+                    </li>
+                  </ul>
+                  <div class="col mb-1">
+                    <div class="form-outline">
+                      <div class="answer-explanation">
+                        <label class="form-label fw-bold" for="explanation">Explanation</label>
+                        <br>
+                        <textarea id="explanation" name="explanation" class="form-control form-control-sm" rows="3"
+                          required></textarea>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="card-footer">
+                    <div class="row">
+                      <span class="submit-button">
+                        <input class="btn btn-primary float-end" type="button" id="save-btn" value="Save Question">
+                      </span>
+                    </div>
                   </div>
                 </div>
-              </div>
-              <div class="card-footer">
-                <div class="row">
-                  <span class="submit-button">
-                    <input class="btn btn-primary float-end" type="button" id="save-btn" value="Save Question">
-                  </span>
-                </div>
-              </div>
-            </div>
-
+              </form>
+            
             </div>
           </div>
         </main>

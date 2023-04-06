@@ -29,78 +29,33 @@
                 </button>
               </div>
 
-
               <div id="accordion-rules" class="accordion-collapse collapse" aria-labelledby="accordion-heading">
                 <div class="accordion-body">
 
                   <div class="card-body" id="rules-questions">
                     <ul class="list-group list-group-flush">
+                      <!-- QUESTIONS RULES --> 
+                      <% for (const rule of rules) {%>
                       <li class="list-group-item">
                         <div class="answer-group d-flex pt-2 pb-2">
-                          <div class="col-md-10 mb-2">
-                            <p id="rules-1">1. Question text 123456</p>
+                          <div class="col-md-10 mb-2"> 
+                            <p id="rules-<%= rule.number %>"><%= rule.number %>. <%= rule.text %></p>
                           </div>
                           <div class="col-md-2 mb-2">
                             <input class="btn btn-primary btn-sm" type="submit" value="Edit/View" />
                           </div>
                         </div>
                       </li>
-                      <li class="list-group-item">
-                        <div class="answer-group d-flex pt-2 pb-2">
-                          <div class="col-md-10 mb-2">
-                            <p id="rules-2">2. Question text 123456</p>
-                          </div>
-                          <div class="col-md-10 mb-2">
-                            <input class="btn btn-primary btn-sm" type="submit" value="Edit/View" />
-                          </div>
-                        </div>
-                      </li>
-                      <li class="list-group-item">
-                        <div class="answer-group d-flex pt-2 pb-2">
-                          <div class="col-md-10 mb-2">
-                            <p id="rules-3">3. Question text 123456</p>
-                          </div>
-                          <div class="col-md-2 mb-2">
-                            <input class="btn btn-primary btn-sm" type="submit" value="Edit/View" />
-                          </div>
-                        </div>
-                      </li>
-                      <li class="list-group-item">
-                        <div class="answer-group d-flex pt-2 pb-2">
-                          <div class="col-md-10 mb-2">
-                            <p id="rules-4">4. Question text 123456</p>
-                          </div>
-                          <div class="col-md-2 mb-2">
-                            <input class="btn btn-primary btn-sm" type="submit" value="Edit/View" />
-                          </div>
-                        </div>
-                      </li>
-                      <li class="list-group-item">
-                        <div class="answer-group d-flex pt-2 pb-2">
-                          <div class="col-md-10 mb-2">
-                            <p id="rules-5">5. Question text 123456</p>
-                          </div>
-                          <div class="col-md-2 mb-2">
-                            <input class="btn btn-primary btn-sm" type="submit" value="Edit/View" />
-                          </div>
-                        </div>
-                      </li>
+                      <%} %>
+
                     </ul>
                   </div>
-
 
                 </div>
               </div>
 
-
-
             </div>
           </div>
-
-
-
-
-
 
           <div class="accordion col col-md-8">
             <div class="accordion-item card mb-3" id="quiz">
@@ -111,70 +66,30 @@
                 </button>
               </div>
 
-
               <div id="accordion-signs" class="accordion-collapse collapse" aria-labelledby="accordion-heading">
                 <div class="accordion-body">
 
-                  <div class="card-body" id="rules-questions">
-                    <ul class="list-group list-group-flush">
+                  <div class="card-body" id="signs-questions">
+                    <ul class="list-group list-group-flush">                      
+                      <!-- QUESTIONS SIGNS --> 
+                      <% for (const sign of signs) {%>
                       <li class="list-group-item">
                         <div class="answer-group d-flex pt-2 pb-2">
                           <div class="col-md-10 mb-2">
-                            <p id="rules-1">1. Question text 123456</p>
+                            <p id="signs-<%= sign.number %>"><%= sign.number %>. <%= sign.text %></p>
                           </div>
                           <div class="col-md-2 mb-2">
                             <input class="btn btn-primary btn-sm" type="submit" value="Edit/View" />
                           </div>
                         </div>
                       </li>
-                      <li class="list-group-item">
-                        <div class="answer-group d-flex pt-2 pb-2">
-                          <div class="col-md-10 mb-2">
-                            <p id="rules-2">2. Question text 123456</p>
-                          </div>
-                          <div class="col-md-10 mb-2">
-                            <input class="btn btn-primary btn-sm" type="submit" value="Edit/View" />
-                          </div>
-                        </div>
-                      </li>
-                      <li class="list-group-item">
-                        <div class="answer-group d-flex pt-2 pb-2">
-                          <div class="col-md-10 mb-2">
-                            <p id="rules-3">3. Question text 123456</p>
-                          </div>
-                          <div class="col-md-2 mb-2">
-                            <input class="btn btn-primary btn-sm" type="submit" value="Edit/View" />
-                          </div>
-                        </div>
-                      </li>
-                      <li class="list-group-item">
-                        <div class="answer-group d-flex pt-2 pb-2">
-                          <div class="col-md-10 mb-2">
-                            <p id="rules-4">4. Question text 123456</p>
-                          </div>
-                          <div class="col-md-2 mb-2">
-                            <input class="btn btn-primary btn-sm" type="submit" value="Edit/View" />
-                          </div>
-                        </div>
-                      </li>
-                      <li class="list-group-item">
-                        <div class="answer-group d-flex pt-2 pb-2">
-                          <div class="col-md-10 mb-2">
-                            <p id="rules-5">5. Question text 123456</p>
-                          </div>
-                          <div class="col-md-2 mb-2">
-                            <input class="btn btn-primary btn-sm" type="submit" value="Edit/View" />
-                          </div>
-                        </div>
-                      </li>
+                      <%} %>
+
                     </ul>
                   </div>
 
-
                 </div>
               </div>
-
-
 
             </div>
           </div>
