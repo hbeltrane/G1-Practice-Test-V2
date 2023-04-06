@@ -37,7 +37,7 @@ router.get('/result', (req, res) => {
 //route for dashboard
 router.get('/dashboard', (req, res) => {/*
     if (req.session.user) {*/
-        res.render('dashboard', { user: req.session.user });/*
+    res.render('dashboard', { user: req.session.user });/*
     } else {
         res.send("Unauthorized user");
     }*/

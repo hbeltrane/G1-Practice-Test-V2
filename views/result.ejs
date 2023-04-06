@@ -22,41 +22,41 @@
         <h1>G1 Driver License Knowledge Test</h1>
       </header>
   
-      <main class="col d-flex justify-content-center pt-4">
+      <main class="col d-flex justify-content-center pt-4 mb-2">
   
         <div class="card w-50">
           <div class="card-header">
             <h2>Results</h2>
             <div class="return-button">
-              <input class="primary" type="button" id="return-btn" value="Try Again">
+              <input class="btn btn-primary" type="button" id="return-btn" value="Try Again">
             </div>
           </div>
           <ul class="list-group list-group-flush">
             <li class="list-group-item">
               <table class="result-table">
                 <tr class="table-header">
-                  <th></th>
-                  <th>Rules</th>
-                  <th>Signs</th>
-                  <th>Total</th>
+                  <th class="w-50"></th>
+                  <th class="w-25">Rules</th>
+                  <th class="w-25">Signs</th>
+                  <th class="w-25">Total</th>
                 </tr>
                 <tr id="correct-row">
-                  <th>Correct:</th>
+                  <th class="text-success fw-bold">Correct:</th>
                   <td id="correct-rules"></td>
                   <td id="correct-signs"></td>
                   <td id="correct-total"></td>
                 </tr>
                 <tr id="incorrect-row">
-                  <th>Incorrect:</th>
+                  <th class="text-danger fw-bold">Incorrect:</th>
                   <td id="incorrect-rules"></td>
                   <td id="incorrect-signs"></td>
                   <td id="incorrect-total"></td>
                 </tr>
                 <tr id="percentage-row">
-                  <th>Percentage:</th>
-                  <td id="percentage-rules"></td>
-                  <td id="percentage-signs"></td>
-                  <td id="percentage-total"></td>
+                  <th class="fw-bold">Percentage:</th>
+                  <td class="fw-bold" id="percentage-rules"></td>
+                  <td class="fw-bold" id="percentage-signs"></td>
+                  <td class="fw-bold" id="percentage-total"></td>
                 </tr>
               </table>
             </li>
@@ -72,52 +72,4 @@
   
     </div>
   
-<!--
-    <div class="container">
-      <header>
-        <h1>Driver License Knowledge Test</h1>
-      </header>
-
-      <main>
-        <div class="result-header">
-          <h2>Results</h2>
-          <div class="return-button">
-            <input class="primary" type="button" id="return-btn" value="Try Again">
-          </div>
-        </div>
-        <div class="result-description">
-          <table class="result-table">
-            <tr class="table-header">
-              <th></th>
-              <th>Rules</th>
-              <th>Signs</th>
-              <th>Total</th>
-            </tr>
-            <tr id="correct-row">
-              <th>Correct:</th>
-              <td id="correct-rules"></td>
-              <td id="correct-signs"></td>
-              <td id="correct-total"></td>
-            </tr>
-            <tr id="incorrect-row">
-              <th>Incorrect:</th>
-              <td id="incorrect-rules"></td>
-              <td id="incorrect-signs"></td>
-              <td id="incorrect-total"></td>
-            </tr>
-            <tr id="percentage-row">
-              <th>Percentage:</th>
-              <td id="percentage-rules"></td>
-              <td id="percentage-signs"></td>
-              <td id="percentage-total"></td>
-            </tr>
-          </table>
-        </div>
-        <div class="pie-chart">
-          <canvas id="myChart" style="width:100%; max-width:600px"></canvas>
-        </div>
-      </main>
-
-    </div>
--->
     <%- include('footer') -%>

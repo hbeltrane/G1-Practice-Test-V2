@@ -7,7 +7,10 @@
  */
  
  $(document).ready(function() {
-    checkCookie();
+    totalRules = Number(sessionStorage.getItem("rules"));
+    totalSigns = Number(sessionStorage.getItem("signs"));
+    correctRules = Number(sessionStorage.getItem("correct-rules"));
+    correctSigns = Number(sessionStorage.getItem("correct-signs"));
     displayTotals();
 	createChart();
     // Return to Home
@@ -16,6 +19,7 @@
         window.location.href = "index.html";
     });
 });
+
 var totalRules;
 var totalSigns;
 var total;
@@ -54,34 +58,6 @@ function createChart() {
         }
     }
     });
-}
-
-function checkCookie() {
-    totalRules = Number(getCookie("rules-questions"));
-    totalSigns = Number(getCookie("signs-questions"));
-    correctRules = Number(getCookie("correct-rules"));
-    correctSigns = Number(getCookie("correct-signs"));
-    checkRandom = getCookie("random") == "1" ? true : false;
-    checkEmail = getCookie("send-email") == "1" ? true : false;
-};
-
-function getCookie(c_name)
-{
-    if (document.cookie.length > 0)
-    {
-        c_start = document.cookie.indexOf(c_name + "=");
-        if (c_start != -1)
-        {
-            c_start = c_start + c_name.length + 1;
-            c_end = document.cookie.indexOf(";", c_start);
-            if (c_end == -1)
-            {
-                c_end=document.cookie.length;
-            }
-            return unescape(document.cookie.substring(c_start, c_end));
-        }
-    }
-    return "";
 }
 
 function displayTotals() {

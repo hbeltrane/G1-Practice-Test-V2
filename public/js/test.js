@@ -1,13 +1,13 @@
 /*
-		Lambton College
-		CSD 3103 - Full Stack JavaScript
-		Term project
-		Hugo Beltran Escarraga - C0845680
-		Juan Luis Casanova Romero - C0851175
+        Lambton College
+        CSD 3103 - Full Stack JavaScript
+        Term project
+        Hugo Beltran Escarraga - C0845680
+        Juan Luis Casanova Romero - C0851175
  */
- 
-var totalRules = 20;
-var totalSigns = 20;
+
+var totalRules;
+var totalSigns;
 var arrayRules = [];
 var arraySigns = [];
 var checkRandom;
@@ -24,21 +24,21 @@ var correctRules = 0;
 var correctSigns = 0;
 
 async function loadJSON() {
-  let responseRules = await fetch('http://localhost:3000/questions/rules');
-  jsonRules = await responseRules.json();
-  let responseSigns = await fetch('http://localhost:3000/questions/signs');
-  jsonSigns = await responseSigns.json();
+    let responseRules = await fetch('http://localhost:3000/questions/rules');
+    jsonRules = await responseRules.json();
+    totalRules = jsonRules.length;
+    let responseSigns = await fetch('http://localhost:3000/questions/signs');
+    jsonSigns = await responseSigns.json();
+    totalSigns = jsonSigns.length;
 
-  if (jsonRules && jsonSigns) {
-    init();
-  };
+    if (jsonRules && jsonSigns) {
+        init();
+    };
 }
 
 function init() {
-    getRulesList(Number(getCookie("rules-questions")));
-    getSignsList(Number(getCookie("signs-questions")));
-    checkRandom = getCookie("random") == "1" ? true : false;
-    checkEmail = getCookie("send-email") == "1" ? true : false;
+    getRulesList(sessionStorage.getItem("rules"));
+    getSignsList(sessionStorage.getItem("signs"));
     randomIndex = [0, 1, 2, 3];
     displayQuestion();
     addListeners();
@@ -53,67 +53,41 @@ function addListeners() {
     document.getElementById("skip-btn").addEventListener("click", skipQuestion);
 }
 
-function setCookie(c_name, value, expiredays)
-{
-    var exdate = new Date();
-    exdate.setDate(exdate.getDate() + expiredays);
-    document.cookie = c_name + "=" + escape(value) + ((expiredays==null) ? "" : ";expires=" + exdate.toUTCString());
-}
-
-function getCookie(c_name)
-{
-    if (document.cookie.length > 0)
-    {
-        c_start = document.cookie.indexOf(c_name + "=");
-        if (c_start != -1)
-        {
-            c_start = c_start + c_name.length + 1;
-            c_end = document.cookie.indexOf(";", c_start);
-            if (c_end == -1)
-            {
-                c_end=document.cookie.length;
-            }
-            return unescape(document.cookie.substring(c_start, c_end));
-        }
-    }
-    return "";
-}
-
 function getRulesList(numberRules) {
     let totalArrayRules = [];
-    for(let i = 1; i<=totalRules; i++) {
-        totalArrayRules.push(i);
+    for (let i = 1; i <= totalRules; i++) {
+        totalArrayRules.push(i - 1);
     }
-    for(let i = totalArrayRules.length - 1; i >= 1; i--) {
+    for (let i = totalArrayRules.length - 1; i >= 1; i--) {
         let j = Math.floor(Math.random() * (i + 1));
         let temp = totalArrayRules[j];
         totalArrayRules[j] = totalArrayRules[i];
         totalArrayRules[i] = temp;
     }
-    for(let i = 0; i < numberRules; i++) {
+    for (let i = 0; i < numberRules; i++) {
         arrayRules.push(totalArrayRules[i]);
     }
 }
 
 function getSignsList(numberSigns) {
     let totalArraySigns = [];
-    for(let i = 1; i<=totalSigns; i++) {
-        totalArraySigns.push(i);
+    for (let i = 1; i <= totalSigns; i++) {
+        totalArraySigns.push(i - 1);
     }
-    for(let i = totalArraySigns.length - 1; i >= 1; i--) {
+    for (let i = totalArraySigns.length - 1; i >= 1; i--) {
         let j = Math.floor(Math.random() * (i + 1));
         let temp = totalArraySigns[j];
         totalArraySigns[j] = totalArraySigns[i];
         totalArraySigns[i] = temp;
     }
-    for(let i = 0; i < numberSigns; i++) {
+    for (let i = 0; i < numberSigns; i++) {
         arraySigns.push(totalArraySigns[i]);
     }
 }
 
 function submitAction() {
     var submitBtn = document.getElementById("submit-btn");
-    switch(submitBtn.value) {
+    switch (submitBtn.value) {
         case "Submit Answer":
             checkAnswer();
             displayExplanation();
@@ -129,8 +103,8 @@ function submitAction() {
             submitBtn.value = "Submit Answer";
             break;
         case "View Results":
-            setCookie("correct-rules", correctRules, 365);
-            setCookie("correct-signs", correctSigns, 365);
+            sessionStorage.setItem("correct-rules", correctRules);
+            sessionStorage.setItem("correct-signs", correctSigns);
             document.location = "/router/result";
             break;
     }
@@ -174,51 +148,38 @@ function displayQuestion() {
     explanation.style.display = "none";
     button = document.querySelector("#skip-btn");
     button.style.display = "block";
-	if (currentRules < arrayRules.length) {
+    if (currentRules < arrayRules.length) {
         currentQuestion = jsonRules[arrayRules[currentRules]];
-		//currentQuestion = jsonRules.questions[arrayRules[currentRules]];
-		document.getElementById("category").innerText = jsonRules[arrayRules[currentRules]].category;
+        document.getElementById("category").innerText = jsonRules[arrayRules[currentRules]].category;
         document.getElementById("text").innerText = jsonRules[arrayRules[currentRules]].text;
-		//document.getElementById("text").innerText = jsonRules.questions[arrayRules[currentRules]].text;
-		hideImage();
-		shuffleIndexes();
+        hideImage();
+        shuffleIndexes();
         document.getElementById("answer-a-text").innerText = jsonRules[arrayRules[currentRules]].answers[randomIndex[0]].text;
-		//document.getElementById("answer-a-text").innerText = jsonRules.questions[arrayRules[currentRules]].answers[randomIndex[0]].text;
         document.getElementById("answer-b-text").innerText = jsonRules[arrayRules[currentRules]].answers[randomIndex[1]].text;
-		//document.getElementById("answer-b-text").innerText = jsonRules.questions[arrayRules[currentRules]].answers[randomIndex[1]].text;
         document.getElementById("answer-c-text").innerText = jsonRules[arrayRules[currentRules]].answers[randomIndex[2]].text;
-		//document.getElementById("answer-c-text").innerText = jsonRules.questions[arrayRules[currentRules]].answers[randomIndex[2]].text;
         document.getElementById("answer-d-text").innerText = jsonRules[arrayRules[currentRules]].answers[randomIndex[3]].text;
-		//document.getElementById("answer-d-text").innerText = jsonRules.questions[arrayRules[currentRules]].answers[randomIndex[3]].text;
-		currentRules++;
-		if (currentRules == arrayRules.length) {
-			button.style.display = "none";
-		}
-	}
-	else {
-		if (currentSigns < arraySigns.length) {
+        currentRules++;
+        if (currentRules == arrayRules.length) {
+            button.style.display = "none";
+        }
+    }
+    else {
+        if (currentSigns < arraySigns.length) {
             currentQuestion = jsonSigns[arraySigns[currentSigns]];
-			//currentQuestion = jsonSigns.questions[arraySigns[currentSigns]];
-			document.getElementById("category").innerText = jsonSigns[arraySigns[currentSigns]].category;
-			document.getElementById("text").innerText = jsonSigns[arraySigns[currentSigns]].text;
-			//document.getElementById("text").innerText = jsonSigns.questions[arraySigns[currentSigns]].text;
-			showImage(jsonSigns[arraySigns[currentSigns]].reference);
-			//showImage(jsonSigns.questions[arraySigns[currentSigns]].reference);
-			shuffleIndexes();
-			document.getElementById("answer-a-text").innerText = jsonSigns[arraySigns[currentSigns]].answers[randomIndex[0]].text;
-			//document.getElementById("answer-a-text").innerText = jsonSigns.questions[arraySigns[currentSigns]].answers[randomIndex[0]].text;
-			document.getElementById("answer-b-text").innerText = jsonSigns[arraySigns[currentSigns]].answers[randomIndex[1]].text;
-			//document.getElementById("answer-b-text").innerText = jsonSigns.questions[arraySigns[currentSigns]].answers[randomIndex[1]].text;
-			document.getElementById("answer-c-text").innerText = jsonSigns[arraySigns[currentSigns]].answers[randomIndex[2]].text;
-			//document.getElementById("answer-c-text").innerText = jsonSigns.questions[arraySigns[currentSigns]].answers[randomIndex[2]].text;
-			document.getElementById("answer-d-text").innerText = jsonSigns[arraySigns[currentSigns]].answers[randomIndex[3]].text;
-			//document.getElementById("answer-d-text").innerText = jsonSigns.questions[arraySigns[currentSigns]].answers[randomIndex[3]].text;
-			currentSigns++;
-			if (currentSigns == arraySigns.length) {
-				button.style.display = "none";
-			}
-		}
-	}
+            document.getElementById("category").innerText = jsonSigns[arraySigns[currentSigns]].category;
+            document.getElementById("text").innerText = jsonSigns[arraySigns[currentSigns]].text;
+            showImage(jsonSigns[arraySigns[currentSigns]].reference);
+            shuffleIndexes();
+            document.getElementById("answer-a-text").innerText = jsonSigns[arraySigns[currentSigns]].answers[randomIndex[0]].text;
+            document.getElementById("answer-b-text").innerText = jsonSigns[arraySigns[currentSigns]].answers[randomIndex[1]].text;
+            document.getElementById("answer-c-text").innerText = jsonSigns[arraySigns[currentSigns]].answers[randomIndex[2]].text;
+            document.getElementById("answer-d-text").innerText = jsonSigns[arraySigns[currentSigns]].answers[randomIndex[3]].text;
+            currentSigns++;
+            if (currentSigns == arraySigns.length) {
+                button.style.display = "none";
+            }
+        }
+    }
 }
 
 function shuffleIndexes() {
@@ -243,19 +204,13 @@ function skipQuestion() {
         arrayRules.push(arrayRules[currentRules]);
         arrayRules.splice(currentRules, 1);
         currentQuestion = jsonRules[arrayRules[currentRules]];
-        //currentQuestion = jsonRules.questions[arrayRules[currentRules]];
         document.getElementById("category").innerText = jsonRules[arrayRules[currentRules]].category;
         document.getElementById("text").innerText = jsonRules[arrayRules[currentRules]].text;
-        //document.getElementById("text").innerText = jsonRules.questions[arrayRules[currentRules]].text;
         hideImage();
         document.getElementById("answer-a-text").innerText = jsonRules[arrayRules[currentRules]].answers[0].text;
-        //document.getElementById("answer-a-text").innerText = jsonRules.questions[arrayRules[currentRules]].answers[0].text;
         document.getElementById("answer-b-text").innerText = jsonRules[arrayRules[currentRules]].answers[1].text;
-        //document.getElementById("answer-b-text").innerText = jsonRules.questions[arrayRules[currentRules]].answers[1].text;
         document.getElementById("answer-c-text").innerText = jsonRules[arrayRules[currentRules]].answers[2].text;
-        //document.getElementById("answer-c-text").innerText = jsonRules.questions[arrayRules[currentRules]].answers[2].text;
         document.getElementById("answer-d-text").innerText = jsonRules[arrayRules[currentRules]].answers[3].text;
-        //document.getElementById("answer-d-text").innerText = jsonRules.questions[arrayRules[currentRules]].answers[3].text;
         currentRules++;
     }
     else {
@@ -264,20 +219,13 @@ function skipQuestion() {
             arraySigns.push(arraySigns[currentSigns]);
             arraySigns.splice(currentSigns, 1);
             currentQuestion = jsonSigns[arraySigns[currentSigns]];
-            //currentQuestion = jsonSigns.questions[arraySigns[currentSigns]];
             document.getElementById("category").innerText = jsonSigns[arraySigns[currentSigns]].category;
             document.getElementById("text").innerText = jsonSigns[arraySigns[currentSigns]].text;
-            //document.getElementById("text").innerText = jsonSigns.questions[arraySigns[currentSigns]].text;
             showImage(jsonSigns[arraySigns[currentSigns]].reference);
-            //showImage(jsonSigns.questions[arraySigns[currentSigns]].reference);
             document.getElementById("answer-a-text").innerText = jsonSigns[arraySigns[currentSigns]].answers[0].text;
-            //document.getElementById("answer-a-text").innerText = jsonSigns.questions[arraySigns[currentSigns]].answers[0].text;
             document.getElementById("answer-b-text").innerText = jsonSigns[arraySigns[currentSigns]].answers[1].text;
-            //document.getElementById("answer-b-text").innerText = jsonSigns.questions[arraySigns[currentSigns]].answers[1].text;
             document.getElementById("answer-c-text").innerText = jsonSigns[arraySigns[currentSigns]].answers[2].text;
-            //document.getElementById("answer-c-text").innerText = jsonSigns.questions[arraySigns[currentSigns]].answers[2].text;
             document.getElementById("answer-d-text").innerText = jsonSigns[arraySigns[currentSigns]].answers[3].text;
-            //document.getElementById("answer-d-text").innerText = jsonSigns.questions[arraySigns[currentSigns]].answers[3].text;
             currentSigns++;
         }
     }
@@ -349,7 +297,7 @@ function removeAnswerStyle() {
         }
         if (answerLabels[item].classList.contains("text-success")) {
             answerLabels[item].classList.remove("text-success");
-            removeAnswerMark(answerLabels[item]);		
+            removeAnswerMark(answerLabels[item]);
         }
     }
 }
