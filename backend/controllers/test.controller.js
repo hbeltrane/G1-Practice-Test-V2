@@ -10,7 +10,7 @@ const Question = require('../models/test.model.js');
 
 // Retrieve and return all questions of rules category.
 exports.findAllRules = (req, res) => {
-    Question.find({ "category": "Rules" })
+    Question.find({ "category": "rules" })
     .then(questions => {
         res.send(questions);
     }).catch(err => {
@@ -22,7 +22,7 @@ exports.findAllRules = (req, res) => {
 
 // Retrieve and return all questions of signs category.
 exports.findAllSigns = (req, res) => {
-    Question.find({ "category": "Signs" })
+    Question.find({ "category": "signs" })
     .then(questions => {
         res.send(questions);
     }).catch(err => {
@@ -43,15 +43,19 @@ exports.create = (req, res) => {
 
     // Create a Question
     const question = new Question({
-        title: req.body.title || "Untitled Question", 
-        content: req.body.content,
-        topic: req.body.topic
+      number: req.body.number,
+      text: req.body.text,
+      category: req.body.category,
+      presentation: req.body.presentation,
+      reference: req.body.reference,
+      answers: req.body.answers,
+      explanation: req.body.explanation
     });
 
     // Save Question in the database
     question.save()
     .then(data => {
-        res.send(data);
+      res.status(201).send("Question successfully created");
     }).catch(err => {
         res.status(500).send({
             message: err.message || "Some error occurred while creating the Question."
@@ -92,39 +96,6 @@ exports.findOne = (req, res) => {
         });
     });
   };
-
-// Update a question identified by the num in the request
-exports.update = (req, res) => {
-    // Validate Request
-    if(!req.body.content) {
-        return res.status(400).send({
-            message: "Question content can not be empty"
-        });
-    }
-
-    // Find question and update it with the request body
-    Question.findByIdAndUpdate(req.params.num, {
-        title: req.body.title || "Untitled Question",
-        content: req.body.content
-    }, {new: true})
-    .then(question => {
-        if(!question) {
-            return res.status(404).send({
-                message: "Question not found with id " + req.params.num
-            });
-        }
-        res.send(question);
-    }).catch(err => {
-        if(err.kind === 'ObjectId') {
-            return res.status(404).send({
-                message: "Question not found with id " + req.params.num
-            });                
-        }
-        return res.status(500).send({
-            message: "Error updating question with id " + req.params.num
-        });
-    });
-};
 
 // Delete a question with the specified num in the request
 exports.delete = (req, res) => {

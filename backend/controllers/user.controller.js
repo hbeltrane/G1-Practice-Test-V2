@@ -7,6 +7,7 @@
 */
 
 const User = require('../models/user.model.js');
+const Question = require('../models/test.model.js');
 
 // Create and Save a new User
 exports.create = async (req, res) => {
@@ -34,15 +35,13 @@ exports.create = async (req, res) => {
 
     // Save User in the database
     user.save()
-      .then(data => {
-        // res.status(201).send("User successfully created");
-        req.session.user = user.name;
-        res.render('dashboard');
-      }).catch(err => {
-        res.status(500).send({
-          message: err.message || "Some error occurred while creating the User."
+        .then(data => {
+            res.render('login');
+        }).catch(err => {
+            res.status(500).send({
+                message: err.message || "Some error occurred while creating the User."
+            });
         });
-      });
   } else {
     res.render('signup');
   }
@@ -59,9 +58,10 @@ exports.authenticate = async (req, res) => {
       req.session.user = user.name;
       console.log(req.session.user);
       if (user.role == 'admin') {
-        res.redirect('/router/dashboard');
+        let allRules = await Question.find({ "category": "rules" });
+        let allSigns = await Question.find({ "category": "sign" });
+        res.render('questions', {rules: allRules, signs: allSigns});
       } else {
-        //res.end("Login successful");
         res.render('dashboard');
       }
 
