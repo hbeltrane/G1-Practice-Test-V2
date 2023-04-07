@@ -56,7 +56,7 @@ app.use('/router', router);
 
 // home router
 app.get('/', (req,res) => {
-    res.render('index', {title : "Welcome"});
+    res.render('dashboard', {title : "Welcome"});
 })
 
 // Require user routes

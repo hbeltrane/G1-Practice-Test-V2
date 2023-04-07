@@ -7,29 +7,38 @@
 -->
 
 <nav class="navbar navbar-expand-sm navbar-dark bg-dark">
-    <div class="container-fluid">
+  <div class="container-fluid">
 
-      <button class="navbar-toggler" type="button"
-        data-bs-toggle="collapse" data-bs-target="#test-navbar">
-        <span class="navbar-toggler-icon"></span>
-      </button>
-      <div class="collapse navbar-collapse" id="test-navbar">
-        <ul class="navbar-nav me-auto">
-        </ul>
-        <ul class="navbar-nav d-flex">
-          <li class="nav-item">
-            <a class="nav-link text-white"
-            href="/router/signup">Sign up</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link text-white"
-            href="/router/login">Log in</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link text-white"
-            href="/router/index">Log out</a>
-          </li>
-        </ul>
-      </div>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#test-navbar">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="test-navbar">
+      <ul class="navbar-nav me-auto">
+        <li class="nav-item">
+          <h4 class="text-white">
+            <%= locals.name ? name : "Welcome" %>
+          </h4>
+        </li>
+      </ul>
+      <ul class="navbar-nav me-auto">
+      </ul>
+      <ul class="navbar-nav d-flex">
+        <li class="nav-item">
+          <a class="nav-link text-white" href="/router/signup">
+            <%= locals.name ? "" : "Sign up" %>
+          </a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link text-white" href="/router/login">
+            <%= locals.name ? "" : "Log in" %>
+          </a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link text-white" href="/router/index">
+            <%= locals.name ? "Log out" : "" %>
+          </a>
+        </li>
+      </ul>
     </div>
-  </nav>
+  </div>
+</nav>

@@ -16,7 +16,7 @@
     // Return to Home
     const returnBtn = document.querySelector("#return-btn");
         returnBtn.addEventListener("click", function(e) {
-        window.location.href = "index.html";
+        window.location.href = "setup";
     });
 });
 
