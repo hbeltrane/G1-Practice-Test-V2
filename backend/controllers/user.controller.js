@@ -57,9 +57,9 @@ exports.authenticate = async (req, res) => {
       req.session.email = user.email;
       req.session.role = user.role;
       if (user.role == 'admin') {
-        res.redirect("router/dashboard");
+        res.render("dashboard", { name: user.name, email: user.email });
       } else {
-        res.render('setup', { name: user.name });
+        res.render('setup', { name: user.name, email: user.email });
       }
 
     } else {
