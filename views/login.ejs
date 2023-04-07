@@ -11,49 +11,56 @@
     <title>Log in</title>
     </head>
 
-    <body>
+    <body class="d-flex flex-column h-100">
 
         <%- include('navbar') -%>
 
-        <div class="container">
-            <header class="col d-flex justify-content-center">
-                <h1>G1 Driver License Knowledge Test</h1>
+            <header>
+              <div class="container">
+                <div class="col d-flex justify-content-center">
+                  <h1>G1 Driver License Knowledge Test</h1>
+                </div>
+              </div>
             </header>
         
-            <main class="col d-flex justify-content-center pt-4 mb-2">
+            <main class="flex-shrink-0">
+              <div class="container">
 
-                <div class="card w-40 mb-3">
+                <div class="col d-flex justify-content-center pt-4 mb-2">
+
+                  <div class="card w-40 mb-3">
                     <div class="card-body">
 
-                        <form class="mx-3 mb-2" id="test-form" action="/auth" method="POST">
+                      <form class="mx-3 mb-2" id="test-form" action="/auth" method="POST">
 
-                            <div>
-                                <h2>Login</h2>
-                                <div class="mb-3">
-                                    <label class="form-label" for="email">Email</label>&nbsp;&nbsp;<span
-                                        id="email-error"></span>
-                                    <input type="email" class="form-control" id="email" name="email" size="30"
-                                        placeholder="Enter your email address" pattern="^[a-zA-Z0-9]+(?:\.[a-zA-Z0-9]+)*@[a-zA-Z0-9]+(?:\.[a-zA-Z0-9]+)*$" required>
-                                </div>
-                                <div class="mb-3">
-                                    <label class="form-label" for="password">Password</label>&nbsp;&nbsp;<span
-                                        id="password-error"></span>
-                                    <input type="password" class="form-control" id="password" name="password" size="30"
-                                        placeholder="Enter your password" required>
-                                </div>
-                            </div>
+                        <div>
+                          <h2>Login</h2>
+                          <div class="mb-3">
+                              <label class="form-label" for="email">Email</label>&nbsp;&nbsp;<span
+                                  id="email-error"></span>
+                              <input type="email" class="form-control" id="email" name="email" size="30"
+                                  placeholder="Enter your email address" pattern="^[a-zA-Z0-9]+(?:\.[a-zA-Z0-9]+)*@[a-zA-Z0-9]+(?:\.[a-zA-Z0-9]+)*$" required>
+                          </div>
+                          <div class="mb-3">
+                              <label class="form-label" for="password">Password</label>&nbsp;&nbsp;<span
+                                  id="password-error"></span>
+                              <input type="password" class="form-control" id="password" name="password" size="30"
+                                  placeholder="Enter your password" required>
+                          </div>
+                        </div>
 
-                            <button class="w-100 btn btn-primary btn-lg" type="submit" id="submit-btn">
-                                Login
-                            </button>
+                        <button class="w-100 btn btn-primary btn-lg" type="submit" id="submit-btn">
+                            Login
+                        </button>
 
-                        </form>
+                      </form>
 
                     </div>
+                  </div>
                 </div>
 
-            </main>
+              </div>
 
-        </div>
+            </main>
 
         <%- include('footer') -%>
