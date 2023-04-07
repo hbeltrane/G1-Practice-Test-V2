@@ -8,7 +8,7 @@
 
 var express = require('express');
 var router = express.Router();
-const Question = require('./backend/models/test.model.js');
+const {Question} = require('./backend/models/test.model.js');
 
 //route for index
 router.get('/index', (req, res) => {
