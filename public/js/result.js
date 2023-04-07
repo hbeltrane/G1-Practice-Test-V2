@@ -60,6 +60,12 @@ function createChart() {
     });
 }
 
+function round(input) {
+  number = Number(input);
+  return Math.round((number + Number.EPSILON) * 100) / 100;
+
+}
+
 function displayTotals() {
     incorrectRules = totalRules - correctRules;
     incorrectSigns = totalSigns - correctSigns;
@@ -72,7 +78,7 @@ function displayTotals() {
     document.getElementById("incorrect-signs").innerHTML = incorrectSigns;
     document.getElementById("correct-total").innerHTML = correctTotal;
     document.getElementById("incorrect-total").innerHTML = incorrectTotal;
-    document.getElementById("percentage-rules").innerHTML = Number(100 * correctRules / totalRules) + "%";
-    document.getElementById("percentage-signs").innerHTML = Number(100 * correctSigns / totalSigns) + "%";
-    document.getElementById("percentage-total").innerHTML = Number(100 * correctTotal / total) + "%";
+    document.getElementById("percentage-rules").innerHTML = round(100 * correctRules / totalRules) + "%";
+    document.getElementById("percentage-signs").innerHTML = round(100 * correctSigns / totalSigns) + "%";
+    document.getElementById("percentage-total").innerHTML = round(100 * correctTotal / total) + "%";
 }
