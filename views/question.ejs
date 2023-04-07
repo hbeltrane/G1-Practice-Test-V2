@@ -32,10 +32,10 @@
                   <div class="card mb-3 col-md-8" id="quiz">
   
                     <form action="/questions" method="POST">
-                      <div class="card-header" id="info">
-                        <div class="row mt-2 float-end mb-3">
-                          <div class="col-sm-7">
-                            <label for="category" class="form-label select-label fw-bold">Category</label> <br>
+                      <div class="card-header">
+                        <div class="row mt-2 mb-3">
+                          <div class="text-end col-sm-11">
+                            <label for="category" class="form-label select-label fw-bold">Category</label>
                             <select class="select form-control-sm" id="category" name="category">
                               <option value="Rules" selected>Rules</option>
                               <option value="Signs">Signs</option>
@@ -44,7 +44,7 @@
                         </div>
                       </div>
                   
-                      <div class="card-body" id="question">
+                      <div class="card-body">
                         <div class="form-outline">
                           <label class="form-label fw-bold" for="question">Question</label>
                           <br>
@@ -99,12 +99,12 @@
                             </div>
                           </div>
                         </div>
-                        <div class="card-footer">
-                          <div class="row">
-                            <span class="submit-button">
-                              <input class="btn btn-primary float-end" type="submit" id="save-btn" value="Save Question">
-                            </span>
-                          </div>
+                      </div>
+                      <div class="card-footer">
+                        <div class="row">
+                          <span class="submit-button">
+                            <input class="btn btn-primary float-end" type="submit" id="save-btn" value="Save Question">
+                          </span>
                         </div>
                       </div>
                     </form>
