@@ -34,7 +34,7 @@ exports.create = async (req, res) => {
     // Save User in the database
     user.save()
         .then(data => {
-            res.render('login');
+            res.render('setup', { name: user.name });
         }).catch(err => {
             res.status(500).send({
                 message: err.message || "Some error occurred while creating the User."
@@ -53,12 +53,12 @@ exports.authenticate = async (req, res) => {
   if (user != null) {
 
     if (req.body.password == user.password) {
-      req.session.user = user.name;
-
+      req.session.name = user.name;
+      req.session.email = user.email;
       if (user.role == 'admin') {
         res.redirect("router/questions");
       } else {
-        res.render('dashboard');
+        res.render('setup', { name: user.name });
       }
 
     } else {
