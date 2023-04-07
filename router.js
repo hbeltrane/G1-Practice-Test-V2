@@ -32,34 +32,55 @@ router.post('/test', (req, res) => {
 
 //route for result
 router.get('/result', (req, res) => {
-    res.render('result', { name: req.session.name, email: req.session.email });
+    if (req.session.name) {
+        res.render('result', { name: req.session.name, email: req.session.email });
+    } else {
+        res.render('login');
+    }
 });
 
 //route for setup
 router.get('/setup', (req, res) => {
-    if (req.session.user) {
+    if (req.session.name) {
         res.render('setup', { name: req.session.name, email: req.session.email });
     } else {
-        res.send("Unauthorized user");
+        res.render('login');
     }
 });
 
 //route for dashboard
 router.get('/dashboard', (req, res) => {
-    res.render('dashboard');
+    if (req.session.name) {
+        res.render('dashboard', { name: req.session.name });
+    } else {
+        res.render('login');
+    }
+});
+
+//route for question
+router.get('/question', (req, res) => {
+    if (req.session.name) {
+        res.render('question', { name: req.session.name });
+    } else {
+        res.render('login');
+    }
 });
 
 //route for questions
 router.get('/questions', async (req, res) => {
-  if (req.session.role == 'admin') {
-    let allRules = await Question.find({ "category": "Rules" });
-    let allSigns = await Question.find({ "category": "Signs" });
-    res.render('questions', {name: req.session.name, rules: allRules, signs: allSigns});
-  } else {
-    res.status(401).send({
-      message: "Unauthorized user"
-    });
-  }
+    if (req.session.name) {
+        if (req.session.role == 'admin') {
+            let allRules = await Question.find({ "category": "Rules" });
+            let allSigns = await Question.find({ "category": "Signs" });
+            res.render('questions', { name: req.session.name, rules: allRules, signs: allSigns });
+        } else {
+            res.status(401).send({
+                message: "Unauthorized user"
+            });
+        }
+    } else {
+        res.render('login');
+    }
 });
 
 //route for logout
