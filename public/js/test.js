@@ -93,6 +93,8 @@ function submitAction() {
             displayExplanation();
             submitBtn.value = "Next Question";
             if (currentRules == arrayRules.length && currentSigns == arraySigns.length) {
+                submitBtn.classList.remove("btn-primary");
+                submitBtn.classList.add("btn-success");
                 submitBtn.value = "View Results";
             }
             break;

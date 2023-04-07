@@ -23,4 +23,6 @@ const QuestionSchema = mongoose.Schema({
     explanation: String
 });
 
-module.exports = mongoose.model('Question', QuestionSchema);
+const Question = mongoose.model('Question', QuestionSchema);
+const Answer = mongoose.model('Answer', AnswerSchema);
+module.exports = {Question: Question, Answer: Answer};

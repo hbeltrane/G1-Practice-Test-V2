@@ -23,7 +23,7 @@
           <div class="col col-md-8">
             <div class="card mb-3" id="quiz">
   
-              <form action="">
+              <form action="/questions" method="POST">
                 <div class="card-header" id="info">
                   <div class="row mt-2 float-end mb-3">
                     <div class="col-sm-7">
@@ -52,36 +52,36 @@
                     <li class="list-group-item">
                       <div class="answer-group d-flex pt-2 pb-2 alert alert-success">
             
-                        <input type="text" id="answer-0" name="answer-0" class="form-control form-control-sm text-success"
+                        <input type="text" id="answer0" name="answer0" class="form-control form-control-sm text-success"
                           required />
-                        <label class="answer-label" for="true-0" id="true-0"></label>
+                        <label class="answer-label" for="true0" id="true0"></label>
                       </div>
                     </li>
             
                     <li class="list-group-item">
                       <div class="answer-group d-flex pt-2 pb-2 alert alert-danger">
             
-                        <input type="text" id="answer-1" name="answer-1" class="form-control form-control-sm text-danger"
+                        <input type="text" id="answer1" name="answer1" class="form-control form-control-sm text-danger"
                           required />
-                        <label class="answer-label" for="true-1" id="true-1"></label>
+                        <label class="answer-label" for="true1" id="true1"></label>
                       </div>
                     </li>
             
                     <li class="list-group-item">
                       <div class="answer-group d-flex pt-2 pb-2 alert alert-danger">
             
-                        <input type="text" id="answer-2" name="answer-2" class="form-control form-control-sm text-danger"
+                        <input type="text" id="answer2" name="answer2" class="form-control form-control-sm text-danger"
                           required />
-                        <label class="answer-label" for="true-2" id="true-2"></label>
+                        <label class="answer-label" for="true2" id="true2"></label>
                       </div>
                     </li>
             
                     <li class="list-group-item">
                       <div class="answer-group d-flex pt-2 pb-2 alert alert-danger">
             
-                        <input type="text" id="answer-3" name="answer-3" class="form-control form-control-sm text-danger"
+                        <input type="text" id="answer3" name="answer3" class="form-control form-control-sm text-danger"
                           required />
-                        <label class="answer-label" for="true-3" id="true-3"></label>
+                        <label class="answer-label" for="true3" id="true3"></label>
                       </div>
                     </li>
                   </ul>
@@ -98,7 +98,7 @@
                   <div class="card-footer">
                     <div class="row">
                       <span class="submit-button">
-                        <input class="btn btn-primary float-end" type="button" id="save-btn" value="Save Question">
+                        <input class="btn btn-primary float-end" type="submit" id="save-btn" value="Save Question">
                       </span>
                     </div>
                   </div>
