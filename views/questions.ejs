@@ -34,19 +34,21 @@
 
                   <div class="card-body" id="rules-questions">
                     <ul class="list-group list-group-flush">
-                      <!-- QUESTIONS RULES --> 
+                      <!-- QUESTIONS RULES -->
                       <% for (const rule of rules) {%>
-                      <li class="list-group-item">
-                        <div class="answer-group d-flex pt-2 pb-2">
-                          <div class="col-md-10 mb-2"> 
-                            <p id="rules-<%= rule.number %>"><%= rule.number %>. <%= rule.text %></p>
+                        <li class="list-group-item">
+                          <div class="answer-group d-flex pt-2 pb-2">
+                            <div class="col-md-10 mb-2">
+                              <p id="rules-<%= rule.number %>">
+                                <%= rule.number %>. <%= rule.text %>
+                              </p>
+                            </div>
+                            <div class="col-md-2 mb-2">
+                              <input class="btn btn-primary btn-sm" type="submit" value="Edit/View" />
+                            </div>
                           </div>
-                          <div class="col-md-2 mb-2">
-                            <input class="btn btn-primary btn-sm" type="submit" value="Edit/View" />
-                          </div>
-                        </div>
-                      </li>
-                      <%} %>
+                        </li>
+                        <%} %>
 
                     </ul>
                   </div>
@@ -70,20 +72,25 @@
                 <div class="accordion-body">
 
                   <div class="card-body" id="signs-questions">
-                    <ul class="list-group list-group-flush">                      
-                      <!-- QUESTIONS SIGNS --> 
+                    <ul class="list-group list-group-flush">
+                      <!-- QUESTIONS SIGNS -->
                       <% for (const sign of signs) {%>
-                      <li class="list-group-item">
-                        <div class="answer-group d-flex pt-2 pb-2">
-                          <div class="col-md-10 mb-2">
-                            <p id="signs-<%= sign.number %>"><%= sign.number %>. <%= sign.text %></p>
+                        <li class="list-group-item">
+                          <div class="answer-group d-flex pt-2 pb-2">
+                            <div class="col-md-5 mb-2">
+                              <p id="signs-<%= sign.number %>">
+                                <%= sign.number %>. <%= sign.text %>
+                              </p>
+                            </div>
+                            <div class="col-md-5 mb-2">
+                              <image style="width: 100px" src="<%= sign.reference %>"></image>
+                            </div>
+                            <div class="col-md-2 mb-2">
+                              <input class="btn btn-primary btn-sm" type="submit" value="Edit/View" />
+                            </div>
                           </div>
-                          <div class="col-md-2 mb-2">
-                            <input class="btn btn-primary btn-sm" type="submit" value="Edit/View" />
-                          </div>
-                        </div>
-                      </li>
-                      <%} %>
+                        </li>
+                        <%} %>
 
                     </ul>
                   </div>

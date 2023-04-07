@@ -32,7 +32,7 @@ router.post('/test', (req, res) => {
 
 //route for result
 router.get('/result', (req, res) => {
-    res.render('result');
+    res.render('result', { name: req.session.name, email: req.session.email });
 });
 
 //route for setup
@@ -45,11 +45,16 @@ router.get('/setup', (req, res) => {
 });
 
 //route for dashboard
+router.get('/dashboard', (req, res) => {
+    res.render('dashboard');
+});
+
+//route for questions
 router.get('/questions', async (req, res) => {
-  if (req.session.user.role == 'admin') {
+  if (req.session.role == 'admin') {
     let allRules = await Question.find({ "category": "Rules" });
     let allSigns = await Question.find({ "category": "Signs" });
-    res.render('questions', {rules: allRules, signs: allSigns});
+    res.render('questions', {name: req.session.name, rules: allRules, signs: allSigns});
   } else {
     res.status(401).send({
       message: "Unauthorized user"

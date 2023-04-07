@@ -14,10 +14,10 @@
     displayTotals();
 	createChart();
     // Return to Home
-    const returnBtn = document.querySelector("#return-btn");
-        returnBtn.addEventListener("click", function(e) {
-        window.location.href = "setup";
-    });
+    //const returnBtn = document.querySelector("#return-btn");
+    //    returnBtn.addEventListener("click", function(e) {
+    //    window.location.href = "setup";
+    //});
 });
 
 var totalRules;
