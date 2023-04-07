@@ -8,6 +8,7 @@
 
 var express = require('express');
 var router = express.Router();
+const Question = require('./backend/models/test.model.js');
 
 //route for index
 router.get('/index', (req, res) => {
@@ -35,12 +36,25 @@ router.get('/result', (req, res) => {
 });
 
 //route for dashboard
-router.get('/dashboard', (req, res) => {/*
-    if (req.session.user) {*/
-    res.render('dashboard', { user: req.session.user });/*
+router.get('/dashboard', (req, res) => {
+    if (req.session.user) {
+      res.render('dashboard', { user: req.session.user });
     } else {
         res.send("Unauthorized user");
-    }*/
+    }
+});
+
+//route for dashboard
+router.get('/questions', async (req, res) => {
+  if (req.session.user.role == 'admin') {
+    let allRules = await Question.find({ "category": "Rules" });
+    let allSigns = await Question.find({ "category": "Signs" });
+    res.render('questions', {rules: allRules, signs: allSigns});
+  } else {
+    res.status(401).send({
+      message: "Unauthorized user"
+    });
+  }
 });
 
 //route for logout

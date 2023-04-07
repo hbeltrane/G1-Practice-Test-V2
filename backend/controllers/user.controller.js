@@ -7,7 +7,6 @@
 */
 
 const User = require('../models/user.model.js');
-const Question = require('../models/test.model.js');
 
 // Create and Save a new User
 exports.create = async (req, res) => {
@@ -20,7 +19,6 @@ exports.create = async (req, res) => {
   }
 
   let user = await User.findOne({ "email": req.body.email });
-  console.log(user);
 
   if (user == null) {
 
@@ -56,11 +54,9 @@ exports.authenticate = async (req, res) => {
 
     if (req.body.password == user.password) {
       req.session.user = user.name;
-      console.log(req.session.user);
+
       if (user.role == 'admin') {
-        let allRules = await Question.find({ "category": "Rules" });
-        let allSigns = await Question.find({ "category": "Signs" });
-        res.render('questions', {rules: allRules, signs: allSigns});
+        res.redirect("router/questions");
       } else {
         res.render('dashboard');
       }
