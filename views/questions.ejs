@@ -7,7 +7,7 @@
 -->
 
 <%- include('header') -%>
-
+  <script defer src="/js/questions.js"></script>
     <title>Questions</title>
     </head>
 
@@ -52,7 +52,9 @@
                                       </p>
                                     </div>
                                     <div class="col-md-4 mb-2">
-                                      <input class="btn btn-danger btn-sm me-4" type="button" value="Delete" />
+                                      <button type="button" class="btn btn-danger btn-sm me-4 delete" data-bs-toggle="modal" data-bs-target="#deleteModal" id="<%= rule.number %>">
+                                        Delete
+                                      </button>
                                       <input class="btn btn-primary btn-sm" type="button" value="View/Edit" />
                                     </div>
                                   </div>
@@ -92,7 +94,7 @@
                                       <image style="width: 100px" src="<%= sign.reference %>"></image>
                                     </div>
                                     <div class="col-md-4 mb-2">                                      
-                                      <button type="button" class="btn btn-danger btn-sm me-4" data-bs-toggle="modal" data-bs-target="#deleteModal" id="<%= sign.number %>">
+                                      <button type="button" class="btn btn-danger btn-sm me-4 delete" data-bs-toggle="modal" data-bs-target="#deleteModal" id="<%= sign.number %>">
                                         Delete
                                       </button>
                                       <input class="btn btn-primary btn-sm" type="button" value="View/Edit" />
@@ -114,7 +116,7 @@
 
                 <!-- Delete Question Modal -->
                 <div class="modal fade" id="deleteModal" tabindex="-1" aria-labelledby="deleteModalLabel" aria-hidden="true">
-                  <div class="modal-dialog">
+                  <div class="modal-dialog modal-dialog-centered">
                     <div class="modal-content">
                       <div class="modal-header">
                         <h1 class="modal-title fs-5" id="deleteModalLabel">Delete question</h1>
@@ -124,13 +126,30 @@
                         Are you sure you want to permanently delete this question?
                       </div>
                       <div class="modal-footer">
-                        <button type="button" class="btn btn-success">Yes</button>
+                        <button type="button" class="btn btn-success" id="confirm">Yes</button>
                         <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">No</button>
                       </div>
                     </div>
                   </div>
                 </div>
-
+                <!-- Confirm Delete Modal -->
+                <div id="confirmDeleteModal" class="modal fade" data-backdrop="static" data-keyboard="false" tabindex="-1" role="dialog" aria-labelledby="confirmModalLabel" aria-hidden="true">
+                  <div class="modal-dialog">
+                  <div class="modal-content">
+                    <div class="modal-header">
+                      <h3 id="confirmModalLabel">Question deleted</h3>
+                    </div>
+                    <div class="modal-body">
+                      <div class="alert alert-success" role="alert">
+                        Question successfully deleted
+                      </div>
+                    </div>
+                    <div class="modal-footer">
+                      <button id="ack" class="btn btn-info">Ok</button>
+                    </div>
+                  </div>
+                  </div>
+                  </div>
               </div>
 
             </main>

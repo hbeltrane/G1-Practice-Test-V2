@@ -132,11 +132,11 @@ exports.delete = (req, res) => {
                     message: "Question not found with num " + req.params.num
                 });
             }
-            // res.send({ message: "Question deleted successfully!" });
-            res.render("dashboard", { 
-              name: req.session.name,  
-              message: "Question deleted successfully!"
-            });
+            res.send({ message: "Question deleted successfully!" });
+            // res.render("dashboard", { 
+            //   name: req.session.name,  
+            //   message: "Question deleted successfully!"
+            // });
         }).catch(err => {
             if (err.kind === 'ObjectId' || err.name === 'NotFound') {
                 return res.status(404).send({
