@@ -8,150 +8,153 @@
 
 <%- include('header') -%>
   <script defer src="/js/questions.js"></script>
-    <title>Questions</title>
-    </head>
+  <title>Questions</title>
+  </head>
 
-    <body class="d-flex flex-column h-100">
+  <body class="d-flex flex-column h-100" style="background-image: url('/images/bgadmin.jpg'); background-size:100%;">
 
-        <%- include('navbar') -%>
+    <%- include('navbar') -%>
 
-            <header>
-              <div class="container">
-                <div class="col d-flex justify-content-center">
-                  <h1>Questions database</h1>
+      <header>
+        <div class="container">
+          <div class="col d-flex justify-content-center pt-3">
+            <h1 class="fw-bold bg-black px-5 py-2 text-white bg-opacity-25 rounded-3">Questions bank</h1>
+          </div>
+        </div>
+      </header>
+
+      <main class="flex-shrink-0">
+        <div class="container">
+
+          <div class="col d-flex justify-content-center pt-4 mb-2">
+
+            <div class="accordion col-md-8">
+              <div class="accordion-item" id="quiz">
+                <div class="accordion-header" id="accordion-heading">
+                  <button class="accordion-button collapsed fw-bold" type="button" data-bs-toggle="collapse"
+                    data-bs-target="#accordion-rules" aria-expanded="true" aria-controls="accordion-rules">
+                    Category: Rules
+                  </button>
+                </div>
+
+                <div id="accordion-rules" class="accordion-collapse collapse" aria-labelledby="accordion-heading">
+                  <div class="accordion-body">
+
+                    <div id="rules-questions">
+                      <ul class="list-group list-group-flush">
+                        <!-- QUESTIONS RULES -->
+                        <% for (const rule of rules) {%>
+                          <li class="list-group-item">
+                            <div class="answer-group d-flex pt-2 pb-2">
+                              <div class="col-md-9 mb-2">
+                                <p id="rules-<%= rule.number %>">
+                                  <%= rule.number %>. <%= rule.text %>
+                                </p>
+                              </div>
+                              <div class="col-md-3 mb-2">
+                                <button type="button" class="btn btn-danger btn-sm mx-4 delete" data-bs-toggle="modal"
+                                  data-bs-target="#deleteModal" id="<%= rule.number %>">
+                                  Delete
+                                </button>
+                                <input class="btn btn-primary btn-sm" type="button" value="View/Edit" />
+                              </div>
+                            </div>
+                          </li>
+                          <%} %>
+
+                      </ul>
+                    </div>
+
+                  </div>
+                </div>
+
+              </div>
+              <div class="accordion-item" id="quiz">
+                <div class="accordion-header" id="accordion-heading">
+                  <button class="accordion-button collapsed fw-bold" type="button" data-bs-toggle="collapse"
+                    data-bs-target="#accordion-signs" aria-expanded="true" aria-controls="accordion-signs">
+                    Category: Signs
+                  </button>
+                </div>
+
+                <div id="accordion-signs" class="accordion-collapse collapse show" aria-labelledby="accordion-heading">
+                  <div class="accordion-body">
+
+                    <div id="signs-questions">
+                      <ul class="list-group list-group-flush">
+                        <!-- QUESTIONS SIGNS -->
+                        <% for (const sign of signs) {%>
+                          <li class="list-group-item">
+                            <div class="answer-group d-flex pt-2 pb-2">
+                              <div class="col-md-5 mb-2">
+                                <p id="signs-<%= sign.number %>">
+                                  <%= sign.number %>. <%= sign.text %>
+                                </p>
+                              </div>
+                              <div class="col-md-4 mb-2">
+                                <image style="width: 100px" src="<%= sign.reference %>"></image>
+                              </div>
+                              <div class="col-md-3 mb-2">
+                                <button type="button" class="btn btn-danger btn-sm mx-4 delete" data-bs-toggle="modal"
+                                  data-bs-target="#deleteModal" id="<%= sign.number %>">
+                                  Delete
+                                </button>
+                                <input class="btn btn-primary btn-sm" type="button" value="View/Edit" />
+                              </div>
+                            </div>
+                          </li>
+                          <%} %>
+
+                      </ul>
+                    </div>
+
+                  </div>
+                </div>
+
+              </div>
+            </div>
+
+          </div>
+
+          <!-- Delete Question Modal -->
+          <div class="modal fade" id="deleteModal" tabindex="-1" aria-labelledby="deleteModalLabel" aria-hidden="true">
+            <div class="modal-dialog modal-dialog-centered">
+              <div class="modal-content">
+                <div class="modal-header">
+                  <h1 class="modal-title fs-5" id="deleteModalLabel">Delete question</h1>
+                  <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                  Are you sure you want to permanently delete this question?
+                </div>
+                <div class="modal-footer">
+                  <button type="button" class="btn btn-success" id="confirm">Yes</button>
+                  <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">No</button>
                 </div>
               </div>
-            </header>
-        
-            <main class="flex-shrink-0">
-              <div class="container">
-
-                <div class="col d-flex justify-content-center pt-4 mb-2">
-                  
-                  <div class="accordion col-md-8">
-                    <div class="accordion-item" id="quiz">
-                      <div class="accordion-header" id="accordion-heading">
-                        <button class="accordion-button collapsed fw-bold" type="button" data-bs-toggle="collapse"
-                          data-bs-target="#accordion-rules" aria-expanded="true" aria-controls="accordion-rules">
-                          Category: Rules
-                        </button>
-                      </div>
-
-                      <div id="accordion-rules" class="accordion-collapse collapse" aria-labelledby="accordion-heading">
-                        <div class="accordion-body">
-
-                          <div id="rules-questions">
-                            <ul class="list-group list-group-flush">
-                              <!-- QUESTIONS RULES -->
-                              <% for (const rule of rules) {%>
-                                <li class="list-group-item">
-                                  <div class="answer-group d-flex pt-2 pb-2">
-                                    <div class="col-md-8 mb-2">
-                                      <p id="rules-<%= rule.number %>">
-                                        <%= rule.number %>. <%= rule.text %>
-                                      </p>
-                                    </div>
-                                    <div class="col-md-4 mb-2">
-                                      <button type="button" class="btn btn-danger btn-sm me-4 delete" data-bs-toggle="modal" data-bs-target="#deleteModal" id="<%= rule.number %>">
-                                        Delete
-                                      </button>
-                                      <input class="btn btn-primary btn-sm" type="button" value="View/Edit" />
-                                    </div>
-                                  </div>
-                                </li>
-                                <%} %>
-
-                            </ul>
-                          </div>
-
-                        </div>
-                      </div>
-
-                    </div>
-                    <div class="accordion-item" id="quiz">
-                      <div class="accordion-header" id="accordion-heading">
-                        <button class="accordion-button collapsed fw-bold" type="button" data-bs-toggle="collapse"
-                          data-bs-target="#accordion-signs" aria-expanded="true" aria-controls="accordion-signs">
-                          Category: Signs
-                        </button>
-                      </div>
-
-                      <div id="accordion-signs" class="accordion-collapse collapse show" aria-labelledby="accordion-heading">
-                        <div class="accordion-body">
-
-                          <div id="signs-questions">
-                            <ul class="list-group list-group-flush">
-                              <!-- QUESTIONS SIGNS -->
-                              <% for (const sign of signs) {%>
-                                <li class="list-group-item">
-                                  <div class="answer-group d-flex pt-2 pb-2">
-                                    <div class="col-md-5 mb-2">
-                                      <p id="signs-<%= sign.number %>">
-                                        <%= sign.number %>. <%= sign.text %>
-                                      </p>
-                                    </div>
-                                    <div class="col-md-3 mb-2">
-                                      <image style="width: 100px" src="<%= sign.reference %>"></image>
-                                    </div>
-                                    <div class="col-md-4 mb-2">                                      
-                                      <button type="button" class="btn btn-danger btn-sm me-4 delete" data-bs-toggle="modal" data-bs-target="#deleteModal" id="<%= sign.number %>">
-                                        Delete
-                                      </button>
-                                      <input class="btn btn-primary btn-sm" type="button" value="View/Edit" />
-                                    </div>
-                                  </div>
-                                </li>
-                                <%} %>
-
-                            </ul>
-                          </div>
-
-                        </div>
-                      </div>
-
-                    </div>
-                  </div>                
-				  
+            </div>
+          </div>
+          <!-- Confirm Delete Modal -->
+          <div id="confirmDeleteModal" class="modal fade" data-backdrop="static" data-keyboard="false" tabindex="-1"
+            role="dialog" aria-labelledby="confirmModalLabel" aria-hidden="true">
+            <div class="modal-dialog">
+              <div class="modal-content">
+                <div class="modal-header">
+                  <h3 id="confirmModalLabel">Question deleted</h3>
                 </div>
-
-                <!-- Delete Question Modal -->
-                <div class="modal fade" id="deleteModal" tabindex="-1" aria-labelledby="deleteModalLabel" aria-hidden="true">
-                  <div class="modal-dialog modal-dialog-centered">
-                    <div class="modal-content">
-                      <div class="modal-header">
-                        <h1 class="modal-title fs-5" id="deleteModalLabel">Delete question</h1>
-                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                      </div>
-                      <div class="modal-body">
-                        Are you sure you want to permanently delete this question?
-                      </div>
-                      <div class="modal-footer">
-                        <button type="button" class="btn btn-success" id="confirm">Yes</button>
-                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">No</button>
-                      </div>
-                    </div>
+                <div class="modal-body">
+                  <div class="alert alert-success" role="alert">
+                    Question successfully deleted
                   </div>
                 </div>
-                <!-- Confirm Delete Modal -->
-                <div id="confirmDeleteModal" class="modal fade" data-backdrop="static" data-keyboard="false" tabindex="-1" role="dialog" aria-labelledby="confirmModalLabel" aria-hidden="true">
-                  <div class="modal-dialog">
-                  <div class="modal-content">
-                    <div class="modal-header">
-                      <h3 id="confirmModalLabel">Question deleted</h3>
-                    </div>
-                    <div class="modal-body">
-                      <div class="alert alert-success" role="alert">
-                        Question successfully deleted
-                      </div>
-                    </div>
-                    <div class="modal-footer">
-                      <button id="ack" class="btn btn-info">Ok</button>
-                    </div>
-                  </div>
-                  </div>
-                  </div>
+                <div class="modal-footer">
+                  <button id="ack" class="btn btn-info">Ok</button>
+                </div>
               </div>
+            </div>
+          </div>
+        </div>
 
-            </main>
+      </main>
 
-        <%- include('footer') -%>
+      <%- include('footer') -%>

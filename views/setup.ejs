@@ -12,71 +12,71 @@
   <title>Welcome - Set up your test</title>
   </head>
 
-  <body>
+  <body class="d-flex flex-column h-100" style="background-image: url('/images/bgsetup.jpg'); background-size:100%;">
 
     <%- include('navbar') -%>
 
-    <div class="container">
-      <header class="col d-flex justify-content-center">
-        <h1>G1 Driver License Knowledge Test</h1>
-      </header>
-  
-      <main class="col d-flex justify-content-center pt-4 mb-2">
-
-        <div class="card w-50 mb-3">
-          <div class="card-body">
-            <form id="test-form" action="/router/test" method="POST">
-
-
-              <div class="row">
-
-                <h2>Configure your test</h2>
-                <div class="col-sm-6">
-                  <label class="form-label" for="rules-questions">Rules</label>
-                  <select class="form-select" name="rules-questions" id="rules-questions">
-                    <option value="5" selected>5</option>
-                    <option value="10">10</option>
-                    <option value="15">15</option>
-                    <option value="20">20</option>
-                  </select>
-                </div>
-                <div class="col-sm-6">
-                  <label class="form-label" for="signs-questions">Signs</label>
-                  <select class="form-select" name="signs-questions" id="signs-questions">
-                    <option value="5" selected>5</option>
-                    <option value="10">10</option>
-                    <option value="15">15</option>
-                    <option value="20">20</option>
-                  </select>
-
-                </div>
-
-              </div>
-
-              <hr class="my-4">
-              <div class="row mx-1">
-                <div class="form-check col-sm-6">
-                  <input class="form-check-input" type="checkbox" id="random" name="random">
-                  <label class="form-check-label" for="random">Random questions</label>
-                </div>
-                <div class="form-check col-sm-6">
-                  <input class="form-check-input" type="checkbox" id="send-email" name="send-email">
-                  <label class="form-check-label" for="send-email">Send score by email</label>
-                </div>
-              </div>
-              <hr class="my-4">
-
-              <button class="w-100 btn btn-success btn-lg" type="submit" id="submit-btn">
-                Go for it
-              </button>
-
-            </form>
-
-          </div>
+      <div class="container">
+        <div class="col d-flex justify-content-center pt-3">
+          <h1 class="fw-bold bg-black px-5 py-2 text-white bg-opacity-25 rounded-3">G1 Driver License Knowledge Test</h1>
         </div>
 
-      </main>
+        <main class="col d-flex justify-content-center pt-4 mb-2">
 
-    </div>
+          <div class="card w-50 mb-3">
+            <div class="card-body">
+              <form id="test-form" action="/router/test" method="POST">
 
-<%- include('footer') -%>
+
+                <div class="row">
+
+                  <h2>Configure your test</h2>
+                  <div class="col-sm-6">
+                    <label class="form-label" for="rules-questions">Rules</label>
+                    <select class="form-select" name="rules-questions" id="rules-questions">
+                      <option value="5" selected>5</option>
+                      <option value="10">10</option>
+                      <option value="15">15</option>
+                      <option value="20">20</option>
+                    </select>
+                  </div>
+                  <div class="col-sm-6">
+                    <label class="form-label" for="signs-questions">Signs</label>
+                    <select class="form-select" name="signs-questions" id="signs-questions">
+                      <option value="5" selected>5</option>
+                      <option value="10">10</option>
+                      <option value="15">15</option>
+                      <option value="20">20</option>
+                    </select>
+
+                  </div>
+
+                </div>
+
+                <hr class="my-4">
+                <div class="row mx-1">
+                  <div class="form-check col-sm-6">
+                    <input class="form-check-input" type="checkbox" id="random" name="random">
+                    <label class="form-check-label" for="random">Random questions</label>
+                  </div>
+                  <div class="form-check col-sm-6">
+                    <input class="form-check-input" type="checkbox" id="send-email" name="send-email">
+                    <label class="form-check-label" for="send-email">Send score by email</label>
+                  </div>
+                </div>
+                <hr class="my-4">
+
+                <button class="w-100 btn btn-success btn-lg" type="submit" id="submit-btn">
+                  Go for it
+                </button>
+
+              </form>
+
+            </div>
+          </div>
+
+        </main>
+
+      </div>
+
+      <%- include('footer') -%>

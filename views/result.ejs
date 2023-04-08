@@ -13,73 +13,73 @@
   <title>Results</title>
   </head>
 
-    <body class="d-flex flex-column h-100">
+  <body class="d-flex flex-column h-100" style="background-image: url('/images/bgresult.jpg'); background-size:100%;">
 
-        <%- include('navbar') -%>
+    <%- include('navbar') -%>
 
-            <header>
-              <div class="container">
-                <div class="col d-flex justify-content-center pt-3">
-                  <h1>G1 Driver License Knowledge Test</h1>
+      <header>
+        <div class="container">
+          <div class="col d-flex justify-content-center pt-3">
+            <h1 class="fw-bold bg-black px-5 py-2 text-white bg-opacity-25 rounded-3">G1 Driver License Knowledge Test</h1>
+          </div>
+        </div>
+      </header>
+
+      <main class="flex-shrink-0">
+        <div class="container">
+
+          <div class="col d-flex justify-content-center pt-4 mb-2">
+
+            <div class="card w-50">
+              <div class="card-header d-flex">
+                <div class="col-md-6">
+                  <h2>Results</h2>
+                </div>
+                <div class="col-md-6 my-1 text-end">
+                  <button class="btn btn-primary" onclick="window.location=('/router/setup')">Try Again</button>
                 </div>
               </div>
-            </header>
-        
-            <main class="flex-shrink-0">
-              <div class="container">
-
-                <div class="col d-flex justify-content-center pt-4 mb-2">
-
-                  <div class="card w-50">
-                    <div class="card-header d-flex">
-                      <div class="col-md-6">
-                        <h2>Results</h2>
-                      </div>
-                      <div class="col-md-6 my-1 text-end">
-                        <button class="btn btn-primary" onclick="window.location=('/router/setup')">Try Again</button>
-                      </div>
-                    </div>
-                    <ul class="list-group list-group-flush">
-                      <li class="list-group-item">
-                        <table class="result-table">
-                          <tr class="table-header">
-                            <th class="w-50"></th>
-                            <th class="w-25">Rules</th>
-                            <th class="w-25">Signs</th>
-                            <th class="w-25">Total</th>
-                          </tr>
-                          <tr id="correct-row">
-                            <th class="text-success fw-bold">Correct:</th>
-                            <td id="correct-rules"></td>
-                            <td id="correct-signs"></td>
-                            <td id="correct-total"></td>
-                          </tr>
-                          <tr id="incorrect-row">
-                            <th class="text-danger fw-bold">Incorrect:</th>
-                            <td id="incorrect-rules"></td>
-                            <td id="incorrect-signs"></td>
-                            <td id="incorrect-total"></td>
-                          </tr>
-                          <tr id="percentage-row">
-                            <th class="fw-bold">Percentage:</th>
-                            <td class="fw-bold" id="percentage-rules"></td>
-                            <td class="fw-bold" id="percentage-signs"></td>
-                            <td class="fw-bold" id="percentage-total"></td>
-                          </tr>
-                        </table>
-                      </li>
-                    </ul>
-                    <div class="card-body">
-                      <div class="pie-chart">
-                        <canvas id="myChart" style="width:100%; max-width:600px"></canvas>
-                      </div>
-                    </div>
-                  </div>
-				  
+              <ul class="list-group list-group-flush">
+                <li class="list-group-item">
+                  <table class="result-table">
+                    <tr class="table-header">
+                      <th class="w-50"></th>
+                      <th class="w-25">Rules</th>
+                      <th class="w-25">Signs</th>
+                      <th class="w-25">Total</th>
+                    </tr>
+                    <tr id="correct-row">
+                      <th class="text-success fw-bold">Correct:</th>
+                      <td id="correct-rules"></td>
+                      <td id="correct-signs"></td>
+                      <td id="correct-total"></td>
+                    </tr>
+                    <tr id="incorrect-row">
+                      <th class="text-danger fw-bold">Incorrect:</th>
+                      <td id="incorrect-rules"></td>
+                      <td id="incorrect-signs"></td>
+                      <td id="incorrect-total"></td>
+                    </tr>
+                    <tr id="percentage-row">
+                      <th class="fw-bold">Percentage:</th>
+                      <td class="fw-bold" id="percentage-rules"></td>
+                      <td class="fw-bold" id="percentage-signs"></td>
+                      <td class="fw-bold" id="percentage-total"></td>
+                    </tr>
+                  </table>
+                </li>
+              </ul>
+              <div class="card-body">
+                <div class="pie-chart">
+                  <canvas id="myChart" style="width:100%; max-width:600px"></canvas>
                 </div>
-
               </div>
+            </div>
 
-            </main>
+          </div>
 
-        <%- include('footer') -%>
+        </div>
+
+      </main>
+
+      <%- include('footer') -%>

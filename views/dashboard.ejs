@@ -11,17 +11,21 @@
 	<title>Admin module</title>
 	</head>
 
-	<body class="d-flex flex-column h-100">
+	<body class="d-flex flex-column h-100" style="background-image: url('/images/bgadmin.jpg'); background-size:100%;">
 
 		<%- include('navbar') -%>
 
 			<div class="container">
-				<div class="p-5 mb-4 bg-light rounded-3">
+				<div class="p-5 my-5 bg-light rounded-3">
 					<div class="container-fluid">
-						<h1 class="display-5 fw-bold">G1 Driver License Knowledge Test</h1>
+						<h1 class="display-5 fw-bold">G1 Driver License</h1>
 						<p class="col-md-8 fs-4">Admin Module</p>
-						<button class="btn btn-primary btn-lg" onclick="window.location=('/router/questions')">View questions</button>
-						<button class="btn btn-primary btn-lg" onclick="window.location=('/router/question')">Create question</button>
+						<div class="d-grid gap-2 d-md-flex justify-content-md-end">
+							<button class="btn btn-primary btn-lg" onclick="window.location=('/router/questions')">View
+								questions</button>
+							<button class="btn btn-primary btn-lg" onclick="window.location=('/router/question')">Create
+								question</button>
+						</div>
 					</div>
 				</div>
 			</div>
