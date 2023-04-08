@@ -6,8 +6,14 @@
         Juan Luis Casanova Romero - C0851175
 */
 
-const {Question} = require('../models/test.model.js');
-const {Answer} = require('../models/test.model.js');
+const { Question } = require('../models/test.model.js');
+const { Answer } = require('../models/test.model.js');
+
+//File upload
+let formidable = require("formidable");
+const fs = require('fs');
+const path = require('path');
+const root = require('../../root');
 
 // Retrieve and return all questions of rules category.
 exports.findAllRules = (req, res) => {
@@ -35,44 +41,61 @@ exports.findAllSigns = (req, res) => {
 
 // Create and Save a new Question
 exports.create = async (req, res) => {
-    // Validate request
-    if (!req.body.question) {
-        return res.status(400).send({
-            message: "Question content can not be empty"
-        });
-    }
 
+    let ques = req.body.question;
     let num = await Question.find().sort({ number: -1 }).limit(1);
     let pres = req.body.category == "Rules" ? "text" : "image";
-    answer = [];
+    let ref = "";
+    let ans = [];
+
+    //File upload
+    /*
+    if (req.body.category == "Signs") {
+        ques = "What does this sign mean?";
+        ref = "/images/" + req.body.filetoupload;
+        */
+        //Formidable
+        let form = new formidable.IncomingForm();
+        form.parse(req, function(error, fields, file) {
+            let filepath = file.fileupload.filepath;
+            let newpath = path.join(root, 'public/images/');
+            newpath += file.fileupload.originalFilename;
+            console.log(newpath);
+            fs.rename(filepath, newpath, function() {
+                res.write("File uploaded");
+                res.end();
+            });
+        });
+        //Formidable
+    //};
     const ans0 = new Answer({
         text: req.body.answer0,
         isCorrect: "true"
     });
-    answer.push(ans0);
+    ans.push(ans0);
     const ans1 = new Answer({
         text: req.body.answer1,
         isCorrect: "false"
     });
-    answer.push(ans1);
+    ans.push(ans1);
     const ans2 = new Answer({
         text: req.body.answer2,
         isCorrect: "false"
     });
-    answer.push(ans2);
+    ans.push(ans2);
     const ans3 = new Answer({
         text: req.body.answer3,
         isCorrect: "false"
     });
-    answer.push(ans3);
+    ans.push(ans3);
     // Create a Question
     const question = new Question({
         number: num[0].number + 1,
-        text: req.body.question,
+        text: ques,
         category: req.body.category,
         presentation: pres,
-        reference: req.body.reference,
-        answers: answer,
+        reference: ref,
+        answers: ans,
         explanation: req.body.explanation
     });
 
