@@ -63,17 +63,17 @@ exports.authenticate = async (req, res) => {
       }
 
     } else {
-      res.status(400).send({
-        message: "Invalid username or password"
-      });
-      // res.redirect('/auth');
+      // res.status(400).send({
+      //   message: "Invalid username or password"
+      // });
+      res.redirect('/router/login');
     }
 
   } else {
-    res.status(400).send({
-      message: "Invalid username or password"
-    });
-    // res.redirect('/auth');
+    // res.status(400).send({
+    //   message: "Invalid username or password"
+    // });
+    res.redirect('/router/login');
   }
 
 };

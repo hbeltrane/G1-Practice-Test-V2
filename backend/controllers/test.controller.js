@@ -147,22 +147,27 @@ exports.findOne = (req, res) => {
 
 // Delete a question with the specified num in the request
 exports.delete = (req, res) => {
-    Question.findByIdAndRemove(req.params.num)
+    let num = Number(req.params.num)
+    Question.findOneAndRemove({number: num})
         .then(question => {
             if (!question) {
                 return res.status(404).send({
-                    message: "Question not found with id " + req.params.num
+                    message: "Question not found with num " + req.params.num
                 });
             }
-            res.send({ message: "Question deleted successfully!" });
+            // res.send({ message: "Question deleted successfully!" });
+            res.render("dashboard", { 
+              name: req.session.name,  
+              message: "Question deleted successfully!"
+            });
         }).catch(err => {
             if (err.kind === 'ObjectId' || err.name === 'NotFound') {
                 return res.status(404).send({
-                    message: "Question not found with id " + req.params.num
+                    message: "Question not found with num " + req.params.num
                 });
             }
             return res.status(500).send({
-                message: "Could not delete question with id " + req.params.num
+                message: "Could not delete question with num " + req.params.num
             });
         });
 };
