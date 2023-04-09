@@ -11,7 +11,7 @@ const path = require('path');
 const bodyparser = require('body-parser');
 const session = require('express-session');
 const {v4: uuidv4} = require('uuid');
-
+const os = require('os');
 const router = require('./router');
 
 const app = express();
@@ -64,4 +64,4 @@ require('./backend/routes/user.routes.js')(app);
 // Require test routes
 require('./backend/routes/test.routes.js')(app);
 
-app.listen(port, () => { console.log("Listening to the server on http://localhost:3000")});
+app.listen(port, () => { console.log("Listening to the server on " + os.hostname())});

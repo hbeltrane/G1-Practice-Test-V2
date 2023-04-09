@@ -6,7 +6,10 @@ form.addEventListener('submit', (e) => {
 
     const urlEncoded = new URLSearchParams(fd).toString();
 
-    fetch('http://localhost:3000/questions', {
+    const hosturl = "https://g1-practice-test-v2.azurewebsites.net"
+    //const hosturl = "http://localhost:3000"
+
+    fetch(`${hosturl}/questions`, {
         method: "POST",
         body: fd
     })

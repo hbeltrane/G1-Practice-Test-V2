@@ -1,12 +1,14 @@
 /*
-		Lambton College
-		CSD 3103 - Full Stack JavaScript
-		Term project
-		Hugo Beltran Escarraga - C0845680
-		Juan Luis Casanova Romero - C0851175
+    Lambton College
+    CSD 3103 - Full Stack JavaScript
+    Term project
+    Hugo Beltran Escarraga - C0845680
+    Juan Luis Casanova Romero - C0851175
  */
 
-const url = "http://localhost:3000";
+const hosturl = "https://g1-practice-test-v2.azurewebsites.net"
+//const hosturl = "http://localhost:3000"
+
 const deleteButtons = document.querySelectorAll(".delete");
 const deleteModal = new bootstrap.Modal('#deleteModal', {
   backdrop: false
@@ -31,7 +33,7 @@ const selectQuestion = function (num) {
 
 const deleteQuestion = async function (num) {
   try {
-    const response = await fetch(`${url}/questions/${num}`, {
+    const response = await fetch(`${hosturl}/questions/${num}`, {
       method: "DELETE"
     });
 
@@ -76,7 +78,7 @@ const loadView = function (question) {
 
 const viewQuestion = async function (num) {
   try {
-    const response = await fetch(`${url}/questions/${num}`, {
+    const response = await fetch(`${hosturl}/questions/${num}`, {
       method: "GET"
     });
 

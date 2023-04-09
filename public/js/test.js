@@ -23,11 +23,15 @@ var ansWrong = 0;
 var correctRules = 0;
 var correctSigns = 0;
 
+
+const hosturl = "https://g1-practice-test-v2.azurewebsites.net"
+//const hosturl = "http://localhost:3000"
+
 async function loadJSON() {
-    let responseRules = await fetch('http://localhost:3000/questions/rules');
+    let responseRules = await fetch(`${hosturl}/questions/rules`);
     jsonRules = await responseRules.json();
     totalRules = jsonRules.length;
-    let responseSigns = await fetch('http://localhost:3000/questions/signs');
+    let responseSigns = await fetch(`${hosturl}/questions/signs`);
     jsonSigns = await responseSigns.json();
     totalSigns = jsonSigns.length;
 
