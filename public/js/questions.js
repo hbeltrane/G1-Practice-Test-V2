@@ -9,19 +9,20 @@
 const url = "http://localhost:3000";
 const deleteButtons = document.querySelectorAll(".delete");
 const deleteModal = new bootstrap.Modal('#deleteModal', {
-  keyboard: true
+  backdrop: false
 });
 
 const confirmButton = document.querySelector("#confirm");
 const confirmDeleteModal = new bootstrap.Modal('#confirmDeleteModal', {
-  keyboard: false
+  keyboard: false,
+  backdrop: false
 });
 const acknowledgeButton = document.querySelector("#ack");
 let selectedQuestion = 0;
 
 const viewButtons = document.querySelectorAll(".view");
 const viewModal = new bootstrap.Modal('#viewModal', {
-  keyboard: true
+  backdrop: false
 });
 
 const selectQuestion = function (num) {
@@ -80,7 +81,6 @@ const viewQuestion = async function (num) {
     });
 
     const question = await response.json();
-    console.log(question);
     loadView(question);
     //viewModal.show();
 

@@ -1,17 +1,12 @@
-<!--
-	Lambton College
-	CSD 3103 - Full Stack JavaScript
-	Term project
-	Hugo Beltran Escarraga - C0845680
-	Juan Luis Casanova Romero - C0851175
--->
+<!-- QUESTIONS -->
 
 <%- include('header') -%>
+  <link href="/css/admin.css" rel="stylesheet">
   <script defer src="/js/questions.js"></script>
   <title>Questions</title>
   </head>
 
-  <body class="d-flex flex-column h-100" style="background-image: url('/images/bgadmin.jpg'); background-size:100%;">
+  <body class="d-flex flex-column h-100">
 
     <%- include('navbar') -%>
 
@@ -141,7 +136,7 @@
             </div>
           </div>
           <!-- Confirm Delete Modal -->
-          <div id="confirmDeleteModal" class="modal fade" data-backdrop="static" data-keyboard="false" tabindex="-1"
+          <div id="confirmDeleteModal" class="modal fade" data-keyboard="false" tabindex="-1"
             role="dialog" aria-labelledby="confirmModalLabel" aria-hidden="true">
             <div class="modal-dialog">
               <div class="modal-content">

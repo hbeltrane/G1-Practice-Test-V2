@@ -5,8 +5,9 @@
 		Hugo Beltran Escarraga - C0845680
 		Juan Luis Casanova Romero - C0851175
  */
- body {
-  background-image: url('/images/bgtest.jpg'); 
+
+body {
+  background-image: url('/images/bgadmin.jpg'); 
   background-size:100%;
   background-repeat: no-repeat;
   background-attachment: fixed;
