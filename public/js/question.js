@@ -17,7 +17,8 @@ form.addEventListener('submit', (e) => {
     form.reset();
     document.querySelector("#text").hidden = false;
     document.querySelector("#question").required = true;
-    document.querySelector("#ref").hidden = true;setTimeout(() => {
+    document.querySelector("#ref").hidden = true;
+    setTimeout(() => {
     const message = document.getElementById('message');
     message.hidden = true;
     }, 3000);
