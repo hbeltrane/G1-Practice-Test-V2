@@ -6,10 +6,6 @@
 		Juan Luis Casanova Romero - C0851175
 */
 
-//File upload
-//const express = require('express');
-//const app = express();
-//const path = require('path');
 const multer = require('multer');
 const root = require('../../root');
 

@@ -6,6 +6,8 @@
         Juan Luis Casanova Romero - C0851175
  */
 
+import { hosturl } from '/js/host.js';
+
 var totalRules;
 var totalSigns;
 var arrayRules = [];
@@ -22,10 +24,7 @@ var ansRight = 0;
 var ansWrong = 0;
 var correctRules = 0;
 var correctSigns = 0;
-
-
-const hosturl = "https://g1-practice-test-v2.azurewebsites.net"
-//const hosturl = "http://localhost:3000"
+var randomIndex =[];
 
 async function loadJSON() {
     let responseRules = await fetch(`${hosturl}/questions/rules`);
@@ -121,10 +120,10 @@ function displayExplanation() {
     for (let item = 0; item < radios.length; item++) {
         radios[item].disabled = true;
     }
-    button = document.querySelector("#skip-btn");
+    let button = document.querySelector("#skip-btn");
     button.style.display = "none";
     document.getElementById("explanation").innerText = currentQuestion.explanation;
-    explanation = document.querySelector(".answer-explanation");
+    let explanation = document.querySelector(".answer-explanation");
     explanation.style.display = "block";
     if (isCorrectAnswer) {
         ansRight++;
@@ -143,14 +142,14 @@ function displayExplanation() {
 }
 
 function displayQuestion() {
-    button = document.querySelector(".submit-button");
+    let button = document.querySelector(".submit-button");
     button.style.display = "none";
     var radios = document.getElementsByClassName("answer-radio");
     for (let item = 0; item < radios.length; item++) {
         radios[item].disabled = false;
         radios[item].checked = false;
     }
-    explanation = document.querySelector(".answer-explanation");
+    let explanation = document.querySelector(".answer-explanation");
     explanation.style.display = "none";
     button = document.querySelector("#skip-btn");
     button.style.display = "block";
@@ -195,11 +194,10 @@ function shuffleIndexes() {
         randomIndex[i] = randomIndex[j];
         randomIndex[j] = temp;
     }
-    return randomIndex;
 }
 
 function skipQuestion() {
-    button = document.querySelector(".submit-button");
+    let button = document.querySelector(".submit-button");
     button.style.display = "none";
     var radios = document.getElementsByClassName("answer-radio");
     for (let item = 0; item < radios.length; item++) {
@@ -238,7 +236,7 @@ function skipQuestion() {
 }
 
 function getAnswer() {
-    button = document.querySelector(".submit-button");
+    let button = document.querySelector(".submit-button");
     button.style.display = "block";
 }
 

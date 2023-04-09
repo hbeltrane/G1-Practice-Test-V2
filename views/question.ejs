@@ -2,7 +2,8 @@
 
 <%- include('header') -%>
   <link href="/css/admin.css" rel="stylesheet">
-  <script defer src="/js/question.js"></script>
+  <script src="/js/host.js" type="module"></script>
+  <script defer src="/js/question.js" type="module"></script>
   <title>Sign up</title>
   </head>
 
@@ -30,7 +31,7 @@
                   <div class="row mt-2 mb-3">
                     <div class="text-end col-sm-11">
                       <label for="category" class="form-label select-label fw-bold">Category</label>
-                      <select class="select form-control-sm" id="category" name="category" onchange=setRef()>
+                      <select class="select form-control-sm" id="category" name="category">
                         <option value="Rules" selected>Rules</option>
                         <option value="Signs">Signs</option>
                       </select>

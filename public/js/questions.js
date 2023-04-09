@@ -6,8 +6,7 @@
     Juan Luis Casanova Romero - C0851175
  */
 
-const hosturl = "https://g1-practice-test-v2.azurewebsites.net"
-//const hosturl = "http://localhost:3000"
+import { hosturl } from '/js/host.js';
 
 const deleteButtons = document.querySelectorAll(".delete");
 const deleteModal = new bootstrap.Modal('#deleteModal', {
@@ -84,7 +83,6 @@ const viewQuestion = async function (num) {
 
     const question = await response.json();
     loadView(question);
-    //viewModal.show();
 
   } catch (error) {
     console.error("Error:", error);

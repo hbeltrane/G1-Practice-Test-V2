@@ -13,9 +13,12 @@ const alertMessage = document.querySelector("#message");
 
 
 function showMessage() {
-  alertMessage.innerHTML = "Incorrect username or password.";
-  resultAlert.classList.add("show", "alert-danger");
+  //alertMessage.innerHTML = "Incorrect username or password.";
+  //resultAlert.classList.add("show", "alert-danger");
   resultAlert.hidden = false;
+  setTimeout(() => {
+    resultAlert.hidden = true;
+  }, 3000);
 }
 
 function isPasswordEqual() {
@@ -35,7 +38,3 @@ window.addEventListener('load', (event) => {
   });
 
 });
-
-
-// resultAlert.hidden = false;
-// resultAlert.classList.remove("show", "alert-danger");
