@@ -125,7 +125,8 @@ exports.findAll = (req, res) => {
 
 // Find a single question with a num
 exports.findOne = (req, res) => {
-    Question.findById(req.params.num)
+    let num = Number(req.params.num)
+    Question.findOne({number: num})
         .then(question => {
             if (!question) {
                 return res.status(404).send({
@@ -136,11 +137,11 @@ exports.findOne = (req, res) => {
         }).catch(err => {
             if (err.kind === 'ObjectId') {
                 return res.status(404).send({
-                    message: "Question not found with id " + req.params.num
+                    message: "Question not found with num " + req.params.num
                 });
             }
             return res.status(500).send({
-                message: "Error retrieving question with id " + req.params.num
+                message: "Error retrieving question with num " + req.params.num
             });
         });
 };

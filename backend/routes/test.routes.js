@@ -19,8 +19,8 @@ module.exports = (app) => {
   // Retrieve all question
   app.get('/questions', test.findAll);
 
-  // Retrieve a single question by Id
-  app.get('/questions/:qId', test.findOne);
+  // Retrieve a single question by number
+  app.get('/questions/:num', test.findOne);
 
   // Delete a question by number
   app.delete('/questions/:num', test.delete);

@@ -48,15 +48,18 @@
                             <div class="answer-group d-flex pt-2 pb-2">
                               <div class="col-md-9 mb-2">
                                 <p id="rules-<%= rule.number %>">
-                                  <%= rule.number %>. <%= rule.text %>
+                                  <b><%= rule.number %>.</b> <%= rule.text %>
                                 </p>
                               </div>
                               <div class="col-md-3 mb-2">
                                 <button type="button" class="btn btn-danger btn-sm mx-4 delete" data-bs-toggle="modal"
-                                  data-bs-target="#deleteModal" id="<%= rule.number %>">
+                                  data-bs-target="#deleteModal" id="d<%= rule.number %>">
                                   Delete
                                 </button>
-                                <input class="btn btn-primary btn-sm" type="button" value="View/Edit" />
+                                <button type="button" class="btn btn-primary btn-sm view" data-bs-toggle="modal"
+                                  data-bs-target="#viewModal" id="v<%= rule.number %>">
+                                  View
+                                </button>
                               </div>
                             </div>
                           </li>
@@ -88,7 +91,7 @@
                             <div class="answer-group d-flex pt-2 pb-2">
                               <div class="col-md-5 mb-2">
                                 <p id="signs-<%= sign.number %>">
-                                  <%= sign.number %>. <%= sign.text %>
+                                  <b><%= sign.number %>.</b> <%= sign.text %>
                                 </p>
                               </div>
                               <div class="col-md-4 mb-2">
@@ -96,10 +99,13 @@
                               </div>
                               <div class="col-md-3 mb-2">
                                 <button type="button" class="btn btn-danger btn-sm mx-4 delete" data-bs-toggle="modal"
-                                  data-bs-target="#deleteModal" id="<%= sign.number %>">
+                                  data-bs-target="#deleteModal" id="d<%= sign.number %>">
                                   Delete
                                 </button>
-                                <input class="btn btn-primary btn-sm" type="button" value="View/Edit" />
+                                <button type="button" class="btn btn-primary btn-sm view" data-bs-toggle="modal"
+                                  data-bs-target="#viewModal" id="v<%= sign.number %>">
+                                  View
+                                </button>
                               </div>
                             </div>
                           </li>
@@ -149,6 +155,26 @@
                 </div>
                 <div class="modal-footer">
                   <button id="ack" class="btn btn-info">Ok</button>
+                </div>
+              </div>
+            </div>
+          </div>
+          <!-- View Question Modal -->
+          <div class="modal fade" id="viewModal" tabindex="-1" aria-labelledby="viewModalLabel" aria-hidden="true">
+            <div class="modal-dialog modal-dialog-centered">
+              <div class="modal-content">
+                <div class="modal-header pb-2">
+                  <h1 class="modal-title fs-5" id="viewModalLabel"> </h1>
+                  <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body py-0" id="viewModalBody">
+
+                </div> <hr class="mt-1 mb-2">
+                <div class="modal-body py-0" id="viewModalSection">
+                  
+                </div>
+                <div class="modal-footer">
+                  <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Ok</button>
                 </div>
               </div>
             </div>
