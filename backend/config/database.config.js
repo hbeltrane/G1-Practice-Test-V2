@@ -9,6 +9,6 @@
 const password = process.env.PRACTICE_TEST 
 
 module.exports = {
-    url: 'mongodb://0.0.0.0:27017/G1-Practice-Test'
-    // url:`mongodb+srv://admin:${password}@fullstackjs.cbyf9va.mongodb.net/PracticeTest`
+    //url: 'mongodb://0.0.0.0:27017/G1-Practice-Test'
+    url:`mongodb+srv://admin:${password}@fullstackjs.cbyf9va.mongodb.net/PracticeTest`
   }
