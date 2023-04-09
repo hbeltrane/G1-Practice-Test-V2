@@ -13,11 +13,14 @@ form.addEventListener('submit', (e) => {
         method: "POST",
         body: fd
     })
-    alert("Question saved");//Replace
+    document.querySelector("#message").hidden = false;
     form.reset();
     document.querySelector("#text").hidden = false;
     document.querySelector("#question").required = true;
-    document.querySelector("#ref").hidden = true;
+    document.querySelector("#ref").hidden = true;setTimeout(() => {
+    const message = document.getElementById('message');
+    message.hidden = true;
+    }, 3000);
 })
 
 function setRef() {
