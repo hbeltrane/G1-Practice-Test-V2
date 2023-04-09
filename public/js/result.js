@@ -99,6 +99,6 @@ window.addEventListener('load', (event) => {
   resultAlert.addEventListener('closed.bs.alert', event => {
     resultAlert.display = "none";
     resultAlert.classList.remove("show");
-    document.querySelector("#message").classList.add("pt-4");
+    document.querySelector("#result").classList.add("pt-4");
   });
 });
