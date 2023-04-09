@@ -6,6 +6,29 @@
 		Juan Luis Casanova Romero - C0851175
 */
 
+//File upload
+const express = require('express');
+const app = express();
+const multer = require('multer');
+const path = require('path');
+const root = require('../../root');
+
+const storage = multer.diskStorage({
+  destination: function(req, file, callback){
+    callback(null, root + '/public/images/');
+  },
+  filename: function(req, file, callback){
+    callback(null, file.originalname);
+  }
+})
+
+const upload = multer({
+  storage: storage,
+  limits: {
+    filesize: 100000
+  }
+})
+
 module.exports = (app) => {
   const test = require('../controllers/test.controller.js');
 
@@ -14,7 +37,7 @@ module.exports = (app) => {
   app.get('/questions/signs', test.findAllSigns);
 
   // Create a new question
-  app.post('/questions', test.create);
+  app.post('/questions', upload.any(), test.create);
   
   // Retrieve all question
   app.get('/questions', test.findAll);

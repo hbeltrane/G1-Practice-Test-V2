@@ -9,12 +9,6 @@
 const { Question } = require('../models/test.model.js');
 const { Answer } = require('../models/test.model.js');
 
-//File upload
-let formidable = require("formidable");
-const fs = require('fs');
-const path = require('path');
-const root = require('../../root');
-
 // Retrieve and return all questions of rules category.
 exports.findAllRules = (req, res) => {
     Question.find({ "category": "Rules" })
@@ -41,33 +35,15 @@ exports.findAllSigns = (req, res) => {
 
 // Create and Save a new Question
 exports.create = async (req, res) => {
-
     let ques = req.body.question;
     let num = await Question.find().sort({ number: -1 }).limit(1);
     let pres = req.body.category == "Rules" ? "text" : "image";
     let ref = "";
     let ans = [];
-
-    //File upload
-    /*
     if (req.body.category == "Signs") {
         ques = "What does this sign mean?";
-        ref = "/images/" + req.body.filetoupload;
-        */
-        //Formidable
-        let form = new formidable.IncomingForm();
-        form.parse(req, function(error, fields, file) {
-            let filepath = file.fileupload.filepath;
-            let newpath = path.join(root, 'public/images/');
-            newpath += file.fileupload.originalFilename;
-            console.log(newpath);
-            fs.rename(filepath, newpath, function() {
-                res.write("File uploaded");
-                res.end();
-            });
-        });
-        //Formidable
-    //};
+        ref = "/images/" + req.files[0].originalname;
+    };
     const ans0 = new Answer({
         text: req.body.answer0,
         isCorrect: "true"
@@ -126,7 +102,7 @@ exports.findAll = (req, res) => {
 // Find a single question with a num
 exports.findOne = (req, res) => {
     let num = Number(req.params.num)
-    Question.findOne({number: num})
+    Question.findOne({ number: num })
         .then(question => {
             if (!question) {
                 return res.status(404).send({
@@ -149,7 +125,7 @@ exports.findOne = (req, res) => {
 // Delete a question with the specified num in the request
 exports.delete = (req, res) => {
     let num = Number(req.params.num)
-    Question.findOneAndRemove({number: num})
+    Question.findOneAndRemove({ number: num })
         .then(question => {
             if (!question) {
                 return res.status(404).send({
