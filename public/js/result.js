@@ -19,6 +19,7 @@ var checkRandom;
 var checkEmail;
 
 const resultAlert = document.querySelector("#alert");
+const alertMessage = document.querySelector("#message");
 
 function createChart() {
     var xValues = ["Rules - Correct", "Signs- Correct", "Signs - Incorrect", "Rules - Incorrect"];
@@ -51,16 +52,15 @@ function createChart() {
 function round(input) {
   number = Number(input);
   return Math.round((number + Number.EPSILON) * 100) / 100;
-
 }
 
 function messageSuccess() {
-  resultAlert.innerHTML = "<strong>Congratulations!</strong> You passed the test.";
+  alertMessage.innerHTML = "<strong>Congratulations!</strong> You passed the test.";
   resultAlert.classList.add("alert-success");
 }
 
 function messageFail() {
-  resultAlert.innerHTML = "<strong>Keep practicing</strong> You are going to do it!";
+  alertMessage.innerHTML = "<strong>Keep practicing</strong> You are going to do it!";
   resultAlert.classList.add("alert-danger");
 }
 
@@ -99,6 +99,6 @@ window.addEventListener('load', (event) => {
   resultAlert.addEventListener('closed.bs.alert', event => {
     resultAlert.display = "none";
     resultAlert.classList.remove("show");
+    document.querySelector("#message").classList.add("pt-4");
   });
-
 });
