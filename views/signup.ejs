@@ -8,6 +8,7 @@
 
 <%- include('header') -%>
   <link href="/css/main.css" rel="stylesheet">
+  <script defer src="/js/signup.js"></script>
   <title>Sign up</title>
   </head>
 
@@ -32,7 +33,7 @@
             <div class="card w-50 mb-3">
               <div class="card-body">
 
-                <form class="mx-5 mb-2" id="test-form" action="/users" method="POST">
+                <form id="signup" class="mx-5 mb-2" id="test-form" action="/users" method="POST">
 
                   <div>
 
@@ -77,6 +78,12 @@
               </div>
             </div>
 
+          </div>
+          <!-- MESSAGE --> 
+          <div class="d-flex justify-content-center">
+            <div id="alert" class="alert alert-dismissible fade show col-md-6" role="alert" hidden>
+              <span id="message"></span>
+            </div>
           </div>
 
         </div>

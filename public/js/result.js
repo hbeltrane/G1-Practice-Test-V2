@@ -60,7 +60,7 @@ function messageSuccess() {
 }
 
 function messageFail() {
-  alertMessage.innerHTML = "<strong>Keep practicing</strong> You can do it!";
+  alertMessage.innerHTML = "<strong>Keep practicing.</strong> You can do it!";
   resultAlert.classList.add("alert-danger");
 }
 
