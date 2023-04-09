@@ -34,7 +34,7 @@ exports.create = async (req, res) => {
     // Save User in the database
     user.save()
         .then(data => {
-            res.render('setup', { name: user.name });
+            res.render('login');
         }).catch(err => {
             res.status(500).send({
                 message: err.message || "Some error occurred while creating the User."
@@ -63,16 +63,10 @@ exports.authenticate = async (req, res) => {
       }
 
     } else {
-      // res.status(400).send({
-      //   message: "Invalid username or password"
-      // });
       res.redirect('/router/login');
     }
 
   } else {
-    // res.status(400).send({
-    //   message: "Invalid username or password"
-    // });
     res.redirect('/router/login');
   }
 

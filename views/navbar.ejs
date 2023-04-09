@@ -14,22 +14,22 @@
           </h4>
         </li>
       </ul>
-      <ul class="navbar-nav me-auto">
-      </ul>
       <ul class="navbar-nav d-flex">
         <li class="nav-item">
           <a class="nav-link text-white" href="/router/dashboard">
             <%= locals.name=="Admin" ? "Dashboard" : "" %>
           </a>
         </li>
+        
         <li class="nav-item">
-          <a class="nav-link text-white" href="/router/signup">
-            <%= locals.name ? "" : "Sign up" %>
+          <a class="nav-link text-white" href="/router/setup">
+            <%= locals.name ? "Test" : "" %>
           </a>
         </li>
+        
         <li class="nav-item">
-          <a class="nav-link text-white" href="/router/login">
-            <%= locals.name ? "" : "Log in" %>
+          <a class="nav-link text-white" href="/router/index">
+            <%= locals.name ? "" : "Home" %>
           </a>
         </li>
         <li class="nav-item">
