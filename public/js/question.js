@@ -6,15 +6,22 @@ form.addEventListener('submit', (e) => {
 
     const urlEncoded = new URLSearchParams(fd).toString();
 
-    fetch('http://localhost:3000/questions', {
+    const hosturl = "https://g1-practice-test-v2.azurewebsites.net"
+    //const hosturl = "http://localhost:3000"
+
+    fetch(`${hosturl}/questions`, {
         method: "POST",
         body: fd
     })
-    alert("Question saved");//Replace
+    document.querySelector("#message").hidden = false;
     form.reset();
     document.querySelector("#text").hidden = false;
     document.querySelector("#question").required = true;
     document.querySelector("#ref").hidden = true;
+    setTimeout(() => {
+    const message = document.getElementById('message');
+    message.hidden = true;
+    }, 3000);
 })
 
 function setRef() {

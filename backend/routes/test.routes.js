@@ -7,10 +7,10 @@
 */
 
 //File upload
-const express = require('express');
-const app = express();
+//const express = require('express');
+//const app = express();
+//const path = require('path');
 const multer = require('multer');
-const path = require('path');
 const root = require('../../root');
 
 const storage = multer.diskStorage({
