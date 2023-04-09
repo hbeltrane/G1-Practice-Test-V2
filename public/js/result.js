@@ -5,20 +5,6 @@
 		Hugo Beltran Escarraga - C0845680
 		Juan Luis Casanova Romero - C0851175
  */
- 
- $(document).ready(function() {
-    totalRules = Number(sessionStorage.getItem("rules"));
-    totalSigns = Number(sessionStorage.getItem("signs"));
-    correctRules = Number(sessionStorage.getItem("correct-rules"));
-    correctSigns = Number(sessionStorage.getItem("correct-signs"));
-    displayTotals();
-	createChart();
-    // Return to Home
-    //const returnBtn = document.querySelector("#return-btn");
-    //    returnBtn.addEventListener("click", function(e) {
-    //    window.location.href = "setup";
-    //});
-});
 
 var totalRules;
 var totalSigns;
@@ -30,7 +16,9 @@ var incorrectSigns;
 var correctTotal;
 var incorrectTotal;
 var checkRandom;
-var checkEmail
+var checkEmail;
+
+const resultAlert = document.querySelector("#alert");
 
 function createChart() {
     var xValues = ["Rules - Correct", "Signs- Correct", "Signs - Incorrect", "Rules - Incorrect"];
@@ -66,6 +54,16 @@ function round(input) {
 
 }
 
+function messageSuccess() {
+  resultAlert.innerHTML = "<strong>Congratulations!</strong> You passed the test.";
+  resultAlert.classList.add("alert-success");
+}
+
+function messageFail() {
+  resultAlert.innerHTML = "<strong>Keep practicing</strong> You are going to do it!";
+  resultAlert.classList.add("alert-danger");
+}
+
 function displayTotals() {
     incorrectRules = totalRules - correctRules;
     incorrectSigns = totalSigns - correctSigns;
@@ -80,5 +78,27 @@ function displayTotals() {
     document.getElementById("incorrect-total").innerHTML = incorrectTotal;
     document.getElementById("percentage-rules").innerHTML = round(100 * correctRules / totalRules) + "%";
     document.getElementById("percentage-signs").innerHTML = round(100 * correctSigns / totalSigns) + "%";
-    document.getElementById("percentage-total").innerHTML = round(100 * correctTotal / total) + "%";
+    let percentageTotal = 100 * correctTotal / total
+    document.getElementById("percentage-total").innerHTML = round(percentageTotal) + "%";
+
+    if (percentageTotal >= 80) {
+      messageSuccess();
+    } else {
+      messageFail();
+    }
 }
+
+window.addEventListener('load', (event) => {
+  totalRules = Number(sessionStorage.getItem("rules"));
+  totalSigns = Number(sessionStorage.getItem("signs"));
+  correctRules = Number(sessionStorage.getItem("correct-rules"));
+  correctSigns = Number(sessionStorage.getItem("correct-signs"));
+  displayTotals();
+  createChart();
+  
+  resultAlert.addEventListener('closed.bs.alert', event => {
+    resultAlert.display = "none";
+    resultAlert.classList.remove("show");
+  });
+
+});
