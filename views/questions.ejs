@@ -42,17 +42,17 @@
                         <% for (const rule of rules) {%>
                           <li class="list-group-item">
                             <div class="answer-group d-flex pt-2 pb-2">
-                              <div class="col-md-9 mb-2">
+                              <div class="col-6 col-md-9 mb-2">
                                 <p id="rules-<%= rule.number %>">
                                   <b><%= rule.number %>.</b> <%= rule.text %>
                                 </p>
                               </div>
-                              <div class="col-md-3 mb-2">
-                                <button type="button" class="btn btn-danger btn-sm mx-4 delete" data-bs-toggle="modal"
+                              <div class="col-6 col-md-3 mb-2">
+                                <button type="button" class="btn btn-danger btn-sm mx-2 delete" data-bs-toggle="modal"
                                   data-bs-target="#deleteModal" id="d<%= rule.number %>">
                                   Delete
                                 </button>
-                                <button type="button" class="btn btn-primary btn-sm view" data-bs-toggle="modal"
+                                <button type="button" class="btn btn-primary btn-sm mx-1 view" data-bs-toggle="modal"
                                   data-bs-target="#viewModal" id="v<%= rule.number %>">
                                   View
                                 </button>

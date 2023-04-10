@@ -28,7 +28,7 @@ function createChart() {
     "#01A775",
     "#6495ED",
     "#FFC300",
-    "#DB2E3f"
+    "#DB2E3F"
   ];
 
   new Chart("myChart", {
@@ -54,13 +54,13 @@ function round(input) {
   return Math.round((number + Number.EPSILON) * 100) / 100;
 }
 
-function messageSuccess() {
-  alertMessage.innerHTML = "<strong>Congratulations!</strong> You passed the test.";
+function messageSuccess(message) {
+  alertMessage.innerHTML = message;
   resultAlert.classList.add("alert-success");
 }
 
-function messageFail() {
-  alertMessage.innerHTML = "<strong>Keep practicing.</strong> You can do it!";
+function messageFail(message) {
+  alertMessage.innerHTML = message;
   resultAlert.classList.add("alert-danger");
 }
 
@@ -81,10 +81,18 @@ function displayTotals() {
   let percentageTotal = 100 * correctTotal / total
   document.getElementById("percentage-total").innerHTML = round(percentageTotal) + "%";
 
-  if (percentageTotal >= 80) {
-    messageSuccess();
+  if (percentageTotal == 100) {
+    messageSuccess("<strong>Perfect!</strong> You are good to go.");
+  } else if (percentageTotal >= 80) {
+    messageSuccess("<strong>Congratulations!</strong> You passed the test.");
+  } else if (percentageTotal >= 60) {
+    messageFail("<strong>Push harder.</strong> You are almost there!");
+  } else if (percentageTotal >= 40) {
+    messageFail("<strong>Keep practicing.</strong> You can do it!");
+  } else if (percentageTotal >= 20) {
+    messageFail("<strong>Not good.</strong> It is a long way!");
   } else {
-    messageFail();
+    messageFail("<strong>Keep walking.</strong>");
   }
   setTimeout(() => {
     resultAlert.hidden = true;
