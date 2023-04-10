@@ -50,30 +50,34 @@
                     <div class="mb-3">
                       <label class="form-label" for="name">Name</label>&nbsp;&nbsp;<span id="name-error"></span>
                       <input type="text" class="form-control" id="name" name="name" size="30"
+                      aria-describedby="naameHelpInline" title="Alphabets only"
                         placeholder="Enter your name" pattern="^[a-zA-Z.]+( [a-zA-Z.]+)*$" required>
                     </div>
                     <div class="mb-3">
                       <label class="form-label" for="email">Email</label>&nbsp;&nbsp;<span id="email-error"></span>
                       <input type="email" class="form-control" id="email" name="email" size="30"
+                      aria-describedby="emailHelpInline" title="Email address format"
                         placeholder="Enter your email address"
                         pattern="^[a-zA-Z0-9]+(?:\.[a-zA-Z0-9]+)*@[a-zA-Z0-9]+(?:\.[a-zA-Z0-9]+)*$" required>
                     </div>
                     <div class="mb-3">
                       <label class="form-label" for="phone">Phone</label>&nbsp;&nbsp;<span id="phone-error"></span>
                       <input type="tel" class="form-control" id="phone" name="phone" size="30"
+                      aria-describedby="phoneHelpInline" title="Numbers only without area code"
                         placeholder="Enter your phone number" pattern="^[2-9][0-9]{9}" required>
                     </div>
                     <div class="mb-3">
                       <label class="form-label" for="password">Password</label>&nbsp;&nbsp;<span
                         id="password-error"></span>
                       <input type="password" class="form-control" id="password" name="password" size="30"
-                        placeholder="Enter your password">
+                      aria-describedby="passwordHelpInline" title="Minimum 8 characters inluding uppercase, lowercase, numbers, and special characters"
+                        placeholder="Enter your password" pattern="[A-Za-z0-9!#$%&*+-]{8,}">
                     </div>
                     <div class="mb-3">
                       <label class="form-label" for="password2">Confirm Password</label>&nbsp;&nbsp;<span
                         id="password2-error"></span>
                       <input type="password" class="form-control" id="password2" name="password2" size="30"
-                        placeholder="Confirm your password" pattern="[A-Za-z0-9!#$%&*+-]{8,}" required>
+                        placeholder="Confirm your password" required>
                     </div>
                   </div>
 
