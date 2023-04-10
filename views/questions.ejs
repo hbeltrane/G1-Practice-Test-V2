@@ -42,12 +42,12 @@
                         <% for (const rule of rules) {%>
                           <li class="list-group-item">
                             <div class="answer-group d-flex pt-2 pb-2">
-                              <div class="col-7 col-md-8 col-sm-8 mb-2">
+                              <div class="col-7 col-md-7 col-sm-7 mb-2">
                                 <p id="rules-<%= rule.number %>">
                                   <b><%= rule.number %>.</b> <%= rule.text %>
                                 </p>
                               </div>
-                              <div class="col-5 col-md-5 col-sm-5 mb-2">
+                              <div class="col-5 col-md-5 col-sm-5 mb-2 text-end">
                                 <button type="button" class="btn btn-danger btn-sm ms-4 delete" data-bs-toggle="modal"
                                   data-bs-target="#deleteModal" id="d<%= rule.number %>">
                                   Delete
@@ -85,15 +85,15 @@
                         <% for (const sign of signs) {%>
                           <li class="list-group-item">
                             <div class="answer-group d-flex pt-2 pb-2">
-                              <div class="col-1 col-md-1 col-sm-1 mb-2">
+                              <div class="col-5 col-md-5 col-sm-5 mb-2">
                                 <p id="signs-<%= sign.number %>">
-                                  <b><%= sign.number %>.</b>
+                                  <b><%= sign.number %>.</b> <%= sign.text %>
                                 </p>
                               </div>
-                              <div class="col-6 col-md-7 col-sm-7 mb-2">
+                              <div class="col-2 col-md-2 col-sm-2 mb-2">
                                 <image style="width: 100px" src="<%= sign.reference %>"></image>
                               </div>
-                              <div class="col-5 col-md-5 col-sm-5 mb-2">
+                              <div class="col-5 col-md-5 col-sm-5 mb-2 text-end">
                                 <button type="button" class="btn btn-danger btn-sm ms-4 delete" data-bs-toggle="modal"
                                   data-bs-target="#deleteModal" id="d<%= sign.number %>">
                                   Delete
