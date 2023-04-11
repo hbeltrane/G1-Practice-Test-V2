@@ -7,6 +7,7 @@
  */
 
 body {
+  background-color: #EEEEEE;
   background-image: url('/images/bgadmin.jpg'); 
   background-size:100%;
   background-repeat: no-repeat;
