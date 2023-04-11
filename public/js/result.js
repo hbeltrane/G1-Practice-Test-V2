@@ -87,12 +87,14 @@ function displayTotals() {
     messageSuccess("<strong>Congratulations!</strong> You passed the test.");
   } else if (percentageTotal >= 60) {
     messageFail("<strong>Push harder.</strong> You are almost there!");
-  } else if (percentageTotal >= 40) {
+  } else if (percentageTotal >= 50) {
     messageFail("<strong>Keep practicing.</strong> You can do it!");
-  } else if (percentageTotal >= 20) {
+  } else if (percentageTotal >= 40) {
     messageFail("<strong>Not good.</strong> It is a long way!");
-  } else {
+  } else if (percentageTotal >= 20){
     messageFail("<strong>Keep walking.</strong>");
+  } else {
+    messageFail("🙄");
   }
   setTimeout(() => {
     resultAlert.hidden = true;
